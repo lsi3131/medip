@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\logger\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\connection\XmlConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\ConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\PACSConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\XmlDataFilePathManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDAO_Xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDTO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDAO_Xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDTO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDefines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\CommonDefines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDefines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\AppConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\SubWindow\FolderViewWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\SubWindow\PatientListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\DirectoryTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\FileTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\AppCoreContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Action\ActionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\FileManagerAppCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomDataset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DIMSE_Data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomDatasetFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\System\RuntimeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\System\ShortcutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\System\DicomNetworkManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\System\FilePathManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Event\EventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Action\ActionManagerIPCVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\appcore_defines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\dicom_defines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomListenerInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomPresentationContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\EchoSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\EmptySCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\FindSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\GetSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\MoveSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\MultiSendSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\SCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\SingleSendSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\SCU\StoreSCUCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomFindOption.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Util\FileFilterParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\FileManagerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSearchDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\MainWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\PACSListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSDicomConvertUploadDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_PDFToDcm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_BmpToDcm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_DcmToPDF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_DcmToImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomDatasetIOParameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Util\FileSystemUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\System\LicenseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Util\StringUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Resource\ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupInputInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomHostInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\SubWindow\PACSExportWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\EntityDataManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\FileManagerExportData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\DicomImageViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Image\VolumeImageData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\render\CPUMPRPlane2DRenderingManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Image\VolumeUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCUStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCPStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Export\DicomExportManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Export\DicomExportData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkStoreSCPStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\SettingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\ColumnHeaderInfoList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\DateRangeInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\FindOptionInfoList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomDataset_define.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\TableColumnConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Image\WindowingInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\DicomPreviewWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Image\DicomDataImage_sint16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\FileManagerImportData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\FileViewMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\TreeHeaderInfoList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\DicomImportDataDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\FolderViewConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\SystemDirectoryView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Resource\IconManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\SingleInputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\FavoritesDirectoryListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\config\GUISettingConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDTOManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\DicomEditDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\DicomTagEditWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomDatasetIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\data\data_defines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Action\ActionPatientListUploadDicomFileList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Action\ActionPatientListEditDicomFileList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\Image\DicomImageToQTConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Resource\StringManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelStudyObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelSeriesObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelImageObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelImageObjectListMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\logger\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\connection\XmlConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\ConfigManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\PACSConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\XmlDataFilePathManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDAO_Xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDTO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDAO_Xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDTO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\CommonDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\AppConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\AppCoreContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\FileManagerAppCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomDataset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DIMSE_Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomDatasetFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\System\RuntimeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\System\ShortcutManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\System\FilePathManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\appcore_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\dicom_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomPresentationContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomListenerInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\StoreSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\EchoSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\EmptySCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\FindSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\GetSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\MoveSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\MultiSendSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\SCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\SCU\SingleSendSCUCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Convert\DicomConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomFindOption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Util\FileFilterParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomDatasetIOParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Util\FileSystemUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\System\LicenseManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Util\StringUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Resource\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupInputInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomHostInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\EntityDataManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\FileManagerExportData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Image\VolumeImageData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\render\CPUMPRPlane2DRenderingManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Image\VolumeUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkSCUStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkSCPStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomInfomationModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Export\DicomExportManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Export\DicomExportData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkStoreSCPStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\UI\ColumnHeaderInfoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\UI\DateRangeInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\UI\FindOptionInfoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomDataset_define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\TableColumnConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Image\WindowingInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Image\DicomDataImage_sint16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\UI\FileViewMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\UI\TreeHeaderInfoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\FolderViewConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Resource\IconManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\config\GUISettingConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDTOManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\data\data_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\Image\DicomImageToQTConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\appcore\Resource\StringManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelStudyObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelSeriesObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelImageObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomDatasetIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelImageObjectListMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="filemanager\appcore\MainWindow.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="config\pacs_config.xml" />
+    <Xml Include="data\xml\imported_dicom_info_list.xml" />
+    <Xml Include="data\xml\last_edited_file_list.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="filemanager\appcore\SubWindow\FolderViewWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\SubWindow\PatientListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\DirectoryTreeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\FileTreeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Action\ActionManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\System\DicomNetworkManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Event\EventManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Action\ActionManagerIPCVersion.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\dicom\Network\DicomNetworkSCP.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\dicom\Network\DicomNetworkSCU.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\FileManagerDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSearchDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\MainWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\PACSListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSDicomConvertUploadDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\SubWindow\PACSExportWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\DicomImageViewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\SettingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\DicomPreviewWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\dicom\DicomInfomationModelLoader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\DicomImportDataDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\SystemDirectoryView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\SingleInputDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\FavoritesDirectoryListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\DicomEditDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\UI\DicomTagEditWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Action\ActionPatientListUploadDicomFileList.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Action\ActionPatientListEditDicomFileList.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\FileManagerImportData.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FileManagerAppCore.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="svn_version.h.tmpl" />
+    <None Include="filemanager\appcore\Resource\default.qss" />
+    <None Include="filemanager\appcore\Resource\deepcatch_stylesheet.qss" />
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\FolderViewWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PatientListWidget.ui" />
+    <QtUic Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PACSExportWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.ui" />
+    <QtUic Include="filemanager\appcore\MainWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\SettingDialog.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomImageViewer.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomPreviewWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomImportDataDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\SingleInputDialog.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomTagEditWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomEditDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.ui" />
+  </ItemGroup>
+</Project>

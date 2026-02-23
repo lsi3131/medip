@@ -1,0 +1,3466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="algorithm\GMM.cpp" />
+    <ClCompile Include="algorithm\KMeans.cpp" />
+    <ClCompile Include="algorithm\MagicCut.cpp" />
+    <ClCompile Include="algorithm\Radiomics.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Network\FTPProtocolOutput.cpp" />
+    <ClCompile Include="Network\Network.cpp" />
+    <ClCompile Include="3MF\C3MFLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Macro\MacroRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\TestLicenseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestVolumeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\test_pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\InputMessageDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Macro\MacroArgumentParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Macro\Parser\MacroArgumentParser_Omniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\VolumeToSurface3D\VolumeTo3DSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionLevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    <ClCompile Include="Windows\AnalMPRPlaneView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\AnalVolumeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\CroppingView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\CroppingViewControlWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\glwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\HeightMapInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\HeightMapView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\ImageManagementTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ClCompile Include="Windows\MEVolumeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\ReportWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\ResultView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\SegmentationView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\SelectSliceView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\SubView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Tabwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\windowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Tab\AIContrastSynthesisTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AIKernelConversionTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AILowdoseCTReconstuctionTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AISegTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AISegTabDeepCatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AISetTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AITranslationTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AnalysisTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AnimationTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\AnnotationTab2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\CaptureTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\DrawcutTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\Export3DTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\IMGProcessTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\MeshTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\OmniverseTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\OptionalTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\RegionGrowTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\ROITab2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\SummaryTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\ThreSholdTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\Visualize2DTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\Visualize3DTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\VisualPrintMeshTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\VisualPrintTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\VOLProcessTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Windows\Tab\WorkingRegionTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\AnnoControlDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\AnnoPathUsageDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\AnnoTextDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\BrushSculptDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\BrushSelectDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CHoleFillingDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CIslandFilterDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ClinicalInformationDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CManpulateDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CMeshCutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\ColorMapDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ComponentDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ConfusionMatrixInfoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CPlaneCutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CRemeshDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CroppingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CSolidDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CSubDivisionDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\CVoxelCountRatioDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\DicomSeriesSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\DrawcutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\HCCPredictionDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\HeightMapDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\HollowDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ImageCalculatorDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ImageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\InputMessageDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Interpolation3dDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\LayerHistogramDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\LevelsetDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\LineProfileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\LoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\MeshBaseDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\MeshOffsetDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\NoticeDisplayDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\NumDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\OfflineLicenseRegDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\OpenSourceLicenseDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\PasswordDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\PathBrowseDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\PresetDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ProjectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ReduceDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ReportTabDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\SessionSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\SizeDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\SmoothDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\SpacingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Stamp3dDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\TableDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\ThickDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\VisualPrintDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CManipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshCutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CMeshDistancMananager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshDlgManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshFontManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshHoleFillManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CMeshManipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshModelViewManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CMeshViewBtn3DScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CMeshViewRenderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\CMeshViewRightClickEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CMeshWorkManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MeshEdit\CPlaneManiplator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\ActionCTQuantization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\ActionKernelConversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\ActionLowdoseReconstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoad3MF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshTo3MF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToSTL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToVTK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveSTL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveVTK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadUsd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    <ClCompile Include="Actions\FileWork\WorkDicomOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkMipOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkNIIOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkRawOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkROIOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveCoordinateNII.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveHUNII.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveHURAW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveJSON.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveMIP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveNII.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveNRRD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveRAW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveROINII.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveSplits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkSaveTXT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\WorkTXTOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\MeshWork\Brush\WorkBrushThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseCreateMeshSTL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseCreateUsdModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseUploadUsd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\PreviewSurface\VisualPrintWorkSurfaceExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\PreviewSurface\WorkSurfaceExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\VisualPrinting\VisualPrintWorkMeshExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionBoundingBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionCalculateFeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionCaptureImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionCOVIDReport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionCuda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionDeepCatchReport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionDrawCut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionFileWork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionFtpWork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionGMMExtractMask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionHccPrediction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageBoundary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageCircumference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageDilation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageEnhance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageErosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageFeatureExtractor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageFissureness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageHoleFilling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageIsotropic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionImageMove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImagePolyhedronThreshold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionImageVesselness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionLevelset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ThreadEnd\ActionManager_ThreadEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionMarking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionMaskList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionMaskListDelete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionMaskListsImageCalculate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionMaskListSplitRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionRegionGrowing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionVertebra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionVisualPrintWork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionWidthLevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionWorkBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\ActionWorkThreadRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Config\OmniverseConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Converter\UsdMeshConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\Converter\UsdMeshPureDataConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\LiveSessionConfigFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\LiveSessionInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\OmniChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveChannelMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\LiveSession\OmniversePeerUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Resource\OmniverseResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdCustomLayerData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUSDMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUSDMaterial_p.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUSDMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdPreset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdPresetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdRenderSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdStage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdStage_p.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\Usd\mipUsdUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseConnector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\OmniverseFileInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseFileUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseSharedResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Omniverse\OmniverseStage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\OmniverseStageEventListenerWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\OmniverseStageReaderWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\OmniverseStageWriterWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Omniverse\OmniverseUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Config\ConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Config\VisualPrintConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Version\FileVersionUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ApplicationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="System\FileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\FolderCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="System\LicenseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="System\LogManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\MedipType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\MinidumpHelp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ProductManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\resourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SelfDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ShortcutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\stringManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="System\styleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\UpdateManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\VolumeCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\AlphaColorMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\AlphaWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\AnalysisWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\ClickLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\ClinicalInfoTableWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\CListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\CollapseDock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\CollapseWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\ColorTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\CustomHistogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\CustomUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\deepcatchAreaChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HoverPoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\ImageListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\LayerHistogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\MaskList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\MedipChartManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MedipMultiBarChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    <ClCompile Include="UI\rangeDisplayChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\RangeWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\ReportTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\TASubClassResultCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\TrWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="graphics\Annotation\AnnoAngle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoArrow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoLength.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoProfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoRectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Annotation\AnnoString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Mesh\MeshPrimitiveBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Mesh\MeshSTLFileUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Mesh\MeshTopologyBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\AnnotationFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\anotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\BoundingBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\CRSpline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\DataContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="graphics\DeletedMaskInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\MaskInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\MeshData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\MeshInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\MeshLayerData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\MeshLayerDataOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\OnSButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\OnSGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="graphics\volumedata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\volumedatapet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\volumedatapet_colortable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Mesh\CUndoRedo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Debug\DebugUsdStageViewerWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\Debug\DebugWidgetDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Infomation\InfoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Infomation\ModuleInfoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\Omniverse\OmniverseFileViewDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLoginDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Network\SSENetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="MedipQT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Actions\FileWork\TestWorkMipOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\Mesh\TestActionCreateMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionManager_ThreadEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionMaskListDelete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionMedipMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionPredictAddEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\API\TestStdThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\Mesh\TestMeshPrimitiveBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\DataContextUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestMeshData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestMeshDataList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestMeshLayerDataOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestVolumeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestVolumeData_AIPredict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestVolumeData_Mask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\TestVolumeDataCommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\VoxelVolumeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\graphics\VoxelVolumeSize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Macro\TestMacroArgumentParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Macro\TestMacroRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_CManipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_CMeshModelViewManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_CMeshViewRenderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_CMeshWorkManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\API_Test\TestOmniverseAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Converter\TestUsdMeshConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Converter\TestUsdMeshPureDataConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\LiveSession\Test_OmniverseLiveChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\LiveSession\Test_OmniverseLiveSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\LiveSession\TestOmniverseChannelMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Preset\TestUsdPresetParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipCustomLayerData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdPreset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdPresetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdStage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\Usd\UsdFileTestResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\CommandLineTestProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\OmniverseFileTestResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestMeshTopology.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniClientAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniverseContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniverseFileUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniverseStage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniverseStageEventListenerWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Omniverse\TestOmniverseStageEventListenerWorkerHandlerStub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Omniverse\TestUSDMeshTopology.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Qt\TestQtAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Renderer\RendererWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\MockMedipType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\MockProductManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\TestLicenseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\TestStringManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UI\TestMaskListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UI\TestMeshListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\Test_MEVolumeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\Tab\TestAISegTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\Tab\TestROITab2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\TestTabWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\TestWindowBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\TestWindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\test_pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestActionMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestAICommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TryCodeWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Mesh\ActionCreateMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialogs\SelectSliceDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadSTL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\FileWork\Mesh\WorkVTKOpen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    <ClCompile Include="Test\System\ProductManagerTestUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Omniverse\ActionReceiveFromOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\Omniverse\TestActionReceiveFromOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\Omniverse\TestActionSendToOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Omniverse\ActionSendToOmniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Windows\Tab\TestMeshTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\FileWork\TestWorkSaveMIP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\File\TestFileWriterMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System\File\FileWriterMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToUSD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Actions\FileWork\Mesh\TestWorkMeshToUSD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\VolumeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\VisualPrintMEVolumeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    <ClCompile Include="Test\Dialogs\TestBrushSculptDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\MeshEditScreenSelector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_MeshEditScreenSelector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshEdit\MeshEditSculpt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\MeshEdit\Test_MeshEditSculpt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\WorkBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    <ClCompile Include="Test\Actions\FileWork\Mesh\TestWorkLoadUsd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TestContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Mesh\ActionAddMeshes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\Mesh\TestActionAddMeshes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Annotation\ActionAnnoAngle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Annotation\ActionAnnoArrow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Annotation\ActionAnnoLen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Annotation\ActionAnnoRectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Annotation\ActionAnnoText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\AI\TestWorkAILowdoseReconstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\WorkAILowdoseReconstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\AI\WorkAIKernelContinousConversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\AI\WorkAIKernelNeutralization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Actions\AI\WorkAICTQuantization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Actions\AI\TestWorkAICTQuantization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\AI\TestWorkAIKernelContinousConversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\AI\TestWorkAIKernelNeutralization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\ActionContrastSynthesisApply.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\WorkAIContrastSynthesis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Actions\AI\TestWorkAIContrastSynthesis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionResult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ActionThreadArgument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Mesh\MeshListColumnList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UI\Mesh\TestMeshListColumnList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Mesh\MeshListColumn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Mesh\MeshListHeaderWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Mesh\MeshListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Omniverse\OmniverseMeshListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\Omniverse\OmniversePropertyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\Omniverse\OmniverseStageListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    
+    
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshInfoWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshSmoothWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\WorkDeepPredict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    <ClCompile Include="Test\Actions\AI\TestWorkDeepPredict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\LicenseManagerTestUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\ThreadEnd\ActionThreadEndDeepDrawPredict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Actions\TestActionThreadEndDeepDrawPredict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainAnalWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainMeshWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainSegmentWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainTabWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainTAWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    
+    
+    
+    
+    <ClCompile Include="Windows\RadiomicsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\Main\MainVisualPrintMeshWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\WindowBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AIProjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\AI\TestAIProjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AIProjectDefinitions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\AIProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\System\TestProductManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\ActionPredictAddEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AI\WorkDeepPredictResult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\Dicom\DicomTestFileResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\MessageBox\MessageBoxBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\MessageBox\GUIMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\MessageBox\ConsoleMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\File\WindowManagerFileLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algorithm\Common\MaskInfoHelper.h" />
+    <ClInclude Include="algorithm\Radiomics.h" />
+    <ClInclude Include="algorithm\GMM.h" />
+    <ClInclude Include="algorithm\KMeans.h" />
+    <ClInclude Include="defineMEDIP.h" />
+    <ClInclude Include="Mip\brush.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="graphics\GaussianSmoothing.h" />
+    <ClInclude Include="Network\FTPProtocolOutput.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="3MF\C3MFLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3MF\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3MF\stb_image_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro\MacroRunner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro\MacroDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro\MacroArgumentParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro\Parser\MacroArgumentParser_Omniverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\VolumeToSurface3D\VolumeTo3DSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionLevel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\HeightMapInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\ResultView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\SubView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\windowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialogs\CMeshCutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    
+    <ClInclude Include="Dialogs\CVoxelCountRatioDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    
+    <ClInclude Include="Dialogs\MeshOffsetDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    
+    
+    <ClInclude Include="MeshEdit\CManipulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CMeshDistancMananager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CMeshDlgManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CMeshFontManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CMeshManipulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CMeshViewRenderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\CPlaneManiplator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseCreateMeshSTL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseCreateUsdModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseUploadUsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionBoundingBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionCaptureImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionFileWork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionImageList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ThreadEnd\ActionManager_ThreadEnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionMaskList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionMaskListDelete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionMaskListsImageCalculate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionWidthLevel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionWorkThreadRunner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Config\OmniverseConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Converter\UsdMeshPureDataConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\LiveSessionConfigFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\LiveSessionInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\OmniChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\OmniverseLiveChannelMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\OmniverseLiveSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\LiveSession\OmniversePeerUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Resource\OmniverseResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdCustomLayerData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUSDMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUSDMaterial_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUSDMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdPreset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdPresetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdRenderSetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdStage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdStage_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\Usd\mipUsdUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseConnector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseFileInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseFileUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseSharedResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\OmniverseUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\primUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omniverse\xformUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Config\ConfigManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Config\VisualPrintConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Version\FileVersionUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\LogManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\MedipType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\MinidumpHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ProductManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\resourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SelfDump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ShortcutManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\styleManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\UpdateManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\VolumeCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\CustomUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\deepcatchAreaChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MedipChartManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\rangeDisplayChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\TASubClassResultCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoAngle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoArrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoLength.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoName.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoProfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoRectangleCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Annotation\AnnoString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Mesh\MeshPrimitiveBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Mesh\MeshSTLFileUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Mesh\MeshTopologyBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\AnnoDeclare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\AnnotationFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\anotation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\BoundingBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\CRSpline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\DeletedMaskInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Hessian_3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\MaskInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\MeshData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\MeshInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\MeshLayerData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\MeshLayerDataOmniverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\OnSButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\volumedata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\volumedatapet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Mesh\CUndoRedo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialogs\Infomation\ModuleInfoDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\graphics\DataContextUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\graphics\TestVolumeDataCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\graphics\VoxelVolumeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\graphics\VoxelVolumeSize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Omniverse\Usd\UsdFileTestResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Omniverse\CommandLineTestProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Omniverse\OmniverseFileTestResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Renderer\RendererWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\System\MockMedipType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\System\MockProductManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\test_pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestAICommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TryCodeWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Mesh\ActionCreateMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ClInclude Include="Test\System\ProductManagerTestUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Omniverse\ActionReceiveFromOmniverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Omniverse\ActionSendToOmniverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System\File\FileWriterMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\MeshEditScreenSelector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshEdit\MeshEditSculpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TestContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Mesh\ActionAddMeshes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Annotation\ActionAnnoAngle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Annotation\ActionAnnoArrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Annotation\ActionAnnoLen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Annotation\ActionAnnoRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Annotation\ActionAnnoText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AI\ActionContrastSynthesisApply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ActionThreadArgument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Mesh\MeshListColumnList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Mesh\MeshListColumn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    
+    <ClInclude Include="Test\System\LicenseManagerTestUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\ThreadEnd\ActionThreadEndDeepDrawPredict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Main\MainVisualPrintMeshWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AIProjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AIProjectDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\AIProject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AI\ActionPredictAddEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AI\WorkDeepPredictResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Actions\AI\TestWorkDeepPredictResult.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Dicom\DicomTestFileResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\MessageBox\MessageBoxBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\MessageBox\GUIMessageBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\MessageBox\ConsoleMessageBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\File\WindowManagerFileLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MedipQT.ui" />
+    <CustomBuild Include="define.h" />
+    <CustomBuild Include="Network\Network.h" />
+    <QtRcc Include="MedipQT.qrc" />
+    <QtMoc Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="Windows\AnalMPRPlaneView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\AnalVolumeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\CroppingView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\CroppingViewControlWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\glwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\HeightMapView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\ImageManagementTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\MEVolumeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\ReportWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\SegmentationView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\SelectSliceView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tabwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AIContrastSynthesisTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AIKernelConversionTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AILowdoseCTReconstuctionTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISegTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISegTabDeepCatch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISetTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AITranslationTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnalysisTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnimationTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnnotationTab2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\CaptureTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\DrawcutTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Export3DTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\IMGProcessTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\MeshTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\OmniverseTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\OptionalTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\RegionGrowTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\ROITab2.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\SummaryTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\ThreSholdTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Visualize2DTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Visualize3DTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VisualPrintMeshTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VisualPrintTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VOLProcessTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\WorkingRegionTab.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\AnnoControlDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\AnnoPathUsageDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\AnnoTextDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\BrushSculptDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\BrushSelectDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CHoleFillingDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CIslandFilterDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ClinicalInformationDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CManpulateDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ColorMapDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ComponentDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ConfusionMatrixInfoDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CPlaneCutDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CRemeshDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CroppingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Dialogs\CroppingDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Dialogs\CSolidDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CSubDivisionDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\DicomSeriesSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\DrawcutDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HCCPredictionDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HeightMapDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HollowDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ImageCalculatorDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Dialogs\ImageCalculatorDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Dialogs\ImageDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\InputMessageDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Interpolation3dDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LayerHistogramDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LevelsetDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LineProfileDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LoginDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\MeshBaseDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\NoticeDisplayDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\NumDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\OfflineLicenseRegDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\OpenSourceLicenseDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Dialogs\OpenSourceLicenseDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Dialogs\PasswordDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\PathBrowseDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\PresetDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ProjectDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ReduceDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ReportTabDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SessionSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Dialogs\SessionSelectDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Dialogs\SizeDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SmoothDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SpacingDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Stamp3dDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\TableDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ThickDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\VisualPrintDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshCutManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshHoleFillManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshModelViewManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshViewBtn3DScene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshViewRightClickEvent.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshWorkManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="Actions\AI\ActionCTQuantization.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Actions\AI\ActionKernelConversion.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Actions\AI\ActionLowdoseReconstruction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoad3MF.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadOBJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshTo3MF.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToOBJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToSTL.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToVTK.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveOBJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveSTL.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveVTK.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadUsd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkDicomOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkMipOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkNIIOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkRawOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkROIOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveCoordinateNII.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveHUNII.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveHURAW.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveJSON.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveMIP.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveNII.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveNRRD.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveRAW.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveROINII.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveSplits.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveTXT.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkTXTOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\MeshWork\Brush\WorkBrushThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\PreviewSurface\VisualPrintWorkSurfaceExport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\PreviewSurface\WorkSurfaceExport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\VisualPrinting\VisualPrintWorkMeshExport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionCalculateFeature.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionCOVIDReport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionCuda.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionDeepCatchReport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionDrawCut.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionFtpWork.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionGMMExtractMask.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionHccPrediction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageBoundary.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageCircumference.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageComponent.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageDilation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageEnhance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageErosion.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageFeatureExtractor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageFissureness.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageHoleFilling.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageIsotropic.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageMove.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImagePolyhedronThreshold.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageScale.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageVesselness.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionLevelset.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionMarking.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionMaskListSplitRegion.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionMesh.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionRegionGrowing.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionVertebra.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionVisualPrintWork.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionWorkBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\Converter\UsdMeshConverter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\LiveSession\OmniverseLiveChannel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseContext.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageEventListenerWorker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageReaderWorker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageWriterWorker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="System\ApplicationManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="System\FolderCompressor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="System\LicenseManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="System\stringManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\AlphaColorMap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\AlphaWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\AnalysisWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ClickLabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ClinicalInfoTableWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\CListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\CollapseDock.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\CollapseWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ColorTable.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\CustomHistogram.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\HoverPoints.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ImageListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\LayerHistogram.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MaskList.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MedipMultiBarChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\RangeWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ReportTextEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\TrWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="graphics\DataContext.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="graphics\OnSGroupBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugWidgetDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Infomation\InfoDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseFileViewDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLoginDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Network\SSENetwork.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MedipQT.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Test\Omniverse\TestOmniverseStageEventListenerWorkerHandlerStub.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <CustomBuild Include="Dialogs\SelectSliceDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadSTL.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkVTKOpen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Dialogs\Infomation\ModuleInfoDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugWidgetDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugUsdStageViewerWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseFileViewDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLoginDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToUSD.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\VisualPrintMEVolumeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\VolumeView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\WorkBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAILowdoseReconstruction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAIKernelContinousConversion.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAIKernelNeutralization.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAICTQuantization.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAIContrastSynthesis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Mesh\MeshListHeaderWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Mesh\MeshListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Omniverse\OmniverseMeshListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Omniverse\OmniversePropertyWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="UI\Omniverse\OmniversePropertyWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="UI\Omniverse\OmniverseStageListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugUsdStageViewerWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshSmoothWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshInfoWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkDeepPredict.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainAnalWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainMeshWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainSegmentWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainTabWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainTAWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\WindowBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windows\RadiomicsView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MedipQT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.ico" />
+    <Image Include="logo_DeepCatch.ico" />
+    <Image Include="logo_MEDIP_AI.ico" />
+    <Image Include="logo_alpha.ico" />
+    <Image Include="logo_beta.ico" />
+    <Image Include="logo_DeepCatch_alpha.ico" />
+    <Image Include="logo_DeepCatch_beta.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="svn_version.h.tmpl" />
+    <None Include="License.html" />
+    <None Include="License_DeepCatch.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{fccc6af1-9003-48b2-a88f-2671326351c2}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{3be42d5a-79d8-429b-9e04-cc37e5b209fc}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+</Project>

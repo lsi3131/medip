@@ -1,0 +1,33 @@
+#pragma once
+
+#ifndef WORK_SAVE_ROINII_H
+#define WORK_SAVE_ROINII_H
+
+#include <QtWidgets>
+
+#include "graphics/volumedata.h"
+
+class WorkSaveROINII : public QObject
+{
+	Q_OBJECT
+
+public:
+	WorkSaveROINII(VOLUME_DATA* pVolumeData, mask _m, int _mI, const QString& strFileName);
+
+private:
+	mask _m;
+	int _mI;
+	QString _FileName;
+	int _addValue;
+	VOLUME_DATA* m_pVolumeData;
+
+	void setProgressValue(int value, bool init = false);
+
+public slots:
+	void threadRun();
+
+signals:
+	void progress(int);
+	void finished();
+};
+#endif

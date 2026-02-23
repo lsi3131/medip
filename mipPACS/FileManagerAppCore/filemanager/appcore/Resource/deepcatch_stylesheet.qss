@@ -1,0 +1,683 @@
+QMainWindow#MainWindow {
+	background-color: #535353;
+}
+
+QWidget {
+	background-color: #535353;
+}
+
+QDialog {
+	background-color: #535353;
+}
+
+QFrame#frameMenu {
+	background-color: #373737;
+}
+
+QListView{
+	background-color: #303030;
+}
+
+QTableView{
+	background-color: #303030;
+}
+
+QTreeView{
+	background-color: #303030;
+}
+
+QSpinBox{
+	background-color: #303030;
+}
+
+QTabBar::tab:selected {
+	background: rgba(48, 48, 48, 255); 
+	color: white;
+}
+
+QTabBar::tab:!selected {
+	background: rgba(82, 82, 82, 255); 
+	color: white;
+}
+
+QTabWidget::pane {
+	border: 1px; 
+	background: rgba(48, 48, 48, 255); 
+	color: black;
+}
+
+/* m_directoryTreeView */
+QTreeView#m_directoryTreeView::branch:open {
+    image: url(:/Resource/Images/deepcatch/folder_view_arrow_open_d.png) 0;
+}
+
+QTreeView#m_directoryTreeView::branch:open:hover {
+    image: url(:/Resource/Images/deepcatch/folder_view_arrow_open_h.png) 0;
+}
+
+QTreeView#m_directoryTreeView::branch:closed:has-children {
+    image: url(:/Resource/Images/deepcatch/folder_view_arrow_close_d.png) 0;
+}
+
+QTreeView#m_directoryTreeView::branch:closed:has-children:hover {
+    image: url(:/Resource/Images/deepcatch/folder_view_arrow_close_h.png) 0;
+}
+
+/* m_mainFileTreeView */
+QTreeView#m_mainFileTreeView::branch:open {
+    background-color: #303030;
+}
+
+QTreeView#m_mainFileTreeView::branch:open:hover {
+    background-color: #303030;
+}
+
+QTreeView#m_mainFileTreeView::branch:closed:has-children {
+    background-color: #303030;
+}
+
+QTreeView#m_mainFileTreeView::branch:closed:has-children:hover {
+    background-color: #303030;
+}
+
+QColumnView{
+	background-color: #656565;
+}
+
+QHeaderView::section {
+    color: #fff;
+    background-color: #656565;
+}
+
+QTableWidget {
+	color: #fff;
+	alternate-background-color: #656565;
+	background-color: #303030;
+}
+
+QTableWidget::item {
+}
+
+QWidget {
+	color: white;
+}
+
+QMenuBar::item {
+	color : #000000;
+}
+QMenu::item{
+	padding: 5px 30px 5px 5px;
+}
+QMenu::item:selected {
+	background-color: rgb(52,73,94);
+	padding: 5px 30px 5px 8px;
+}
+
+QPushButton {
+	background-color: #535353;
+}
+		
+QPushButton:hover {
+	background-color: #484848;
+}
+
+QPushButton:disabled{
+	color: gray;
+}
+
+QLineEdit{
+	background-color: #303030;
+	border-style: outset;
+	/*border: 1px solid #f5f5f5;*/
+	/*border-radius: 4px;*/
+	padding: 4px;
+	/*border-color: #eeeeee;*/
+}
+QLineEdit:disabled{
+	color: gray;
+}
+
+QLabel{
+	border: 0px solid white;
+}
+
+QComboBox {
+	background-color: #414141;
+	border-style: outset;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+	border-color:  #eeeeee;
+	padding: 4px;
+}
+
+QDateEdit
+{
+	background-color: #414141;
+	border-style: outset;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+	border-color:  #eeeeee;
+	padding: 4px;
+}
+
+QDateEdit:disabled{
+	color: gray;
+}
+
+QDateTimeEdit
+{
+	background-color: #414141;
+	border-style: outset;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+	border-color:  #eeeeee;
+	padding: 4px;
+}
+
+QDateTimeEdit:disabled{
+	color: gray;
+}
+
+QScrollBar:vertical {
+	border-radius: 2px;
+	border-style: outset;
+	background-color: #414141;
+}
+
+QScrollBar:horizontal {
+	border-radius: 2px;
+	background-color: #414141;
+}
+
+QSplitter::handle:horizontal {
+	width : 1px;
+	border-radius: 1px;
+	background-color: #707070;
+}
+
+QSplitter::handle:vertical {
+	height : 1px;
+	border-radius: 1px;
+	background-color: #707070;
+}
+
+QProgressBar {
+    border-radius: 3px;
+    border: 1px solid #969696;
+    background-color: #506482;
+    
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.15;
+    text-align: center;
+    color: #ffffff;
+}
+
+QProgressBar::chunk {
+   background-color: #2382AE;
+}
+
+/* ================ Radio Button ==================*/
+QRadioButton#m_rdoTab_Folder::indicator {
+    image: url(:/Resource/Images/deepcatch/folder_d.png);
+}
+
+QRadioButton#m_rdoTab_Folder::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/folder_h.png);
+}
+
+QRadioButton#m_rdoTab_Folder::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/folder_p.png);
+}
+
+QRadioButton#m_rdoTab_PatientList::indicator {
+    image: url(:/Resource/Images/deepcatch/patient_list_d.png);
+}
+
+QRadioButton#m_rdoTab_PatientList::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/patient_list_h.png);
+}
+
+QRadioButton#m_rdoTab_PatientList::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/patient_list_p.png);
+}
+
+QRadioButton#m_rdoTab_PACSDownload::indicator {
+    image: url(:/Resource/Images/deepcatch/pacs_down_d.png);
+}
+
+QRadioButton#m_rdoTab_PACSDownload::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/pacs_down_h.png);
+}
+
+QRadioButton#m_rdoTab_PACSDownload::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/pacs_down_p.png);
+}
+
+QRadioButton#m_rdoTab_PACSUpload::indicator {
+    image: url(:/Resource/Images/deepcatch/pacs_upload_d.png);
+}
+
+QRadioButton#m_rdoTab_PACSUpload::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/pacs_upload_h.png);
+}
+
+QRadioButton#m_rdoTab_PACSUpload::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/pacs_upload_p.png);
+}
+/*********** Push Button Design ***********/
+QPushButton#m_btnPrev{
+    border-image: url(:/Resource/Images/deepcatch/prev_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPrev:disabled{
+    border-image: url(:/Resource/Images/deepcatch/prev_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPrev:hover{
+    border-image: url(:/Resource/Images/deepcatch/prev_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPrev:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/prev_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnNext{
+    border-image: url(:/Resource/Images/deepcatch/next_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnNext:disabled{
+    border-image: url(:/Resource/Images/deepcatch/next_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnNext:hover{
+    border-image: url(:/Resource/Images/deepcatch/next_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnNext:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/next_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnParent{
+    border-image: url(:/Resource/Images/deepcatch/parent_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnParent:hover{
+    border-image: url(:/Resource/Images/deepcatch/parent_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnParent:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/parent_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnOpen{
+    border-image: url(:/Resource/Images/deepcatch/open_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnOpen:hover{
+    border-image: url(:/Resource/Images/deepcatch/open_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnOpen:pressed {
+    border-image: url(:/Resource/Images/deepcatch/open_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSelectFolder{
+    border-image: url(:/Resource/Images/deepcatch/select_folder_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSelectFolder:hover{
+    border-image: url(:/Resource/Images/deepcatch/select_folder_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSelectFolder:pressed {
+    border-image: url(:/Resource/Images/deepcatch/select_folder_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnUploadToPACS{
+    border-image: url(:/Resource/Images/deepcatch/upload_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnUploadToPACS:hover{
+    border-image: url(:/Resource/Images/deepcatch/upload_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnUploadToPACS:pressed {
+    border-image: url(:/Resource/Images/deepcatch/upload_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSave{
+    border-image: url(:/Resource/Images/deepcatch/save_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSave:hover{
+    border-image: url(:/Resource/Images/deepcatch/save_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnSave:pressed {
+    border-image: url(:/Resource/Images/deepcatch/save_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnCancel{
+    border-image: url(:/Resource/Images/deepcatch/cancel_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnCancel:hover{
+    border-image: url(:/Resource/Images/deepcatch/cancel_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnCancel:pressed {
+    border-image: url(:/Resource/Images/deepcatch/cancel_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnImportDICOM{
+    border-image: url(:/Resource/Images/deepcatch/import_dicom_d.png);
+	width:203px;
+	height:32px;
+}
+
+QPushButton#m_btnImportDICOM:hover{
+    border-image: url(:/Resource/Images/deepcatch/import_dicom_h.png);
+	width:203px;
+	height:32px;
+}
+
+QPushButton#m_btnImportDICOM:pressed {
+    border-image: url(:/Resource/Images/deepcatch/import_dicom_d.png);
+	width:203px;
+	height:32px;
+}
+
+QPushButton#m_btnSearch{
+    border-image: url(:/Resource/Images/deepcatch/search_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnSearch:hover{
+    border-image: url(:/Resource/Images/deepcatch/search_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnSearch:pressed {
+    border-image: url(:/Resource/Images/deepcatch/search_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnSetupPACS{
+    border-image: url(:/Resource/Images/deepcatch/setting_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnSetupPACS:hover{
+    border-image: url(:/Resource/Images/deepcatch/setting_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnSetupPACS:pressed {
+    border-image: url(:/Resource/Images/deepcatch/setting_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnDownload{
+    border-image: url(:/Resource/Images/deepcatch/download_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnDownload:disabled{
+    border-image: url(:/Resource/Images/deepcatch/download_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnDownload:hover{
+    border-image: url(:/Resource/Images/deepcatch/download_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnDownload:pressed {
+    border-image: url(:/Resource/Images/deepcatch/download_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpSave{
+    border-image: url(:/Resource/Images/deepcatch/popup_save_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpSave:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_save_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpSave:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_save_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpCancel{
+    border-image: url(:/Resource/Images/deepcatch/popup_cancel_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpCancel:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_cancel_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpCancel:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_cancel_p.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpAdd{
+    border-image: url(:/Resource/Images/deepcatch/popup_new_d.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpAdd:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_new_h.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpAdd:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_new_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpEdit{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpEdit:disabled{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpEdit:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpEdit:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_p.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpDelete{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_d.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpDelete:disabled{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpDelete:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_h.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton#m_btnPopUpDelete:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_p.png);
+	width:32px;
+	height:32px;
+}
+
+/*============  Check Box ============= */
+QCheckBox#m_chkFolderOpen {
+    background-color : #535353;
+}
+
+QCheckBox#m_chkFolderOpen:hover {
+    background-color : #484848;
+}
+
+QCheckBox#m_chkFolderOpen::indicator {
+    image: url(:/Resource/Images/deepcatch/arrow_close_d.png);
+}
+
+QCheckBox#m_chkFolderOpen::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/arrow_close_h.png);
+}
+
+QCheckBox#m_chkFolderOpen::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/arrow_open_d.png);
+}
+
+QCheckBox#m_chkFolderOpen::indicator:checked:hover {
+    image: url(:/Resource/Images/deepcatch/arrow_open_h.png);
+}
+
+QCheckBox#m_chkRecentOpen {
+    background-color : #535353;
+}
+
+QCheckBox#m_chkRecentOpen:hover {
+    background-color : #484848;
+}	
+
+QCheckBox#m_chkRecentOpen::indicator {
+    image: url(:/Resource/Images/deepcatch/arrow_close_d.png);
+}
+
+QCheckBox#m_chkRecentOpen::indicator:hover {
+    image: url(:/Resource/Images/deepcatch/arrow_close_h.png);
+}
+
+QCheckBox#m_chkRecentOpen::indicator:checked {
+    image: url(:/Resource/Images/deepcatch/arrow_open_d.png);
+}
+
+QCheckBox#m_chkRecentOpen::indicator:checked:hover {
+    image: url(:/Resource/Images/deepcatch/arrow_open_h.png);
+}
+
+/*================ Label ===================*/
+QLabel#m_labelArrow {
+    image: url(:/Resource/Images/deepcatch/arrow_open_d.png);
+	min-width: 24px;
+	min-height: 24px;
+}
+
+
+QLabel#m_labelListArrowHorz {
+    image: url(:/Resource/Images/deepcatch/List_arrow_horizontal.png);
+	min-width: 24px;
+	min-height: 24px;
+}
+
+QLabel#m_labelListArrowVert {
+    image: url(:/Resource/Images/deepcatch/List_arrow_vertical.png);
+	min-width: 24px;
+	min-height: 24px;
+}
+
+QTextEdit {
+	color: black;
+	background-color : white;
+	foreground-color : black;
+	border-style: outset;
+	border-color: rgba(48, 48, 48, 255);
+}
+

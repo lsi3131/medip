@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{309B7D4A-D293-49A9-BD19-F5D5CB5E4AF8}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;gui;widgets;xml</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;gui;widgets;xml</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\FileManagerAppCore\;$(ProjectDir)..\FileManagerStd\;$(ProjectDir)..\FileManagerNet\;$(ProjectDir)..\Library\mipDicom\include\;$(ProjectDir)..\Library\mipEngine\include\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\include\;$(ProjectDir)..\Library\qpdf\include\;$(SolutionDir)Library\gtest\include\;$(ProjectDir);$(Qt_INCLUDEPATH_);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Library\filemanager\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\Mip\$(Platform)\$(Configuration);$(ProjectDir)..\Library\mipDicom\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\lib\;$(ProjectDir)..\Library\qpdf\lib\$(Configuration)\;$(SolutionDir)Library\gtest\lib\$(Platform)\$(Configuration)\;$(Qt_LIBPATH_);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>rmdir /s /q UnitTest
+xcopy $(ProjectDir)data\ $(OutDir) /Y /D /E
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\FileManagerAppCore\;$(ProjectDir)..\FileManagerStd\;$(ProjectDir)..\FileManagerNet\;$(ProjectDir)..\Library\mipDicom\include\;$(ProjectDir)..\Library\mipEngine\include\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\include\;$(ProjectDir)..\Library\qpdf\include\;$(SolutionDir)Library\gtest\include\;$(ProjectDir);$(Qt_INCLUDEPATH_);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Library\filemanager\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\Mip\$(Platform)\$(Configuration);$(ProjectDir)..\Library\mipDicom\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\lib\;$(SolutionDir)Library\gtest\lib\$(Platform)\$(Configuration)\;$(ProjectDir)..\Library\qpdf\lib\$(Configuration)\;$(Qt_LIBPATH_);$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>rmdir /s /q UnitTest
+xcopy $(ProjectDir)data\ $(OutDir) /Y /D /E
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="filemanager\appcore\SubWindow\TestPACSExportWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\System\TestQtLogger.cpp" />
+    <ClCompile Include="filemanager\appcore\System\TextSaveQtLogger.cpp" />
+    <ClCompile Include="filemanager\appcore\TestAppCoreContext.cpp" />
+    <ClCompile Include="filemanager\appcore\TestMainWidget.cpp" />
+    <ClCompile Include="filemanager\config\TestFolderViewConfig.cpp" />
+    <ClCompile Include="filemanager\config\TestPACSConfig.cpp" />
+    <ClCompile Include="filemanager\dicom\Export\TestDicomExportData.cpp" />
+    <ClCompile Include="filemanager\dicom\Export\TestDicomExportManager.cpp" />
+    <ClCompile Include="filemanager\dicom\Image\TestDicomDataImage_sint16.cpp" />
+    <ClCompile Include="filemanager\dicom\TestDicomInfomationModelSeriesObject.cpp" />
+    <ClCompile Include="filemanager\dicom\TestDicomInfomationModelImageObjectListMap.cpp" />
+    <ClCompile Include="filemanager\TestFileManagerExportData.cpp" />
+    <ClCompile Include="filemanager\TestFileManagerImportData.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TestDumi.cpp" />
+    <ClCompile Include="thirdparty\Test_qpdf.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="filemanager\appcore\System\TextSaveQtLogger.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="data\UnitTest\appcore\TestAppCoreContext\empty.xml" />
+    <Xml Include="data\UnitTest\config\TestFolderViewConfig\empty.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

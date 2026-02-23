@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{396D9146-AE11-43BB-ADEE-D38AA56C8412}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>FileManagerAppCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>FileManagerAppCored</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>FileManagerAppCore</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(projectdir);$(ProjectDir)..\Library\mipDicom\include\;$(ProjectDir)..\Library\mipEngine\include\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\include\;$(ProjectDir)..\Library\gdcm\include\;$(ProjectDir)..\Library\qpdf\include\;$(ProjectDir)..\FileManagerStd\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)FileManager\*.h" "$(ProjectDir)..\Library\FileManager\include\FileManager\" /Y /D
+
+xcopy "$(OutDir)$(TargetName).dll" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.dll" /Y /D
+xcopy "$(OutDir)$(TargetName).lib" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.lib" /Y /D
+xcopy "$(OutDir)$(TargetName).pdb" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.pdb" /Y /D
+
+xcopy  "$(SolutionDir)Library\Qt\$(Platform)\$(Configuration)\*.dll" $(OutDir) /Y /D
+xcopy  "$(SolutionDir)Library\qpdf\lib\$(Configuration)\*.dll" $(OutDir) /Y /D
+xcopy  "$(SolutionDir)Library\mipDicom\lib\$(Platform)\$(Configuration)\*.dll" $(OutDir) /Y /D
+
+xcopy "$(ProjectDir)..\Library\FileManager\*" "$(SolutionDir)Library\FileManager\" /Y /D
+xcopy "$(ProjectDir)..\Library\FileManager\*" "$(CopyPathMEDIPRoot)Library\FileManager\" /Y /D /E
+xcopy "$(OutDir)$(TargetName).dll" "$(CopyPathMEDIPDebug)" /Y /D
+xcopy "$(OutDir)$(TargetName).pdb" "$(CopyPathMEDIPDebug)" /Y /D</Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Library\Mip\$(Platform)\$(Configuration)\mipEngine.lib</AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\lib\;$(ProjectDir)..\Library\gdcm\lib\$(Configuration)\;$(ProjectDir)..\Library\filemanager\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\mipDicom\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\qpdf\lib\$(Configuration)\;$(ProjectDir)..\Library\mipEngine\lib\$(PlatformTarget)\$(Configuration)\;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>SubWCRev.exe $(ProjectDir)..\ $(ProjectDir)\svn_version.h.tmpl $(ProjectDir)\svn_version.h</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(projectdir);$(ProjectDir)..\Library\mipDicom\include\;$(ProjectDir)..\Library\mipEngine\include\;$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\include\;$(ProjectDir)..\Library\gdcm\include\;$(ProjectDir)..\Library\qpdf\include\;$(ProjectDir)..\FileManagerStd\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)FileManager\*.h" "$(ProjectDir)..\Library\FileManager\include\FileManager\" /Y /D
+
+xcopy "$(OutDir)$(TargetName).dll" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.dll" /Y /D
+xcopy "$(OutDir)$(TargetName).lib" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.lib" /Y /D
+xcopy "$(OutDir)$(TargetName).pdb" "$(ProjectDir)..\Library\FileManager\lib\$(Platform)\$(Configuration)\*.pdb" /Y /D
+
+xcopy  "$(SolutionDir)Library\Qt\$(Platform)\$(Configuration)\*.dll" $(OutDir) /Y /D
+xcopy  "$(SolutionDir)Library\qpdf\lib\$(Configuration)\*.dll" $(OutDir) /Y /D
+xcopy  "$(SolutionDir)Library\mipDicom\lib\$(Platform)\$(Configuration)\*.dll" $(OutDir) /Y /D
+
+xcopy "$(ProjectDir)..\Library\FileManager\*" "$(SolutionDir)Library\FileManager\" /Y /D
+xcopy "$(ProjectDir)..\Library\FileManager\*" "$(CopyPathMEDIPRoot)Library\FileManager\" /Y /D /E
+xcopy "$(OutDir)$(TargetName).dll" "$(CopyPathMEDIPRelease)" /Y /D</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Library\dcmtk36\$(Platform)\$(Configuration)\lib\;$(ProjectDir)..\Library\gdcm\lib\$(Configuration)\;$(ProjectDir)..\Library\filemanager\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\mipDicom\lib\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)..\Library\qpdf\lib\$(Configuration)\;$(ProjectDir)..\Library\mipEngine\lib\$(PlatformTarget)\$(Configuration)\;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>SubWCRev.exe $(ProjectDir)..\ $(ProjectDir)\svn_version.h.tmpl $(ProjectDir)\svn_version.h</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;gui;widgets;xml;network;printsupport;winextras</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;gui;widgets;xml;network;printsupport;winextras</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIDE_CHAR_FILE_IO_FUNCTIONS;FM_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIDE_CHAR_FILE_IO_FUNCTIONS;FM_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="filemanager\appcore\Action\ActionPatientListEditDicomFileList.cpp" />
+    <ClCompile Include="filemanager\appcore\Action\ActionManagerIPCVersion.cpp" />
+    <ClCompile Include="filemanager\appcore\Action\ActionManager.cpp" />
+    <ClCompile Include="filemanager\appcore\Action\ActionPatientListUploadDicomFileList.cpp" />
+    <ClCompile Include="filemanager\appcore\appcore_defines.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\DicomImportDataDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\DicomEditDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSearchDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupInputInterface.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveModel.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\SettingDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSDicomConvertUploadDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreModel.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\SingleInputDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\Event\EventManager.cpp" />
+    <ClCompile Include="filemanager\appcore\MainWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\Resource\IconManager.cpp" />
+    <ClCompile Include="filemanager\appcore\Resource\ResourceManager.cpp" />
+    <ClCompile Include="filemanager\appcore\Resource\StringManager.cpp" />
+    <ClCompile Include="filemanager\appcore\SubWindow\PACSExportWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\System\FilePathManager.cpp" />
+    <ClCompile Include="filemanager\appcore\System\LicenseManager.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\DicomPreviewWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\DicomTagEditWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\FavoritesDirectoryListWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\FindOptionInfoList.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\ColumnHeaderInfoList.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\DateRangeInfo.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\DicomImageViewer.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\SystemDirectoryView.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\FileViewMode.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\PACSListWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\UI\TreeHeaderInfoList.cpp" />
+    <ClCompile Include="filemanager\appcore\Util\FileFilterParser.cpp" />
+    <ClCompile Include="filemanager\appcore\Util\FileSystemUtil.cpp" />
+    <ClCompile Include="filemanager\config\FolderViewConfig.cpp" />
+    <ClCompile Include="filemanager\config\GUISettingConfig.cpp" />
+    <ClCompile Include="filemanager\config\TableColumnConfig.cpp" />
+    <ClCompile Include="filemanager\data\data_defines.cpp" />
+    <ClCompile Include="filemanager\data\Image\VolumeImageData.cpp" />
+    <ClCompile Include="filemanager\data\Image\VolumeUtility.cpp" />
+    <ClCompile Include="filemanager\data\Image\WindowingInfo.cpp" />
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDTOManager.cpp" />
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter.cpp" />
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_BmpToDcm.cpp" />
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_DcmToImage.cpp" />
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_DcmToPDF.cpp" />
+    <ClCompile Include="filemanager\dicom\Convert\DicomConverter_PDFToDcm.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomDataset.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomDatasetFactory.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModel.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelImageObject.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelImageObjectListMap.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelSeriesObject.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelStudyObject.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomDatasetIOParameter.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomDatasetIO.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomInfomationModelLoader.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomDataset_define.cpp" />
+    <ClCompile Include="filemanager\dicom\Export\DicomExportData.cpp" />
+    <ClCompile Include="filemanager\dicom\Export\DicomExportManager.cpp" />
+    <ClCompile Include="filemanager\dicom\Image\DicomDataImage_sint16.cpp" />
+    <ClCompile Include="filemanager\dicom\Image\DicomImageToQTConverter.cpp" />
+    <ClCompile Include="filemanager\dicom\DicomType.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomFindOption.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomHostInfo.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCPStatus.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCUStatus.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkStoreSCPStatus.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DIMSE_Data.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\EchoSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\EmptySCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\FindSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\GetSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\MoveSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\MultiSendSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\SCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\SingleSendSCUCommand.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\SCU\StoreSCUCommand.cpp" />
+    <ClCompile Include="filemanager\appcore\Util\StringUtil.cpp" />
+    <ClCompile Include="filemanager\FileManagerDialog.cpp" />
+    <ClCompile Include="filemanager\appcore\MainWindow.cpp" />
+    <ClCompile Include="filemanager\appcore\AppCoreContext.cpp" />
+    <ClCompile Include="filemanager\appcore\System\RuntimeManager.cpp" />
+    <ClCompile Include="filemanager\appcore\System\ShortcutManager.cpp" />
+    <ClCompile Include="filemanager\appcore\SubWindow\FolderViewWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\SubWindow\PatientListWidget.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\DirectoryTreeView.cpp" />
+    <ClCompile Include="filemanager\appcore\UI\FileTreeView.cpp" />
+    <ClCompile Include="filemanager\config\AppConfig.cpp" />
+    <ClCompile Include="filemanager\config\ConfigManager.cpp" />
+    <ClCompile Include="filemanager\config\PACSConfig.cpp" />
+    <ClCompile Include="filemanager\connection\XmlConnection.cpp" />
+    <ClCompile Include="filemanager\data\Entity\CommonDefines.cpp" />
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDAO_Xml.cpp" />
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDefines.cpp" />
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDAO_Xml.cpp" />
+    <ClCompile Include="filemanager\data\Entity\EntityDataManager.cpp" />
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDTO.cpp" />
+    <ClCompile Include="filemanager\data\Entity\ImportedDicomInfoDAO.cpp" />
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDefines.cpp" />
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDTO.cpp" />
+    <ClCompile Include="filemanager\data\Entity\LastEditedFileDAO.cpp" />
+    <ClCompile Include="filemanager\data\XmlDataFilePathManager.cpp" />
+    <ClCompile Include="filemanager\dicom\dicom_defines.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomListenerInfo.cpp" />
+    <ClCompile Include="filemanager\appcore\System\DicomNetworkManager.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCP.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomNetworkSCU.cpp" />
+    <ClCompile Include="filemanager\dicom\Network\DicomPresentationContext.cpp" />
+    <ClCompile Include="filemanager\FileManagerAppCore.cpp" />
+    <ClCompile Include="filemanager\FileManagerExportData.cpp" />
+    <ClCompile Include="filemanager\FileManagerImportData.cpp" />
+    <ClCompile Include="filemanager\render\CPUMPRPlane2DRenderingManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="filemanager\appcore\logger\Logger.cpp" />
+    <QtMoc Include="filemanager\appcore\Action\ActionManager.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\SettingDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.h" />
+    <QtMoc Include="filemanager\appcore\Action\ActionManagerIPCVersion.h" />
+    <QtMoc Include="filemanager\appcore\Event\EventManager.h" />
+    <QtMoc Include="filemanager\appcore\MainWidget.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSearchDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSDicomConvertUploadDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\DicomImportDataDialog.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\DicomEditDialog.h" />
+    <QtMoc Include="filemanager\appcore\Action\ActionPatientListUploadDicomFileList.h" />
+    <QtMoc Include="filemanager\appcore\Action\ActionPatientListEditDicomFileList.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.h" />
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupInputInterface.h" />
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveModel.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.h" />
+    <ClInclude Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreModel.h" />
+    <QtMoc Include="filemanager\appcore\Dialog\SingleInputDialog.h" />
+    <ClInclude Include="filemanager\appcore\Resource\IconManager.h" />
+    <ClInclude Include="filemanager\appcore\Resource\ResourceManager.h" />
+    <QtMoc Include="filemanager\appcore\SubWindow\PACSExportWidget.h" />
+    <ClInclude Include="filemanager\appcore\Resource\StringManager.h" />
+    <ClInclude Include="filemanager\appcore\System\FilePathManager.h" />
+    <QtMoc Include="filemanager\appcore\MainWindow.h" />
+    <ClInclude Include="filemanager\appcore\AppCoreContext.h" />
+    <ClInclude Include="filemanager\appcore\System\LicenseManager.h" />
+    <ClInclude Include="filemanager\appcore\System\RuntimeManager.h" />
+    <ClInclude Include="filemanager\appcore\System\ShortcutManager.h" />
+    <QtMoc Include="filemanager\appcore\SubWindow\FolderViewWidget.h" />
+    <QtMoc Include="filemanager\appcore\SubWindow\PatientListWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\DirectoryTreeView.h" />
+    <QtMoc Include="filemanager\appcore\UI\FileTreeView.h" />
+    <QtMoc Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\PACSListWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\DicomImageViewer.h" />
+    <QtMoc Include="filemanager\appcore\UI\DicomPreviewWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\FavoritesDirectoryListWidget.h" />
+    <QtMoc Include="filemanager\appcore\UI\DicomTagEditWidget.h" />
+    <ClInclude Include="filemanager\appcore\UI\FindOptionInfoList.h" />
+    <ClInclude Include="filemanager\appcore\UI\ColumnHeaderInfoList.h" />
+    <QtMoc Include="filemanager\appcore\UI\SystemDirectoryView.h" />
+    <ClInclude Include="filemanager\appcore\UI\DateRangeInfo.h" />
+    <ClInclude Include="filemanager\appcore\UI\FileViewMode.h" />
+    <ClInclude Include="filemanager\appcore\UI\TreeHeaderInfoList.h" />
+    <ClInclude Include="filemanager\appcore\Util\FileFilterParser.h" />
+    <ClInclude Include="filemanager\appcore\Util\FileSystemUtil.h" />
+    <ClInclude Include="filemanager\config\AppConfig.h" />
+    <ClInclude Include="filemanager\config\ConfigManager.h" />
+    <ClInclude Include="filemanager\config\FolderViewConfig.h" />
+    <ClInclude Include="filemanager\config\GUISettingConfig.h" />
+    <ClInclude Include="filemanager\config\PACSConfig.h" />
+    <ClInclude Include="filemanager\config\TableColumnConfig.h" />
+    <ClInclude Include="filemanager\data\color.h" />
+    <ClInclude Include="filemanager\data\data_defines.h" />
+    <ClInclude Include="filemanager\data\Entity\CommonDefines.h" />
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDAO.h" />
+    <ClInclude Include="filemanager\connection\XmlConnection.h" />
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDAO_Xml.h" />
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDefines.h" />
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDAO_Xml.h" />
+    <ClInclude Include="filemanager\data\Entity\EntityDataManager.h" />
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDTO.h" />
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDefines.h" />
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDTO.h" />
+    <ClInclude Include="filemanager\data\Entity\LastEditedFileDAO.h" />
+    <ClInclude Include="filemanager\data\Image\VolumeImageData.h" />
+    <ClInclude Include="filemanager\data\Image\VolumeUtility.h" />
+    <ClInclude Include="filemanager\data\Image\WindowingInfo.h" />
+    <ClInclude Include="filemanager\data\Entity\ImportedDicomInfoDTOManager.h" />
+    <ClInclude Include="filemanager\data\XmlDataFilePathManager.h" />
+    <ClInclude Include="filemanager\appcore\appcore_defines.h" />
+    <ClInclude Include="filemanager\define.h" />
+    <ClInclude Include="filemanager\dicom\Convert\DicomConverter.h" />
+    <ClInclude Include="filemanager\dicom\DicomInfomationModel.h" />
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelImageObject.h" />
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelImageObjectListMap.h" />
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelSeriesObject.h" />
+    <ClInclude Include="filemanager\dicom\DicomInfomationModelStudyObject.h" />
+    <ClInclude Include="filemanager\dicom\DicomDatasetIOParameter.h" />
+    <ClInclude Include="filemanager\dicom\DicomDatasetIO.h" />
+    <QtMoc Include="filemanager\dicom\DicomInfomationModelLoader.h" />
+    <ClInclude Include="filemanager\dicom\DicomDataset_define.h" />
+    <ClInclude Include="filemanager\dicom\dicom_defines.h" />
+    <ClInclude Include="filemanager\dicom\DicomDataset.h" />
+    <ClInclude Include="filemanager\dicom\DicomDatasetFactory.h" />
+    <ClInclude Include="filemanager\dicom\Export\DicomExportData.h" />
+    <ClInclude Include="filemanager\dicom\Export\DicomExportManager.h" />
+    <ClInclude Include="filemanager\dicom\Image\DicomDataImage_sint16.h" />
+    <ClInclude Include="filemanager\dicom\Image\DicomImageToQTConverter.h" />
+    <ClInclude Include="filemanager\dicom\DicomType.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomFindOption.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomListenerInfo.h" />
+    <QtMoc Include="filemanager\appcore\System\DicomNetworkManager.h" />
+    <QtMoc Include="filemanager\dicom\Network\DicomNetworkSCP.h" />
+    <QtMoc Include="filemanager\dicom\Network\DicomNetworkSCU.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkSCPStatus.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkSCUStatus.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomNetworkStoreSCPStatus.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomPresentationContext.h" />
+    <ClInclude Include="filemanager\dicom\Network\DicomHostInfo.h" />
+    <ClInclude Include="filemanager\dicom\Network\DIMSE_Data.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\EchoSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\EmptySCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\FindSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\GetSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\MoveSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\MultiSendSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\SCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\SingleSendSCUCommand.h" />
+    <ClInclude Include="filemanager\dicom\Network\SCU\StoreSCUCommand.h" />
+    <QtMoc Include="filemanager\FileManagerDialog.h" />
+    <ClInclude Include="filemanager\appcore\Util\StringUtil.h" />
+    <ClInclude Include="filemanager\FileManagerAppCore.h" />
+    <ClInclude Include="filemanager\FileManagerExportData.h" />
+    <QtMoc Include="filemanager\FileManagerImportData.h" />
+    <ClInclude Include="filemanager\render\CPUMPRPlane2DRenderingManager.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="filemanager\export.h" />
+    <ClInclude Include="filemanager\appcore\logger\Logger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="config\pacs_config.xml" />
+    <Xml Include="data\xml\imported_dicom_info_list.xml" />
+    <Xml Include="data\xml\last_edited_file_list.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="filemanager\appcore\MainWindow.qrc">
+      <SubType>Designer</SubType>
+    </QtRcc>
+    <QtRcc Include="Resource.qrc">
+      <FileType>Document</FileType>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FileManagerAppCore.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="filemanager\appcore\Resource\deepcatch_stylesheet.qss" />
+    <None Include="filemanager\appcore\Resource\default.qss" />
+    <None Include="svn_version.h.tmpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="filemanager\appcore\Dialog\Admin\AdminSettingWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Debug\StatusMonitorDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Debug\TestDicomNetworkDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Debug\TestServerClientCommunicationDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomEditDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomImportDataDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\DicomVolumeViewerDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSRegisterDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSSetupQueryRetrieveWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\PACS\PACSSetupStoreWidget.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\SettingDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\SingleInputDialog.ui" />
+    <QtUic Include="filemanager\appcore\Dialog\Util\ProgressBarDialog.ui" />
+    <QtUic Include="filemanager\appcore\MainWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\FolderViewWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PACSExportWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PatientListWidget.ui" />
+    <QtUic Include="filemanager\appcore\SubWindow\PACSSearchDownloadWidget.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomImageViewer.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomPreviewWidget.ui" />
+    <QtUic Include="filemanager\appcore\UI\DicomTagEditWidget.ui" />
+    <QtUic Include="filemanager\appcore\UI\PACSDicomConvertUploadWidget.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

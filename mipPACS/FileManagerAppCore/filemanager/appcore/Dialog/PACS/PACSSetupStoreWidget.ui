@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PACSSetupStoreWidget</class>
+ <widget class="QWidget" name="PACSSetupStoreWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>615</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>9</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_6" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_7" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    image: url(:/Resource/Images/medip/arrow_open_d.png);
+	min-width: 24px;
+	min-height: 24px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="m_labelRepository_2">
+           <property name="text">
+            <string>PACS Locations</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="m_tablePACSList"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_5" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="m_btnEcho">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnAdd">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    border-image: url(:/Resource/Images/deepcatch/popup_new_d.png);
+	width:32;
+	height:32px;
+}
+
+
+QPushButton:disabled{
+    border-image: url(:/Resource/Images/deepcatch/popup_new_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_new_h.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_new_p.png);
+	width:32px;
+	height:32px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnEdit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_d.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton:disabled{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_h.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_modify_p.png);
+	width:32px;
+	height:32px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnDelete">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_d.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton:disabled{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_disabled.png);
+	width:32px;
+	height:32px;
+}
+
+QPushButton:hover{
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_h.png);
+	width:32;
+	height:32px;
+}
+
+QPushButton:hover:pressed {
+    border-image: url(:/Resource/Images/deepcatch/popup_delet_p.png);
+	width:32px;
+	height:32px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

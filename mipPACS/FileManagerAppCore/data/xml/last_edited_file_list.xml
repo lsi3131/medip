@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LastEditedFileList>
+  <LastEditedFile>
+    <FilePath>D:\001.Workpalce\999.Sample\DICOM\Sample_1\478550760000.DCM</FilePath>
+    <EditTime>2020-01-08 18:12</EditTime>
+    <SeriesInstanceUID>2</SeriesInstanceUID>
+    <StudyInstanceUID>3</StudyInstanceUID>
+    <PatientName>4</PatientName>
+    <DateOfBirth>5</DateOfBirth>
+    <PatientID>6</PatientID>
+    <Modality>7</Modality>
+    <StudyDescription>8</StudyDescription>
+    <SeriesDescription>9</SeriesDescription>
+    <AccessionNumber>10</AccessionNumber>
+    <ExamID>11</ExamID>
+    <ReferringPhysician>12</ReferringPhysician>
+    <PerformingPhysician>13</PerformingPhysician>
+    <ReadingPhysician>14</ReadingPhysician>
+
+  </LastEditedFile>  
+</LastEditedFileList>
+

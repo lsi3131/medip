@@ -1,0 +1,12 @@
+#ifndef MEDIP_LICENSE_GLOBAL_H
+#define MEDIP_LICENSE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef MEDIP_LICENSE_LIB
+# define MEDIP_LICENSE_EXPORT Q_DECL_EXPORT
+#else
+# define MEDIP_LICENSE_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MEDIP_LICENSE_GLOBAL_H

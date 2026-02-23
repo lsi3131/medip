@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PACSConfig>
+  <Listener>
+    <ApplicationEntity>STORESCP</ApplicationEntity>
+    <Port>9000</Port>
+  </Listener>
+  <Timeout>30</Timeout>
+  <SelectedHost>0</SelectedHost>
+  <Hosts>
+    <Host>
+      <Name>PACS_TEST</Name>
+      <ApplicationEntity>PACS_TEST_SERVER</ApplicationEntity>
+      <IP>147.47.229.65</IP>
+      <TransferSyntax>1.2.840.10008.1.2.1</TransferSyntax>
+      <Port>34000</Port>
+      <MaxAssoc>1</MaxAssoc>
+    </Host>
+    <Host>
+      <Name>local_pacs</Name>
+      <ApplicationEntity>PACS_TEST_SERVER</ApplicationEntity>
+      <IP>localhost</IP>
+      <TransferSyntax>1.2.840.10008.1.2.1</TransferSyntax>
+      <Port>34000</Port>
+      <MaxAssoc>1</MaxAssoc>
+    </Host>
+  </Hosts>
+  <ExportHosts>
+	<ExportHost>
+	  <Name>DICOM</Name>
+      <ApplicationEntity>DICOM</ApplicationEntity>
+      <IP>147.47.229.65</IP>
+      <TransferSyntax>1.2.840.10008.1.2.1</TransferSyntax>
+      <Port>34000</Port>
+      <MaxAssoc>1</MaxAssoc>
+	</ExportHost>
+  </ExportHosts>
+  
+</PACSConfig> 

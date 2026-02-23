@@ -1,0 +1,1361 @@
+NVTX:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: nvtx-LICENSE.txt
+  packageName: NVTX
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: null
+    scm: null
+  swipat: null
+  version: 5.6.0.18099
+Omniverse Client Library:
+  licenseFile: omniverse client library-LICENSES.txt
+  packageName: Omniverse Client Library
+  packageType: packman
+  source:
+    branch: main
+    change: e33a91039265d08e6c8afd51efce543fe1d56621
+    path: https://gitlab/omniverse/client-library.git
+    scm: git
+  swipat: null
+  version: 2.15.0-main.3210+tc.e33a9103
+SDLGameControllerDB:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: SDLGameControllerDB-LICENSE.md
+  packageName: SDLGameControllerDB
+  packageType: packman
+  source:
+    branch: nv-main
+    change: 5c29b0f986bac9725f886cee117d37540f32fb07
+    path: https://gitlab/omniverse/externals/sdl_gamecontrollerdb
+    scm: git
+  swipat:
+  - http://nvbugs/2670876
+  version: 1.0.a0fbff68
+Tracy:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: Tracy-LICENSE.txt
+  packageName: Tracy
+  packageType: packman
+  source:
+    branch: nvidia
+    change: dd807b23e595dcb645b62c9224b910f10a41527c
+    path: https://gitlab/carbon/carbonite-externals/tracy.git
+    scm: git
+  swipat: http://nvbugs/3038037
+  version: 0.7.8.75-dd807b23-nvidia
+Tracy_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: Tracy-LICENSE.txt
+  packageName: Tracy
+  packageType: null
+  source:
+    branch: nvidia
+    change: bdf2b3ec73dfc5855799f1f58b4491fa164e2763
+    path: https://gitlab/carbon/carbonite-externals/tracy.git
+    scm: git
+  swipat: http://nvbugs/3038037
+  version: 0.7.8.70-bdf2b3ec-nvidia
+abseil:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: abseil-LICENSE.txt
+  packageName: abseil
+  packageType: packman
+  source:
+    branch: master
+    change: bf5734a6301a0c51a60a6e9c04a5d295fefcc3d4
+    path: https://gitlab/carbon/carbonite-externals/abseil.git
+    scm: git
+  swipat: https://nvbugs/3290259
+  version: 20210324.0-bf5734a6-windows-x86_64
+breakpad:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: breakpad-LICENSE.md
+  packageName: breakpad
+  packageType: packman
+  source:
+    branch: experimental
+    change: bb7a85c1e9b0929191188c57f26bba4a0a90284c
+    path: https://gitlab/carbon/carbonite-externals/breakpad.git
+    scm: git
+  swipat: http://nvbugs/2600212
+  version: 119-bb7a85c1-windows-x86_64
+breakpad_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: breakpad-LICENSE.md
+  packageName: breakpad
+  packageType: null
+  source:
+    branch: master
+    change: ed62985568312ccbdd84d45225636789d5b431bd
+    path: https://gitlab/carbon/carbonite-externals/breakpad.git
+    scm: git
+  swipat: http://nvbugs/2600212
+  version: 112-ed629855-windows-x86_64
+brotli:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: brotli-LICENSE.txt
+  packageName: brotli
+  packageType: null
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/carbon/carbonite-externals/brotli.git
+    scm: git
+  swipat: http://nvbugs/2819484
+  version: null
+carb_gfx_plugins:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  internalLicense: true
+  licenseFile: carb_gfx_plugins-LICENSE.txt
+  packageName: carb_gfx_plugins
+  packageType: null
+  source:
+    branch: master
+    change: 8ecee4d6706a11cfe6ba311f65c0d1c959933ab9
+    path: https://gitlab/carbon/graphene.git
+    scm: git
+  swipat: null
+  version: 2019.1.607-8ecee4d6-windows-x86_64
+carbonite:
+  licenseFile: carbonite-LICENSE.txt
+  packageName: carbonite
+  packageType: packman
+  source:
+    branch: master
+    change: f77cd410c6a0d2ec83238348113c0a05a532831e
+    path: https://gitlab/omniverse/carbonite.git
+    scm: git
+  swipat: null
+  version: 128.0+master.tc6301.f77cd410
+carbonite_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: carbonite-LICENSE.txt
+  packageName: carbonite
+  packageType: null
+  source:
+    branch: release_106
+    change: 97805ab82edf814d120de39257127df530f1dfe7
+    path: https://gitlab/omniverse/carbonite.git
+    scm: git
+  swipat: null
+  version: 106.19.3603-97805ab8-106-windows-x86_64
+concurrentqueue:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: concurrentqueue-LICENSE.md
+  packageName: concurrentqueue
+  packageType: packman
+  source:
+    branch: nv-master
+    change: c65e8fc7f9d3e2f4ec2bfb322cbc54382aaca50c
+    path: https://gitlab/carbon/carbonite-externals/concurrentqueue
+    scm: git
+  swipat:
+  - http://nvbugs/2678359
+  version: 1.0.0-beta-4-c65e8fc7
+cpptoml:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: cpptoml-LICENSE.md
+  packageName: cpptoml
+  packageType: packman
+  source:
+    branch: nv-master
+    change: dccb341911dd4855ec4b69095f21e5f2466b6dd5
+    path: https://gitlab/carbon/carbonite-externals/cpptoml
+    scm: git
+  swipat:
+  - http://nvbugs/2614606
+  version: 0.1.1-5-dccb3419
+cxxopts:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - direct
+  licenseFile: cxxopts-LICENSE.md
+  packageName: cxxopts
+  packageType: packman
+  source:
+    branch: nv-master
+    change: cf24126553c1987a71bedd5d0944dcce1edb5d07
+    path: https://gitlab/carbon/carbonite-externals/cxxopts
+    scm: git
+  swipat:
+  - http://nvbugs/2679422
+  version: 2.2.0-45-cf241265
+doctest:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: doctest-LICENSE.txt
+  packageName: doctest
+  packageType: packman
+  source:
+    branch: master
+    change: 5386d7f8ef18d9956ff168c647e72a59b63e5ebf
+    path: https://gitlab/carbon/carbonite-externals/doctest.git
+    scm: git
+  swipat: http://nvbugs/2802670
+  version: 2.4.0-5386d7f8
+doctest_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: doctest-LICENSE.txt
+  packageName: doctest
+  packageType: null
+  source:
+    branch: master
+    change: b29bc767ad8d9184c1e2595e3b69b454aab1670e
+    path: https://gitlab/carbon/carbonite-externals/doctest.git
+    scm: git
+  swipat: http://nvbugs/2802670
+  version: 2.4.0-b29bc767
+doctest_2:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: doctest-LICENSE.txt
+  packageName: doctest
+  packageType: packman
+  source:
+    branch: package_generation_fixes
+    change: c033abc18715a59c70fe63c1c8ace9b326902a52
+    path: https://gitlab/carbon/carbonite-externals/doctest.git
+    scm: git
+  swipat: http://nvbugs/2802670
+  version: 2.4.0-029bbcf
+flatbuffers:
+  licenseFile: flatbuffers-LICENSE.txt
+  packageName: flatbuffers
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://github.com/google/flatbuffers
+    scm: git
+  swipat: null
+  version: null
+fmt:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: fmt-LICENSE.txt
+  packageName: fmt
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 4b3ce36a0255be7475e7f7810d9bf751179d262c
+    path: https://gitlab/omniverse/externals/fmt-build.git
+    scm: git
+  swipat: http://nvbugs/3040602
+  version: 7.0.3+nv2
+forgeaudio:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: forgeaudio-LICENSE.md
+  packageName: forgeaudio
+  packageType: packman
+  source:
+    branch: merge-request
+    change: ee78376940e72f1458497910a78bd919a8afd537
+    path: https://gitlab/winex-group/winex.git
+    scm: git
+  swipat: https://nvbugs/3385349
+  version: 2.1.0+pipeline4864552.ee783769-windows-x86_64
+forgeaudio_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: forgeaudio-LICENSE.md
+  packageName: forgeaudio
+  packageType: null
+  source:
+    branch: merge-request
+    change: 22d7bd3bd5d97a0239c585149120eaee7f568807
+    path: https://gitlab/forge/winex.git
+    scm: git
+  swipat: null
+  version: 1.202107142586737.22d7bd3bd5-windows-x86_64
+glfw:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: glfw-LICENSE.md
+  packageName: glfw
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 944ffe2b0efb4682d2704236f02bd0bd26c36de4
+    path: https://gitlab/omniverse/externals/glfw-build.git
+    scm: git
+  swipat: http://nvbugs/2676413
+  version: 3.3.0+pipeline3462136-windows-x86_64
+glfw_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: glfw-LICENSE.md
+  packageName: glfw
+  packageType: null
+  source:
+    branch: nv-master
+    change: bd315677234d70adf6ce6fce0808eccbfa9f8a3e
+    path: https://gitlab/omniverse/externals/glfw.git
+    scm: git
+  swipat: http://nvbugs/2676413
+  version: 3.3.43-bd315677-windows-x86_64
+hiredis:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: hiredis-LICENSE.txt
+  packageName: hiredis
+  packageType: null
+  source:
+    branch: master
+    change: 8e1269b3cfab5b90bcaa88e91b7722be8fbca760
+    path: https://gitlab/omniverse/externals/hiredis
+    scm: git
+  swipat: http://nvbugs/3028495
+  version: 297ecbe.8e1269b3-windows-x86_64-release-master-repackaged
+idl.cpp:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: idl.cpp-LICENSE.txt
+  packageName: idl.cpp
+  packageType: packman
+  source:
+    branch: master
+    change: 33ba316cc6f44fd152a3e4bba20483ed753d40a6
+    path: https://gitlab/omniverse/idl.git
+    scm: git
+  swipat: null
+  version: 0.15+master.teamcity.1610.33ba316c
+imgui:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: imgui-LICENSE.txt
+  packageName: imgui
+  packageType: packman
+  source:
+    branch: nvidia-docking
+    change: baa8db4274733594a8e8552df3973f8c42492309
+    path: https://gitlab/carbon/carbonite-externals/imgui.git
+    scm: git
+  swipat: null
+  version: 1.70_wip-baa8db42-source
+kaguya:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: kaguya-LICENSE.md
+  packageName: kaguya
+  packageType: null
+  source:
+    branch: master
+    change: 0b81e5086c15f0d36dd946b377e308c9b1a3c527
+    path: https://gitlab/carbon/carbonite-externals/kaguya
+    scm: git
+  swipat: http://nvbugs/2674695
+  version: master-4-0b81e508
+libcurl:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: libcurl-LICENSE.txt
+  packageName: libcurl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 7bd585d5653a6e8c5b258dd7125c6fca55c5ecaa
+    path: https://gitlab/omniverse/externals/libcurl-build.git
+    scm: git
+  swipat: http://nvbugs/2781914
+  version: 7.78.0+pipeline3181197-windows-x86_64
+libcurl_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libcurl-LICENSE.txt
+  packageName: libcurl
+  packageType: null
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/carbon/carbonite-externals/libcurl.git
+    scm: git
+  swipat: http://nvbugs/2781914
+  version: null
+libcurl_2:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: libcurl-LICENSE.txt
+  packageName: libcurl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 1f5510b05eb15ee65eebf9164b1e20263f3ddd1c
+    path: https://gitlab/omniverse/externals/libcurl-build.git
+    scm: git
+  swipat: '2781914'
+  version: 7.83.1+nv2-windows-x86_64
+libffi:
+  inheritedFrom:
+  - direct
+  - python/3.8.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - self
+  - python/3.8.13+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.9.10+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libffi-LICENSE.txt
+  packageName: libffi
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 674dacf685767330a9d0e9c32c5814cd3e651862
+    path: https://gitlab/omniverse/externals/libffi-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/3217408
+  version: 3.4.2+nv1-windows-x86_64
+libflac:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: libflac-LICENSE.txt
+  packageName: libflac
+  packageType: packman
+  source:
+    branch: merge-request
+    change: ddc271bbc9686487ec113f3e66441631310e7151
+    path: https://gitlab/omniverse/externals/flac-build.git
+    scm: git
+  swipat: http://nvbugs/2682137
+  version: 1.3.4+nv2-windows-x86_64
+libflac_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libflac-LICENSE.txt
+  packageName: libflac
+  packageType: null
+  source:
+    branch: main
+    change: f63f14c331d4fb9fc706a96f0b0b66a57e05261e
+    path: https://gitlab/omniverse/externals/flac-build.git
+    scm: git
+  swipat: http://nvbugs/2682137
+  version: 1.3.3-313ab585-windows-f63f14c3
+libogg:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: libogg-LICENSE.txt
+  packageName: libogg
+  packageType: packman
+  source:
+    branch: merge-request
+    change: e037d1d832bf11c7cd051130c7fd6064c42ec7a5
+    path: https://gitlab/omniverse/externals/ogg-build.git
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.4+nv1-windows-x86_64
+libogg_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - C:/packman-repo/chk/libvorbis/1.3.7+nv2-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libogg-LICENSE.txt
+  packageName: libogg
+  packageType: packman
+  source:
+    branch: merge-request
+    change: b4b636e29508ee7979b56cb808cbeffd7e035868
+    path: https://gitlab/omniverse/externals/ogg-build.git
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.4+nv0-windows-x86_64
+libogg_2:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - C:/packman-repo/chk/libflac/1.3.4+nv2-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libogg-LICENSE.txt
+  packageName: libogg
+  packageType: packman
+  source:
+    branch: merge-request
+    change: b4b636e29508ee7979b56cb808cbeffd7e035868
+    path: https://gitlab/omniverse/externals/ogg-build.git
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.4+nv0-windows-x86_64
+libogg_3:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libogg-LICENSE.txt
+  packageName: libogg
+  packageType: null
+  source:
+    branch: master
+    change: df9a6f552efeabf48a0725d6cb9be1608f7d5ea8
+    path: https://gitlab/carbon/carbonite-externals/xiph-codecs
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.4-windows-28-df9a6f55
+libopus:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: libopus-LICENSE.txt
+  packageName: libopus
+  packageType: packman
+  source:
+    branch: merge-request
+    change: c48452625d828a1b99481ab37151c5a9f14d6d75
+    path: https://gitlab/omniverse/externals/opus-build.git
+    scm: git
+  swipat: http://nvbugs/3059252
+  version: 1.3.1+nv1-windows-x86_64
+libopus_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libopus-LICENSE.txt
+  packageName: libopus
+  packageType: null
+  source:
+    branch: master
+    change: 336ddbb2554e1828bf9e373692108bf9ca93872b
+    path: https://gitlab/carbon/carbonite-externals/xiph-codecs
+    scm: git
+  swipat: http://nvbugs/3059252
+  version: 1.3.1-windows-22-336ddbb2
+libvorbis:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: libvorbis-LICENSE.txt
+  packageName: libvorbis
+  packageType: packman
+  source:
+    branch: merge-request
+    change: dba4f8a9174c350d2e9791bc7d3381b162d4db0a
+    path: https://gitlab/omniverse/externals/vorbis-build.git
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.7+nv2-windows-x86_64
+libvorbis_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: libvorbis-LICENSE.txt
+  packageName: libvorbis
+  packageType: null
+  source:
+    branch: master
+    change: df9a6f552efeabf48a0725d6cb9be1608f7d5ea8
+    path: https://gitlab/carbon/carbonite-externals/xiph-codecs
+    scm: git
+  swipat: http://nvbugs/2672161
+  version: 1.3.7-windows-28-df9a6f55
+lua:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: lua-LICENSE.md
+  packageName: lua
+  packageType: null
+  source:
+    branch: master
+    change: 9882100380fd0229625ff1ca8e13d2de962bbbf8
+    path: https://gitlab/carbon/carbonite-externals/lua
+    scm: git
+  swipat: http://nvbugs/2676244
+  version: 5.3.4-9882100-windows-x86_64
+minhook:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: minhook-LICENSE.txt
+  packageName: minhook
+  packageType: packman
+  source:
+    branch: master
+    change: fd37c48c290535ad18deef33ead08fb8d83a94dd
+    path: https://gitlab/carbon/carbonite-externals/minhook
+    scm: git
+  swipat:
+  - https://nvbugs/3290274
+  version: 1.3.3-next-fd37c48c-windows-x86_64
+minimp3:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: minimp3-LICENSE.txt
+  packageName: minimp3
+  packageType: packman
+  source:
+    branch: master
+    change: de6164cdce1282c411bb0f0d99a52aeb72f840e1
+    path: https://gitlab/carbon/carbonite-externals/minimp3.git
+    scm: git
+  swipat:
+  - http://nvbugs/3125227
+  version: 0-de6164cd
+nlohmann-json:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: nlohmann-json-LICENSE.txt
+  packageName: nlohmann-json
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/carbon/carbonite-externals/nlohmann-json.git
+    scm: git
+  swipat: http://nvbugs/2825992
+  version: null
+nv_usd:
+  licenseFile: nv_usd-LICENSE.md
+  packageName: nv_usd
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/usd-build
+    scm: git
+  swipat:
+  - http://nvbugs/2515781
+  version: null
+omni-config-cpp:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: omni-config-cpp-LICENSE.txt
+  packageName: omni-config-cpp
+  packageType: packman
+  source:
+    branch: main
+    change: 4b1d07929bdf223a4464df14022dd8d35dfaa867
+    path: https://gitlab/omniverse/omni-config-cpp.git
+    scm: git
+  swipat: n/a
+  version: 2.0.3+tc68
+omni-config-cpp_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: omni-config-cpp-LICENSE.txt
+  packageName: omni-config-cpp
+  packageType: null
+  source:
+    branch: main
+    change: b72aae2a3decbdafe68c260ef9fa29d8bfcb9515
+    path: https://gitlab/omniverse/omni-config-cpp.git
+    scm: git
+  swipat: n/a
+  version: 2.0.2+tc46
+omni-config-cpp_1_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: omni-config-cpp-LICENSE.txt
+  packageName: omni-config-cpp
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 4b0b30997a6a63413d62759665becd8359731921
+    path: https://gitlab/omniverse/omni-config-cpp.git
+    scm: git
+  swipat: n/a
+  version: 2.0.3+tc49
+omni-config-cpp_2:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: omni-config-cpp-LICENSE.txt
+  packageName: omni-config-cpp
+  packageType: null
+  source:
+    branch: main
+    change: b72aae2a3decbdafe68c260ef9fa29d8bfcb9515
+    path: https://gitlab/omniverse/omni-config-cpp.git
+    scm: git
+  swipat: n/a
+  version: 2.0.2+tc46
+omnitrace:
+  licenseFile: omnitrace-LICENSE.txt
+  packageName: omnitrace
+  packageType: packman
+  source:
+    branch: dev
+    change: 8831531ec7fa43301f51b166672b5d145d2fa32b
+    path: https://gitlab/ssantoleri/omni-tor.git
+    scm: git
+  swipat: http://nvbugs/3028558
+  version: 0.5.8831531e
+omniverse.auth.client.c:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: omniverse.auth.client.c-LICENSE.txt
+  packageName: omniverse.auth.client.c
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/omni-auth.git
+    scm: git
+  swipat: null
+  version: null
+omniverse.discovery.client.c:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: omniverse.discovery.client.c.windows-x86_64-LICENSE.txt
+  packageName: omniverse.discovery.client.c
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/discovery-service.git
+    scm: git
+  swipat: null
+  version: null
+omniverse.nucleus-objects.schema:
+  licenseFile: omniverse.nucleus-objects.schema.linux-x86_64-LICENSE.txt
+  packageName: omniverse.nucleus-objects.schema
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/backend.git
+    scm: git
+  swipat: null
+  version: null
+openssl:
+  inheritedFrom:
+  - python/3.7.12+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - direct
+  licenseFile: openssl-LICENSE.txt
+  packageName: openssl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: c21e45ba2e09648f43ae4553e2e051de13378cc1
+    path: https://gitlab/omniverse/externals/openssl-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2820294
+  version: 1.1.1m+nv3-windows-x86_64
+openssl_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - self
+  - python/3.7.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: openssl-LICENSE.txt
+  packageName: openssl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 1d35b1e7b47f510f7ff9fac14936fb8078ed7d88
+    path: https://gitlab/omniverse/externals/openssl-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2820294
+  version: 1.1.1n+nv1-windows-x86_64
+openssl_1_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: openssl-LICENSE.txt
+  packageName: openssl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 32266b3841f66427cb9b48e8f182d896479e46b6
+    path: https://gitlab/omniverse/externals/openssl-build.git
+    scm: git
+  swipat: '2820294'
+  version: 1.1.1q+nv1-windows-x86_64
+openssl_2:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: openssl-LICENSE.txt
+  packageName: openssl
+  packageType: null
+  source:
+    branch: openssl-1.1.1k
+    change: 1c7177a60cbb8816b29cc92c3a37de1e5fb608bf
+    path: https://gitlab/carbon/carbonite-externals/openssl.git
+    scm: git
+  swipat: http://nvbugs/2820294
+  version: 1.1.1k-55.1c7177a6-windows-x86_64
+openssl_3:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - direct
+  - python/3.7.13+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: openssl-LICENSE.txt
+  packageName: openssl
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 32266b3841f66427cb9b48e8f182d896479e46b6
+    path: https://gitlab/omniverse/externals/openssl-build.git
+    scm: git
+  swipat:
+  - '2820294'
+  version: 1.1.1q+nv1-windows-x86_64
+pip:
+  inheritedFrom:
+  - direct
+  - python/3.7.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - self
+  - python/3.7.13+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.7.12+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: pip-LICENSE.txt
+  packageName: pip
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 7a3e732b7b7d997ea5ffd10491368c8dd133452a
+    path: https://gitlab/omniverse/externals/pip-build.git
+    scm: git
+  swipat:
+  - https://nvbugs/3354358
+  version: 21.2.1+nv1
+pugixml:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: pugixml-LICENSE.txt
+  packageName: pugixml
+  packageType: packman
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/externals/pugixml.git
+    scm: git
+  swipat: https://nvbugs/3272741
+  version: null
+pybind11:
+  licenseFile: pybind11-LICENSE.md
+  packageName: pybind11
+  packageType: packman
+  source:
+    branch: nvidia-master
+    change: e7bb36b5356fcf35dbeeb55ff6987204a6e4fb61
+    path: https://gitlab/carbon/carbonite-externals/pybind11
+    scm: git
+  swipat: http://nvbugs/2520728
+  version: 2.3.dev1-18-e7bb36b5
+pybind11_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: pybind11-LICENSE.md
+  packageName: pybind11
+  packageType: packman
+  source:
+    branch: nvidia-master
+    change: 349dd2e6b3a3b73242c0fda4104f374c54dd48d1
+    path: https://gitlab/omniverse/externals/pybind11
+    scm: git
+  swipat: http://nvbugs/2520728
+  version: 2.3.dev1-349dd2e6
+pybind11_1_1:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: pybind11-LICENSE.md
+  packageName: pybind11
+  packageType: null
+  source:
+    branch: nvidia-master
+    change: 9a056c90938113a396e796d0a5af78941d0d6d97
+    path: https://gitlab/carbon/carbonite-externals/pybind11
+    scm: git
+  swipat: http://nvbugs/2520728
+  version: 2.3.dev1-19-9a056c90
+pybind11_2:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: pybind11-LICENSE.md
+  packageName: pybind11
+  packageType: null
+  source:
+    branch: nvidia-master
+    change: 9a056c90938113a396e796d0a5af78941d0d6d97
+    path: https://gitlab/carbon/carbonite-externals/pybind11
+    scm: git
+  swipat: http://nvbugs/2520728
+  version: 2.3.dev1-19-9a056c90-repackaged
+python:
+  licenseFile: python-LICENSE.md
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 3a4aa0b1eacee7e547bf928e635ff6443bac964c
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.7.12+nv3-windows-x86_64
+python_1:
+  licenseFile: python-LICENSE.md
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f5beef79c199483ca5a236e40fad2539ea9e18d4
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.9.10+nv3-windows-x86_64
+python_1_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: python37-LICENSE.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 43312473f1ab0db4648cf802a094d2e41b0f282b
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.8.13+nv1-windows-x86_64
+python_1_2:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSE.txt
+  packageName: python
+  packageType: null
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.8.8-windows-00dev000
+python_1_3:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSES.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 606677ffd66d2eaceabdc1d493678609455c9326
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: '3156615'
+  version: 3.8.13+nv3-windows-x86_64
+python_2:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: python37-LICENSE.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f2b11c3ef505007485ceb3b81810bcbed21dc1fc
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.7.13+nv1-windows-x86_64
+python_2_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: python37-LICENSE.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f5710c69db751132efd178b7e000b4e28f4303e3
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.9.12+nv1-windows-x86_64
+python_2_2:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSES.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f676bdd652c2d1f81211e2f909b3e9fc2466e5fd
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: '3156615'
+  version: 3.9.13+nv2-windows-x86_64
+python_3:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSE.txt
+  packageName: python
+  packageType: null
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: null
+python_3_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSES.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: a300f56f65e50ae711b7172bef28dcfe86eb40e8
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: '3156615'
+  version: 3.10.5+nv2-windows-x86_64
+python_4:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSES.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 7387a9176d7e1a5caf7e17e5c9d1349dc6c19b1a
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: '3156615'
+  version: 3.7.13+nv3-windows-x86_64
+python_4_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: python37-LICENSE.txt
+  packageName: python
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f2b11c3ef505007485ceb3b81810bcbed21dc1fc
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: 3.7.13+nv1-windows-x86_64
+python_5:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: python-LICENSE.txt
+  packageName: python
+  packageType: null
+  source:
+    branch: null
+    change: null
+    path: https://gitlab/omniverse/externals/python-build.git
+    scm: git
+  swipat: http://nvbugs/3156615
+  version: null
+rapidjson:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: rapidjson-LICENSE.md
+  packageName: rapidjson
+  packageType: packman
+  source:
+    branch: master
+    change: b4cf59b6a7c1c6e95d6dfbc1ce155c9d4c4767a5
+    path: https://gitlab/carbon/carbonite-externals/rapidjson
+    scm: git
+  swipat:
+  - http://nvbugs/2674747
+  version: 5.2.1-5-b4cf59b6
+rapidjson_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  licenseFile: rapidjson-LICENSE.md
+  packageName: rapidjson
+  packageType: null
+  source:
+    branch: master
+    change: b4cf59b6a7c1c6e95d6dfbc1ce155c9d4c4767a5
+    path: https://gitlab/carbon/carbonite-externals/rapidjson
+    scm: git
+  swipat: http://nvbugs/2674747
+  version: 5.2.1-b4cf59b6-repackaged
+robinhoodhashing:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: robinhoodhashing-LICENSE.md
+  packageName: robinhoodhashing
+  packageType: packman
+  source:
+    branch: nv-master
+    change: 6f27c2e012ad769a6cb8f7911b307dc9b7735168
+    path: https://gitlab/omniverse/externals/robin-hood-hashing
+    scm: git
+  swipat: http
+  version: 1.0.0-beta-6f27c2e0
+ryu:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: ryu-LICENSE.txt
+  packageName: ryu
+  packageType: packman
+  source:
+    branch: merge-request
+    change: e499df9e2f019a88e9b1e9a38c725721ffc68aac
+    path: https://gitlab/omniverse/externals/ryu-build.git
+    scm: git
+  swipat: https://nvbugs/3278156
+  version: 1.0.0-e499df9e-windows-x86_64
+tinytoml:
+  inheritedFrom:
+  - direct
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - omni-config-cpp/2.0.3+tc68/PACKAGE-DEPS.yaml
+  - omni-config-cpp/2.0.2+tc46/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: tinytoml-LICENSE.md
+  packageName: tinytoml
+  packageType: null
+  source:
+    branch: nv-master
+    change: e55461ce42d6957efabe445e89c510879ede6379
+    path: https://gitlab/carbon/carbonite-externals/tinytoml
+    scm: git
+  swipat:
+  - http://nvbugs/2530633
+  version: nv-master-2-e55461ce
+valijson:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: valijson-LICENSE.txt
+  packageName: valijson
+  packageType: packman
+  source:
+    branch: main
+    change: 3a71e89ea317cc1ad2608c830f757bcf0ec92e44
+    path: https://gitlab/omniverse/externals/valijson-build.git
+    scm: git
+  swipat:
+  - https://nvbugs/3312305
+  version: 0.4-main.3a71e89e-linux-x86_64
+vulkansdk:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: vulkansdk-LICENSE.md
+  packageName: vulkansdk
+  packageType: packman
+  source:
+    branch: merge-request
+    change: e21b7e964c8e2685e9b3f3f69ec908b4ccdcce17
+    path: https://gitlab/omniverse/externals/vulkansdk.git
+    scm: git
+  swipat: http://nvbugs/2679402
+  version: 1.2.162.1+nv3-windows-x86_64
+xed:
+  inheritedFrom:
+  - carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  - carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: xed-LICENSE.md
+  packageName: xed
+  packageType: packman
+  source:
+    branch: master-8.30.0
+    change: 655cff24c55918cc273d44f468f151445e7f948c
+    path: https://gitlab/omniverse/externals/xed-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2679424
+  version: 8.30.0-18-g47be2133-31-655cff24
+xz:
+  inheritedFrom:
+  - direct
+  - python/3.7.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - self
+  - python/3.7.13+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.7.12+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: xz-LICENSE.txt
+  packageName: xz
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 031e90485eb5ca43e53e9137f8a32ade742e4128
+    path: https://gitlab/omniverse/externals/xz-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/3381177
+  version: 5.2.5+nv1-windows-x86_64
+zlib:
+  inheritedFrom:
+  - openssl/1.1.1m+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.7.12+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.7.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - openssl/1.1.1n+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f9cdee5a628808c3e6c9922612b00a4dc2aa27de
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2550776
+  version: 1.2.11+nv3-windows-x86_64
+zlib_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: df09ccf561c4c6b84025a1331099b0714bc7915b
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat: http://nvbugs/2550776
+  version: 1.2.12+nv2-windows-x86_64
+zlib_1_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - python/3.7.13+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - openssl/1.1.1n+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: f9cdee5a628808c3e6c9922612b00a4dc2aa27de
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2550776
+  version: 1.2.11+nv3-windows-x86_64
+zlib_1_1_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: df09ccf561c4c6b84025a1331099b0714bc7915b
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat: http://nvbugs/2550776
+  version: 1.2.12+nv2-windows-x86_64
+zlib_2:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - C:/packman-repo/chk/libcurl/7.78.0+pipeline3181197-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: e65912c7ed83a5aaf1cd503bbcb9a6de7b4d418e
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat: http://nvbugs/2515781
+  version: 1.2.11+pipeline3050367-windows-x86_64
+zlib_3:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/carb_sdk.windows-x86_64/128.0/PACKAGE-DEPS.yaml
+  - C:/packman-repo/chk/openssl/1.1.1q+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 774960a41e6c83864c88879f402bd1ff1622fe50
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat: http://nvbugs/2550776
+  version: 1.2.12+nv1-windows-x86_64
+zlib_4:
+  depth: 1
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omnitrace/0.5.8831531e-windows-x86_64-release-dev/PACKAGE-DEPS.yaml
+  - E:/pm/chk/carb_sdk+plugins/106.19.3603-97805ab8-106-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.md
+  packageName: zlib
+  packageType: null
+  source:
+    branch: nv-master
+    change: b6e15c64303e6e00ff10be2fda41b820889623f7
+    path: https://gitlab/carbon/carbonite-externals/zlib
+    scm: git
+  swipat: http://nvbugs/2515781
+  version: 1.2.11-windows-45-b6e15c64
+zlib_5:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  - direct
+  - openssl/1.1.1q+nv1-windows-x86_64/PACKAGE-DEPS.yaml
+  - python/3.7.13+nv3-windows-x86_64/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: 774960a41e6c83864c88879f402bd1ff1622fe50
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat:
+  - http://nvbugs/2550776
+  version: 1.2.12+nv1-windows-x86_64
+zlib_5_1:
+  inheritedFrom:
+  - C:/buildAgent/pm/chk/omni_client_library.windows-x86_64/2.15.0/PACKAGE-DEPS.yaml
+  licenseFile: zlib-LICENSE.txt
+  packageName: zlib
+  packageType: packman
+  source:
+    branch: merge-request
+    change: df09ccf561c4c6b84025a1331099b0714bc7915b
+    path: https://gitlab/omniverse/externals/zlib-build.git
+    scm: git
+  swipat: http://nvbugs/2550776
+  version: 1.2.12+nv2-windows-x86_64

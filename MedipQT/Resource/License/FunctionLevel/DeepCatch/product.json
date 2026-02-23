@@ -1,0 +1,24 @@
+{
+    "code": true,
+    "data": [
+        {
+            "category1": "Product",
+            "category2": "DeepCatch",
+            "category3": "DeepCatch",
+            "comment": "N",
+            "functionLevelId": "00100001",
+            "functionLevelName": "DeepCatch",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "DeepCatch",
+            "category3": "DeepCatch V2",
+            "comment": "N",
+            "functionLevelId": "00100007",
+            "functionLevelName": "DeepCatch V2",
+            "productType": "PRODUCT"
+        }
+    ],
+    "msg": "성공하였습니다."
+}

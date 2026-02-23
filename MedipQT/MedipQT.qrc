@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>License.html</file>
+        <file>License_DeepCatch.html</file>
+    </qresource>
+</RCC>

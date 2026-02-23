@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingDialog</class>
+ <widget class="QDialog" name="SettingDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>751</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="2" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>360</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnSave">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    border-image: url(:/Resource/Images/deepcatch/save_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton:hover{
+    border-image: url(:/Resource/Images/deepcatch/save_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton:pressed {
+    border-image: url(:/Resource/Images/deepcatch/save_p.png);
+	width:102px;
+	height:32px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnCancel">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    border-image: url(:/Resource/Images/deepcatch/cancel_d.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton:hover{
+    border-image: url(:/Resource/Images/deepcatch/cancel_h.png);
+	width:102px;
+	height:32px;
+}
+
+QPushButton:pressed {
+    border-image: url(:/Resource/Images/deepcatch/cancel_p.png);
+	width:102px;
+	height:32px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="m_tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Query/Retrieve</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::PACSSetupQueryRetrieveWidget" name="m_pQueryRetrievalWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Store</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::PACSSetupStoreWidget" name="m_pStoreWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Admin</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::AdminSettingWidget" name="m_pAdminWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>fm::PACSSetupQueryRetrieveWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/dialog/pacs/pacssetupqueryretrievewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>fm::PACSSetupStoreWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/dialog/pacs/pacssetupstorewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>fm::AdminSettingWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/dialog/admin/adminsettingwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,143 @@
+#include "stdafx.h"
+#include "define.h"
+
+#pragma comment(lib,"PolyhedronMaker.lib")
+#pragma comment(lib,"vtkImagingCore-8.1.lib")
+#pragma comment(lib,"vtkCommonMath-8.1.lib")
+#pragma comment(lib,"vtkFiltersCore-8.1.lib")
+#pragma comment(lib,"vtkFiltersModeling-8.1.lib")
+#pragma comment(lib,"vtkIOGeometry-8.1.lib")
+#pragma comment(lib,"vtkCommonMisc-8.1.lib")
+#pragma comment(lib,"vtkIOExport-8.1.lib")
+#pragma comment(lib,"vtkRenderingLOD-8.1.lib")
+#pragma comment(lib,"vtkCommonExecutionModel-8.1.lib")
+#pragma comment(lib,"vtkCommonDataModel-8.1.lib")
+#pragma comment(lib,"vtkCommonCore-8.1.lib")
+#pragma comment(lib,"vtkFiltersGeneral-8.1.lib")
+#pragma comment(lib,"vtkCommonTransforms-8.1.lib")
+#pragma comment(lib,"vtkImagingSources-8.1.lib")
+#pragma comment(lib,"vtkImagingStencil-8.1.lib")
+#pragma comment(lib,"lib3mf.lib")
+#pragma comment(lib, "IPHLPAPI.lib")
+#pragma comment(lib, "glew32.lib")
+#pragma comment(lib, "opengl32.lib")
+#pragma comment(lib, "gtest.lib")
+#pragma comment(lib, "IPHLPAPI.lib")
+#pragma comment(lib,"Version.lib")
+#pragma comment(lib,"DbgHelp.Lib")
+#pragma comment(lib,"version.lib")
+
+#ifdef _DEBUG
+#pragma comment(lib,"ar.lib")
+#pragma comment(lib,"arch.lib")
+#pragma comment(lib,"gf.lib")
+#pragma comment(lib,"js.lib")
+#pragma comment(lib,"kind.lib")
+#pragma comment(lib,"pcp.lib")
+#pragma comment(lib,"plug.lib")
+#pragma comment(lib,"sdf.lib")
+#pragma comment(lib,"tf.lib")
+#pragma comment(lib,"trace.lib")
+#pragma comment(lib,"usd.lib")
+#pragma comment(lib,"usdGeom.lib")
+#pragma comment(lib,"usdUtils.lib")
+#pragma comment(lib,"vt.lib")
+#pragma comment(lib,"work.lib")
+#pragma comment(lib,"usdShade.lib")
+#pragma comment(lib,"usdLux.lib")
+#pragma comment(lib,"usdPhysics.lib")
+#pragma comment(lib,"omniclient.lib")
+#pragma comment(lib,"omni_usd_resolver.lib")
+#pragma comment(lib,"boost_python37-vc141-mt-gd-x64-1_68.lib")
+#pragma comment(lib,"shlwapi.lib")
+#pragma comment(lib,"mart.lib")
+
+#pragma comment(lib,"vtkRenderingCore-8.1.lib")
+#pragma comment(lib,"vtkRenderingVolumeOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkRenderingVolume-8.1.lib")
+#pragma comment(lib,"vtkRenderingOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkRenderingFreeType-8.1.lib")
+#pragma comment(lib,"vtkIOImage-8.1.lib")
+#pragma comment(lib,"vtkCommonExecutionModel-8.1.lib")
+#pragma comment(lib,"vtkCommonDataModel-8.1.lib")
+#pragma comment(lib,"vtkRenderingOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkCommonCore-8.1.lib")
+#pragma comment(lib,"vtkInteractionStyle-8.1.lib")
+
+#pragma comment(lib, "MedipMipEncoderd.lib")
+#pragma comment(lib, "MeshControld.lib")
+#pragma comment(lib,"FileManagerAppCored.lib")
+#pragma comment(lib,"FileManagerNetd.lib")
+
+#pragma comment(lib, "opencv_imgcodecs341d")
+#pragma comment(lib, "opencv_highgui341d")
+#pragma comment(lib, "opencv_core341d")
+#pragma comment(lib, "opencv_imgproc341d")
+
+ #pragma comment(lib,"zlibstaticd.lib")
+#pragma comment(lib,"Winmm")
+
+#else
+#pragma comment(lib,"ar.lib")
+#pragma comment(lib,"arch.lib")
+#pragma comment(lib,"gf.lib")
+#pragma comment(lib,"js.lib")
+#pragma comment(lib,"kind.lib")
+#pragma comment(lib,"pcp.lib")
+#pragma comment(lib,"plug.lib")
+#pragma comment(lib,"sdf.lib")
+#pragma comment(lib,"tf.lib")
+#pragma comment(lib,"trace.lib")
+#pragma comment(lib,"usd.lib")
+#pragma comment(lib,"usdGeom.lib")
+#pragma comment(lib,"usdUtils.lib")
+#pragma comment(lib,"vt.lib")
+#pragma comment(lib,"work.lib")
+#pragma comment(lib,"usdShade.lib")
+#pragma comment(lib,"usdLux.lib")
+#pragma comment(lib,"usdPhysics.lib")
+#pragma comment(lib,"omniclient.lib")
+#pragma comment(lib,"omni_usd_resolver.lib")
+#pragma comment(lib,"boost_python37-vc141-mt-x64-1_68.lib")
+#pragma comment(lib,"shlwapi.lib")
+#pragma comment(lib,"mart.lib")
+
+#pragma comment(lib,"vtkRenderingCore-8.1.lib")
+#pragma comment(lib,"vtkRenderingVolumeOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkRenderingVolume-8.1.lib")
+#pragma comment(lib,"vtkRenderingOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkRenderingFreeType-8.1.lib")
+#pragma comment(lib,"vtkIOImage-8.1.lib")
+#pragma comment(lib,"vtkCommonExecutionModel-8.1.lib")
+#pragma comment(lib,"vtkCommonDataModel-8.1.lib")
+#pragma comment(lib,"vtkRenderingOpenGL2-8.1.lib")
+#pragma comment(lib,"vtkCommonCore-8.1.lib")
+#pragma comment(lib,"vtkInteractionStyle-8.1.lib")
+#pragma comment(lib, "opencv_imgcodecs341")
+#pragma comment(lib, "opencv_highgui341")
+#pragma comment(lib, "opencv_core341")
+#pragma comment(lib, "opencv_imgproc341")
+
+#pragma comment(lib, "MedipMipEncoder.lib")
+#pragma comment(lib, "MeshControl.lib")
+#pragma comment(lib,"FileManagerAppCore.lib")
+#pragma comment(lib,"FileManagerNet.lib")
+
+ #pragma comment(lib,"zlibstatic.lib")
+
+#endif
+
+#ifndef _M_IX86
+#pragma comment(lib, "openvr_api.lib")
+#endif
+
+#if defined(AI_VER)
+#pragma comment(lib,"deepinsthink.lib")
+#pragma comment(lib,"mart.lib")	// Medicalip Advanced Reconstruction Toolbox
+#endif
+
+#ifdef _DEBUG
+#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
+#endif
+
+

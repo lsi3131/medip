@@ -1,0 +1,16 @@
+Package: Omniverse Client Library
+Version: 2.15.0-main.3210+tc.e33a9103
+Maintainers: brianh@nvidia.com
+Description: The library that applications use to connect to the Omniverse
+Repository: https://gitlab-master.nvidia.com/omniverse/client-library.git
+License Type: NVIDIA
+Branch: main
+Commit: e33a91039265d08e6c8afd51efce543fe1d56621
+Time: Wed Aug 31 15:44:54 2022
+Builder Name: DESKTOP-UCUIBJT
+Packman Version: '6.44'
+Packagemaker Version: 1.4.1
+CI Build ID: 11513434
+CI Build Number: 2.15.0-main.3210+tc.e33a9103
+CI System: Teamcity
+CI Version: 2022.04 (build 108502)

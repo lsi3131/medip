@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImportedDicomInfoList>
+  <ImportedDicomInfo>
+    <DicomFilePath>1</DicomFilePath>
+    <SeriesInstanceUID>2</SeriesInstanceUID>
+    <StudyInstanceUID>3</StudyInstanceUID>
+    <PatientName>4</PatientName>
+    <DateOfBirth>5</DateOfBirth>
+    <PatientID>6</PatientID>
+    <Modality>7</Modality>
+    <StudyDescription>8</StudyDescription>
+    <SeriesDescription>9</SeriesDescription>
+    <AccessionNumber>10</AccessionNumber>
+    <ExamID>11</ExamID>
+    <ReferringPhysician>12</ReferringPhysician>
+    <PerformingPhysician>13</PerformingPhysician>
+    <ReadingPhysician>14</ReadingPhysician>
+    <ImageCount>15</ImageCount>
+    <Tag>16</Tag>
+  </ImportedDicomInfo>
+</ImportedDicomInfoList>
+

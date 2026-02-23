@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+<root-dir>storage</root-dir>
+<use-relative-path>true</use-relative-path>
+<scheme>file</scheme>
+</configuration>

@@ -1,0 +1,1185 @@
+{
+    "code": true,
+    "data": [
+        {
+            "category1": "Common",
+            "category2": "AI",
+            "category3": "AI Predict",
+            "comment": "N",
+            "functionLevelId": "00000080",
+            "functionLevelName": "Predict",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "AI",
+            "category3": "Predict Usable Count",
+            "comment": "N",
+            "functionLevelId": "00000105",
+            "functionLevelName": "Credit",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "AI Research",
+            "category3": "AI Mask Export",
+            "comment": "N",
+            "functionLevelId": "00000117",
+            "functionLevelName": "AI Mask Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "AI Research",
+            "category3": "AI Weight",
+            "comment": "N",
+            "functionLevelId": "00000081",
+            "functionLevelName": "Select weight",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "AI Trainning",
+            "category3": "AI Trainning",
+            "comment": "N",
+            "functionLevelId": "00000082",
+            "functionLevelName": "Custom Trainning Tool",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Annotation",
+            "category3": "Annotation",
+            "comment": "N",
+            "functionLevelId": "00000048",
+            "functionLevelName": "Text",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Annotation",
+            "category3": "Annotation",
+            "comment": "N",
+            "functionLevelId": "00000049",
+            "functionLevelName": "Arrow",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Annotation",
+            "category3": "Annotation",
+            "comment": "N",
+            "functionLevelId": "00000050",
+            "functionLevelName": "Angle",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Annotation",
+            "category3": "Annotation",
+            "comment": "N",
+            "functionLevelId": "00000051",
+            "functionLevelName": "Length",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Annotation",
+            "category3": "Path Animation",
+            "comment": "N",
+            "functionLevelId": "00000052",
+            "functionLevelName": "Path Animation",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000006",
+            "functionLevelName": "MIP",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000007",
+            "functionLevelName": "MIPD",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000008",
+            "functionLevelName": "MIP, MIPD File uploader",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000009",
+            "functionLevelName": "NII(whole HU)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000098",
+            "functionLevelName": "json Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000104",
+            "functionLevelName": "MIPA",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Export",
+            "category3": "Export",
+            "comment": "N",
+            "functionLevelId": "00000112",
+            "functionLevelName": "PACS Upload",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000001",
+            "functionLevelName": "DICOM",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000002",
+            "functionLevelName": "MIP",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000003",
+            "functionLevelName": "MIPD",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000004",
+            "functionLevelName": "NII_RAW(Mask)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000005",
+            "functionLevelName": "TXT coordinate",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000095",
+            "functionLevelName": "NII(HU)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000103",
+            "functionLevelName": "MIPA",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Import",
+            "category3": "Import",
+            "comment": "N",
+            "functionLevelId": "00000111",
+            "functionLevelName": "PACS Download",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000028",
+            "functionLevelName": "General Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000029",
+            "functionLevelName": "3D Hole Filling",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000030",
+            "functionLevelName": "2D Hole Filling",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000031",
+            "functionLevelName": "Layer Boolean Function(Intersection)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000032",
+            "functionLevelName": "Image Dilation",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000033",
+            "functionLevelName": "Image Erosion",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000034",
+            "functionLevelName": "Mask Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000087",
+            "functionLevelName": "Inverse",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000088",
+            "functionLevelName": "Move Mask",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000089",
+            "functionLevelName": "Flip",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000099",
+            "functionLevelName": "Layer Boolean Function(First=First-Second)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000100",
+            "functionLevelName": "Layer Boolean Function(merge)",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000101",
+            "functionLevelName": "Mask Split Region",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000102",
+            "functionLevelName": "Image Calculator",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000110",
+            "functionLevelName": "Component",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Layer Operation",
+            "category3": "Layer Operation",
+            "comment": "N",
+            "functionLevelId": "00000120",
+            "functionLevelName": "3D Interpolation",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Measurement",
+            "category3": "Measurement",
+            "comment": "N",
+            "functionLevelId": "00000053",
+            "functionLevelName": "General Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Measurement",
+            "category3": "Measurement",
+            "comment": "N",
+            "functionLevelId": "00000054",
+            "functionLevelName": "Projection Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Measurement",
+            "category3": "Measurement",
+            "comment": "N",
+            "functionLevelId": "00000055",
+            "functionLevelName": "Axises Coordinating",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Measurement",
+            "category3": "Measurement",
+            "comment": "N",
+            "functionLevelId": "00000056",
+            "functionLevelName": "Life Profile",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000064",
+            "functionLevelName": "General Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000065",
+            "functionLevelName": "Smooth",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000066",
+            "functionLevelName": "Reduce",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000067",
+            "functionLevelName": "Remesh",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000068",
+            "functionLevelName": "Solid",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000069",
+            "functionLevelName": "Hollow",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000070",
+            "functionLevelName": "Brush",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000071",
+            "functionLevelName": "Measurement",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000072",
+            "functionLevelName": "Cutting",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000073",
+            "functionLevelName": "File Import",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000085",
+            "functionLevelName": "File Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000106",
+            "functionLevelName": "Subdivision",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000107",
+            "functionLevelName": "Boolean",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000113",
+            "functionLevelName": "IslandFilter",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000114",
+            "functionLevelName": "Duplicate",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000115",
+            "functionLevelName": "Attach",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000116",
+            "functionLevelName": "Mesh2Mask",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Mesh Editing",
+            "category3": "Mesh Editing",
+            "comment": "N",
+            "functionLevelId": "00000119",
+            "functionLevelName": "Transform",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Radiomics",
+            "category3": "Radiomics",
+            "comment": "N",
+            "functionLevelId": "00000079",
+            "functionLevelName": "Radiomics",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "2D/3D Histogram",
+            "comment": "N",
+            "functionLevelId": "00000020",
+            "functionLevelName": "2D/3D Histogram basic",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "2D/3D Histogram",
+            "comment": "N",
+            "functionLevelId": "00000021",
+            "functionLevelName": "Preset customising",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "2D/3D Histogram",
+            "comment": "N",
+            "functionLevelId": "00000022",
+            "functionLevelName": "Preset file import",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "2D/3D Histogram",
+            "comment": "N",
+            "functionLevelId": "00000086",
+            "functionLevelName": "Preset file export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Multiple Object Rendering",
+            "comment": "N",
+            "functionLevelId": "00000019",
+            "functionLevelName": "3D Multiple Object Rendering",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000013",
+            "functionLevelName": "3D Volume Viewer",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000014",
+            "functionLevelName": "Clip Mode",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000015",
+            "functionLevelName": "Mix Mode",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000016",
+            "functionLevelName": "3D View Shader Quality Low",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000017",
+            "functionLevelName": "3D View Shader Quality Middle",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "3D Volume Viewer",
+            "comment": "N",
+            "functionLevelId": "00000018",
+            "functionLevelName": "3D View Shader Quality High",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "Mesh Tab List",
+            "comment": "N",
+            "functionLevelId": "00000091",
+            "functionLevelName": "Mesh Tab List",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "Window basic function",
+            "comment": "N",
+            "functionLevelId": "00000010",
+            "functionLevelName": "Window basic function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "Window basic function",
+            "comment": "N",
+            "functionLevelId": "00000011",
+            "functionLevelName": "Boundary Viewer",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Rendering",
+            "category3": "Window basic function",
+            "comment": "N",
+            "functionLevelId": "00000012",
+            "functionLevelName": "Crossection Viewer",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Image Management",
+            "comment": "N",
+            "functionLevelId": "00000061",
+            "functionLevelName": "Image Management",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Image Management",
+            "comment": "N",
+            "functionLevelId": "00000062",
+            "functionLevelName": "Capture",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Image Management",
+            "comment": "N",
+            "functionLevelId": "00000063",
+            "functionLevelName": "Image Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Image Management",
+            "comment": "N",
+            "functionLevelId": "00000094",
+            "functionLevelName": "Image Import",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Report",
+            "comment": "N",
+            "functionLevelId": "00000057",
+            "functionLevelName": "General Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Report",
+            "comment": "N",
+            "functionLevelId": "00000058",
+            "functionLevelName": "Report Import",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Report",
+            "comment": "N",
+            "functionLevelId": "00000059",
+            "functionLevelName": "Report Export",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Report",
+            "comment": "N",
+            "functionLevelId": "00000060",
+            "functionLevelName": "Print preview",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Report",
+            "category3": "Report",
+            "comment": "N",
+            "functionLevelId": "00000097",
+            "functionLevelName": "Editing Function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Manual drawing tools",
+            "comment": "N",
+            "functionLevelId": "00000035",
+            "functionLevelName": "2D View Manual selection function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Manual drawing tools",
+            "comment": "N",
+            "functionLevelId": "00000093",
+            "functionLevelName": "3D View Manual selection function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Manual drawing tools",
+            "comment": "N",
+            "functionLevelId": "00000096",
+            "functionLevelName": "3D View Manual split function",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Region growing",
+            "comment": "N",
+            "functionLevelId": "00000040",
+            "functionLevelName": "Region Growing",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Region growing",
+            "comment": "N",
+            "functionLevelId": "00000041",
+            "functionLevelName": "26 connectivity",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Region growing",
+            "comment": "N",
+            "functionLevelId": "00000042",
+            "functionLevelName": "6 connectivity",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Region growing",
+            "comment": "N",
+            "functionLevelId": "00000090",
+            "functionLevelName": "Mode HU Range",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Semi-Auto segmentation",
+            "comment": "N",
+            "functionLevelId": "00000043",
+            "functionLevelName": "DrawCut",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Semi-Auto segmentation",
+            "comment": "N",
+            "functionLevelId": "00000044",
+            "functionLevelName": "adjust lambda",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Semi-Auto segmentation",
+            "comment": "N",
+            "functionLevelId": "00000045",
+            "functionLevelName": "MDCut",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Threshold",
+            "comment": "N",
+            "functionLevelId": "00000036",
+            "functionLevelName": "Threshold basic",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Threshold",
+            "comment": "N",
+            "functionLevelId": "00000037",
+            "functionLevelName": "Within Selected Layer",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Threshold",
+            "comment": "N",
+            "functionLevelId": "00000038",
+            "functionLevelName": "Within Brush",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Threshold",
+            "comment": "N",
+            "functionLevelId": "00000039",
+            "functionLevelName": "Show Preview",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Threshold",
+            "comment": "N",
+            "functionLevelId": "00000092",
+            "functionLevelName": "GMM",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Working region",
+            "comment": "N",
+            "functionLevelId": "00000046",
+            "functionLevelName": "Working region",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Segmentation",
+            "category3": "Working region",
+            "comment": "N",
+            "functionLevelId": "00000047",
+            "functionLevelName": "Working region tab list",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Visual Printing",
+            "category3": "Visual Printing",
+            "comment": "N",
+            "functionLevelId": "00000076",
+            "functionLevelName": "Visual Printing service",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Visual Printing",
+            "category3": "Visual Printing",
+            "comment": "N",
+            "functionLevelId": "00000077",
+            "functionLevelName": "Basic Mesh Editing",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Visual Printing",
+            "category3": "Visual Printing",
+            "comment": "N",
+            "functionLevelId": "00000078",
+            "functionLevelName": "Preview",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Volume Operation",
+            "category3": "Volume Operation",
+            "comment": "N",
+            "functionLevelId": "00000023",
+            "functionLevelName": "Filtration",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Volume Operation",
+            "category3": "Volume Operation",
+            "comment": "N",
+            "functionLevelId": "00000024",
+            "functionLevelName": "Z-Isotropification",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Volume Operation",
+            "category3": "Volume Operation",
+            "comment": "N",
+            "functionLevelId": "00000025",
+            "functionLevelName": "Volume Flipping",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Volume Operation",
+            "category3": "Volume Operation",
+            "comment": "N",
+            "functionLevelId": "00000026",
+            "functionLevelName": "Volume Downscale",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "Volume Operation",
+            "category3": "Volume Operation",
+            "comment": "N",
+            "functionLevelId": "00000027",
+            "functionLevelName": "Volume Cropping",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "VR",
+            "category3": "VR",
+            "comment": "N",
+            "functionLevelId": "00000074",
+            "functionLevelName": "MEDIP VR",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "Common",
+            "category2": "VR",
+            "category3": "VR",
+            "comment": "N",
+            "functionLevelId": "00000075",
+            "functionLevelName": "MDBOX-XR",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DeepCatch",
+            "category2": "DeepCatch Module",
+            "category3": "DeepCatch Wholebody",
+            "comment": "N",
+            "functionLevelId": "00000084",
+            "functionLevelName": "DeepCatch Wholebody",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DeepCatch",
+            "category2": "DeepCatch Module",
+            "category3": "Predict Usable Count",
+            "comment": "N",
+            "functionLevelId": "00000083",
+            "functionLevelName": "Credit",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DeepCatch V2",
+            "category2": "DeepCatch V2 Module",
+            "category3": "Predict Usable Count",
+            "comment": "N",
+            "functionLevelId": "00000118",
+            "functionLevelName": "Credit",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DEV",
+            "category2": "AI contrast synthesis",
+            "category3": "AI contrast synthesis",
+            "comment": "N",
+            "functionLevelId": "00000121",
+            "functionLevelName": "AI contrast synthesis",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DEV",
+            "category2": "AI heart solution",
+            "category3": "AI heart solution",
+            "comment": "N",
+            "functionLevelId": "00000123",
+            "functionLevelName": "AI heart solution",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DEV",
+            "category2": "AI kernel conversion",
+            "category3": "AI kernel conversion",
+            "comment": "N",
+            "functionLevelId": "00000122",
+            "functionLevelName": "AI kernel conversion",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DEV",
+            "category2": "AI Low-dose CT Reconstruction",
+            "category3": "AI Low-dose CT Reconstruction",
+            "comment": "N",
+            "functionLevelId": "00000124",
+            "functionLevelName": "AI Low-dose CT Reconstruction",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "DEV",
+            "category2": "Nvidia Omniverse",
+            "category3": "Nvidia Omniverse",
+            "comment": "N",
+            "functionLevelId": "00000125",
+            "functionLevelName": "Nvidia Omniverse",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "test_Module",
+            "category2": "test_Module1",
+            "category3": "test_Module1",
+            "comment": "test_Module",
+            "functionLevelId": "00300002",
+            "functionLevelName": "test_Module1",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "test_Module",
+            "category2": "test_Module2",
+            "category3": "test_Module2",
+            "comment": "test_Module",
+            "functionLevelId": "00300003",
+            "functionLevelName": "test_Module2",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "TiSepX",
+            "category2": "TiSepX Client",
+            "category3": "Predict Usable Count",
+            "comment": "N",
+            "functionLevelId": "00000108",
+            "functionLevelName": "Credit",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "TiSepX",
+            "category2": "Web Service",
+            "category3": "AI Function",
+            "comment": "TiSepX COVID19 AI Function",
+            "functionLevelId": "00000126",
+            "functionLevelName": "COVID19",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "TiSepX",
+            "category2": "Web Service",
+            "category3": "AI Function",
+            "comment": "TiSepX TB AI Function",
+            "functionLevelId": "00000127",
+            "functionLevelName": "TB",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "TiSepX",
+            "category2": "Web Service",
+            "category3": "AI Function",
+            "comment": "TiSepX Lung Volumetry AI Function",
+            "functionLevelId": "00000128",
+            "functionLevelName": "Lung Volumetry",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "TiSepX",
+            "category2": "Web Service",
+            "category3": "Predict Usable Count",
+            "comment": "N",
+            "functionLevelId": "00000109",
+            "functionLevelName": "Credit",
+            "productType": "MODULE"
+        },
+        {
+            "category1": "UpdateService",
+            "category2": "AI_Dll",
+            "category3": "AI_Dll",
+            "comment": "N",
+            "functionLevelId": "00000000",
+            "functionLevelName": "AI Dll",
+            "productType": "MODULE"
+        }
+    ],
+    "msg": "성공하였습니다."
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DicomImportDataDialog</class>
+ <widget class="QDialog" name="DicomImportDataDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1033</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>9</number>
+   </property>
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <widget class="fm::DicomPreviewWidget" name="m_dicomPreviewViewer" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignLeft">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="m_btnSelect">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{			border-image: url(:/Resource/Images/medip/select_folder_d.png);			width:102px;			height:32px;		}		QPushButton:hover{			border-image: url(:/Resource/Images/medip/select_folder_h.png);			width:102px;			height:32px;		}		QPushButton:disabled{			border-image: url(:/Resource/Images/medip/select_folder_d.png);			width:102px;			height:32px;		}		QPushButton:hover:pressed {			border-image: url(:/Resource/Images/medip/select_folder_p.png);			width:102px;			height:32px;		}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_btnCancel">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{			border-image: url(:/Resource/Images/medip/cancel_d.png);			width:102px;			height:32px;		}		QPushButton:hover{			border-image: url(:/Resource/Images/medip/cancel_d.png);			width:102px;			height:32px;		}		QPushButton:disabled{			border-image: url(:/Resource/Images/medip/cancel_h.png);			width:102px;			height:32px;		}		QPushButton:hover:pressed {			border-image: url(:/Resource/Images/medip/cancel_p.png);			width:102px;			height:32px;		}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>fm::DicomPreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/UI/dicompreviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

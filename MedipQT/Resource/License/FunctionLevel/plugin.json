@@ -1,0 +1,69 @@
+{
+    "code": true,
+    "data": [
+        {
+            "category1": "Product",
+            "category2": "DeepCatch-Plugin",
+            "category3": "DeepCatch-Plugin",
+            "comment": "라디오믹스 프로덕트(내부사용 전용)",
+            "functionLevelId": "00200003",
+            "functionLevelName": "DeepCatch_custom_research",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP-Plugin",
+            "category3": "MEDIP-Plugin",
+            "comment": "라디오믹스 프로덕트",
+            "functionLevelId": "00200001",
+            "functionLevelName": "Radiomics Pack",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP-Plugin",
+            "category3": "MEDIP-Plugin",
+            "comment": "AI Pack",
+            "functionLevelId": "00200002",
+            "functionLevelName": "AI Pack",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP-Plugin",
+            "category3": "MEDIP-Plugin",
+            "comment": "AI Mask Export Research",
+            "functionLevelId": "00200004",
+            "functionLevelName": "AI Mask Export Research",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP-Plugin",
+            "category3": "MEDIP-Plugin",
+            "comment": "AI Weight Research",
+            "functionLevelId": "00200005",
+            "functionLevelName": "AI Weight Research",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP-Plugin",
+            "category3": "MEDIP-Plugin",
+            "comment": "개발용",
+            "functionLevelId": "00200006",
+            "functionLevelName": "DEV",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "TiSepX-Plugin",
+            "category3": "TiSepX-Plugin",
+            "comment": "TiSepX 플러그인",
+            "functionLevelId": "00200007",
+            "functionLevelName": "Lung Volumetry Pack",
+            "productType": "PRODUCT"
+        }
+    ],
+    "msg": "성공하였습니다."
+}

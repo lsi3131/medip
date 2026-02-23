@@ -1,0 +1,51 @@
+{
+    "code": true,
+    "data": [
+        {
+            "category1": "Product",
+            "category2": "MEDIP",
+            "category3": "MEDIP Full",
+            "comment": "N",
+            "functionLevelId": "00100011",
+            "functionLevelName": "DEMO MEDIP Full",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP",
+            "category3": "MEDIP Light",
+            "comment": "N",
+            "functionLevelId": "00100003",
+            "functionLevelName": "MEDIP Light",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP",
+            "category3": "MEDIP MDBox",
+            "comment": "N",
+            "functionLevelId": "00100006",
+            "functionLevelName": "MEDIP MDBox",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP",
+            "category3": "MEDIP Pro",
+            "comment": "N",
+            "functionLevelId": "00100005",
+            "functionLevelName": "MEDIP Pro",
+            "productType": "PRODUCT"
+        },
+        {
+            "category1": "Product",
+            "category2": "MEDIP",
+            "category3": "MEDIP Research",
+            "comment": "N",
+            "functionLevelId": "00100004",
+            "functionLevelName": "MEDIP Research",
+            "productType": "PRODUCT"
+        }
+    ],
+    "msg": "성공하였습니다."
+}

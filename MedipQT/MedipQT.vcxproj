@@ -1,0 +1,2065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <!--<ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 8.0.props" />
+  </ImportGroup>-->
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>MEDIP</TargetName>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>Medip2018</TargetName>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>Medip2020d</TargetName>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Output\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <TargetName>Medip2018</TargetName>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;xml;network;gui;testlib;widgets;qml;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>QT591_x86</QtInstall>
+    <QtModules>core;xml;network;gui;testlib;widgets;qml;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>QT599</QtInstall>
+    <QtModules>core;xml;network;gui;testlib;widgets;qml;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>QT591_x86</QtInstall>
+    <QtModules>core;xml;network;gui;testlib;widgets;qml;printsupport</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QWT_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;BOOST_ALL_DYN_LINK;TBB_USE_DEBUG=1;_CRT_SECURE_NO_WARNINGS;DEBUG;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;$(SolutionDir)Library\gtest\include\;.\..\Library\cuda\include;.\..\Library\qwt\$(PlatformTarget)\include;.\GeneratedFiles;.;.\GeneratedFiles\$(ConfigurationName);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\include\vtk-8.1;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\include;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\include;.\..\Library\DirectX\include;.\..\Library\cryptopp565\include;.\..\Library\gdcm\include\socketxx;.\..\Library\gdcm\include\gdcmopenjpeg;.\..\Library\gdcm\include\gdcmjpeg;.\..\Library\gdcm\include\gdcmcharls;.\..\Library\gdcm\include;.\..\Library\OpenCV341\include;.\graphics;.\Cuda;.\..\Library\di\include;.\..\Library\OpenCv341\include;.\UI;.\Actions;.\..\Library\MedipLicense\include;.\Dialogs;.\System;.\Windows;.\..\Library\updaterLib\include;%(AdditionalIncludeDirectories);.\..\Library\MedipMipEncoder\include;.\..\Library\Radiomics\include;.\algorithm\Common;.\..\Library\ftpClientLib\include;.\..\Library\FileManager\include;.\..\Library\mipEngine\include;.\..\Library\mipRenderer\include;.\..\Library\MeshControl\include;.\..\Library\mipDicom\include;.\..\Library\3MF\include;.\..\Library\polyhedronMaker\include;.\..\Library\omni\usd\debug\include;.\..\Library\omni\usd_ext_physics\debug\include;.\..\Library\omni\omni_client_library\include;.\..\Library\omni\omni_usd_resolver\include;.\..\Library\omni\python\include;.\..\Library\omni\tinytoml\include;.\..\Library\omni\nlohmann-json\include;.\..\Library\mart_api\include</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\gtest\lib\$(PlatformTarget)\$(Configuration);.\..\Library\cuda\lib\x64;.\..\Library\qwt\$(PlatformTarget)\lib;.\..\Library\MeshLib\lib\$(Configuration);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\gdcm\lib;.\..\Library\Mip\$(PlatformTarget)\$(Configuration);.\..\Library\DirectX\lib\$(PlatformTarget);.\..\Library\cryptopp565\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\glew-2.1.0\lib\Release\x64;.\..\Library\openvr\lib\win64;.\..\Library\OpenCV341\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\di\lib\$(PlatformTarget)\$(Configuration)\;.\..\Library\MeshControl\lib\$(Configuration);.\..\Library\MedipLicense\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\updaterLib\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\MedipMipEncoder\lib\$(Configuration);.\..\Library\Radiomics\lib\$(PlatformTarget)\$(Configuration);.\..\Library\ftpClientLib\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\FileManager\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipEngine\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipRenderer\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipDicom\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\3MF\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\polyhedronMaker\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\omni\usd\debug\lib;.\..\Library\omni\usd_ext_physics\debug\lib;.\..\Library\omni\omni_client_library\debug;.\..\Library\omni\omni_usd_resolver\debug;.\..\Library\omni\python\lib;.\..\Library\omni\boost\debug;.\..\Library\omni;.\..\Library\mart_api\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;vtkIOCore-8.1.lib;vtkIOLegacy-8.1.lib;qwtd.lib;opencv_core341d.lib;Radiomics.lib;mipEngine.lib;mipRenderer.lib;mipDicom.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>CrashInfo.map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <PreBuildEvent>
+      <Command>SubWCRev.exe $(SolutionDir) $(ProjectDir)\svn_version.h.tmpl $(ProjectDir)\svn_version.h</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\Test\TestResource $(OutDir)\Test\ /Y /D /E
+xcopy $(ProjectDir)\Resource\License $(OutDir)\License\ /Y /D /E</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QWT_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;$(SolutionDir)Library\gtest\include\;.\..\Library\qwt\$(PlatformTarget)\include;.\GeneratedFiles;.;.\GeneratedFiles\$(ConfigurationName);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\include\vtk-8.1;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\include;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\include;.\..\Library\DirectX\include;.\..\Library\cryptopp565\include;.\..\Library\OpenCV341\include;.\graphics;.\Cuda;.\UI;.\Actions;.\Windows;%(AdditionalIncludeDirectories);.\..\Library\Radiomics\$(Platform)\$(Configuration)\include;.\algorithm\Common;.\..\Library\omni\usd\release\include;.\..\Library\omni\usd_ext_physics\release\include;.\..\Library\omni\omni_client_library\include;.\..\Library\omni\omni_usd_resolver\include;.\..\Library\omni\python\include;.\..\Library\omni\tinytoml\include;.\..\Library\omni\nlohmann-json\include</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\Medip2018.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\gtest\lib\$(PlatformTarget)\$(Configuration);.\..\Library\qwt\$(PlatformTarget)\lib;.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\Mip\$(PlatformTarget)\$(Configuration);.\..\Library\DirectX\lib\$(PlatformTarget);.\..\Library\cryptopp565\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\glew-2.1.0\lib\Release\Win32;.\..\Library\openvr\lib\win32;.\..\Library\OpenCV341\$(PlatformTarget)\$(Configuration)\lib;%(AdditionalLibraryDirectories);.\..\Library\Radiomics\$(PlatformTarget)\$(Configuration)\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vtkIOCore-8.1.lib;vtkIOLegacy-8.1.lib;qwtd.lib;mipEngine.lib;medipLib.lib;\;$(INHERIT)\;Radiomics.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>CrashInfo.map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QWT_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_DLL;QT_MESSAGELOGCONTEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;$(SolutionDir)Library\gtest\include\;.\..\Library\gdcm\include\socketxx;.\..\Library\gdcm\include\gdcmopenjpeg;.\..\Library\gdcm\include\gdcmjpeg;.\..\Library\gdcm\include\gdcmcharls;.\..\Library\gdcm\include;.\..\Library\cuda\include;.\..\Library\qwt\$(PlatformTarget)\include;.\GeneratedFiles;.;.\GeneratedFiles\$(ConfigurationName);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\include\vtk-8.1;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\include;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\include;.\..\Library\DirectX\include;.\..\Library\cryptopp565\include;.\graphics;.\Cuda;.\..\Library\di\include;.\..\Library\OpenCv341\include;.\UI;.\..\Library\MeshControl;.\Actions;.\..\Library\MedipLicense\include;.\Dialogs;.\System;.\Windows;.\..\Library\updaterLib\include;%(AdditionalIncludeDirectories);.\..\Library\MedipMipEncoder\include;.\..\Library\Radiomics\include;.\algorithm\Common;.\..\Library\ftpClientLib\include;.\..\Library\FileManager\include;.\..\Library\mipEngine\include;.\..\Library\mipRenderer\include;.\..\Library\mipDicom\include;.\..\Library\MeshControl\include;.\..\Library\3MF\include;.\..\Library\polyhedronMaker\include;.\..\Library\omni\usd\debug\include;.\..\Library\omni\usd_ext_physics\debug\include;.\..\Library\omni\omni_client_library\include;.\..\Library\omni\omni_usd_resolver\include;.\..\Library\omni\python\include;.\..\Library\omni\tinytoml\include;.\..\Library\omni\nlohmann-json\include;.\..\Library\mart_api\include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\gtest\lib\$(PlatformTarget)\$(Configuration);.\..\Library\gdcm\lib;.\..\Library\cuda\lib\x64;.\..\Library\qwt\$(PlatformTarget)\lib;.\..\Library\MeshLib\lib\$(Configuration);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\Mip\$(PlatformTarget)\$(Configuration);.\..\Library\DirectX\lib\$(PlatformTarget);.\..\Library\cryptopp565\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\glew-2.1.0\lib\Release\x64;.\..\Library\openvr\lib\win64;.\..\Library\di\lib\$(PlatformTarget)\$(Configuration)\;.\..\Library\OpenCV341\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\MeshControl\lib\$(Configuration);.\..\Library\MedipLicense\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\updaterLib\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\MedipMipEncoder\lib\$(Configuration);.\..\Library\Radiomics\lib\$(PlatformTarget)\$(Configuration);.\..\Library\ftpClientLib\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\FileManager\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipEngine\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipRenderer\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\mipDicom\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\3MF\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\polyhedronMaker\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\omni\usd\release\lib;.\..\Library\omni\usd_ext_physics\release\lib;.\..\Library\omni\omni_client_library\release;.\..\Library\omni\omni_usd_resolver\release;.\..\Library\omni\python\lib;.\..\Library\omni;.\..\Library\mart_api\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;vtkIOCore-8.1.lib;vtkIOLegacy-8.1.lib;qwt.lib;Radiomics.lib;mipEngine.lib;mipRenderer.lib;mipDicom.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>CrashInfo.map</MapFileName>
+      <MapExports>true</MapExports>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+    </Link>
+    <PreBuildEvent>
+      <Command>SubWCRev.exe $(SolutionDir) $(ProjectDir)\svn_version.h.tmpl $(ProjectDir)\svn_version.h</Command>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\Test\TestResource $(OutDir)\Test\ /Y /D /E
+xcopy $(ProjectDir)\Resource\License $(OutDir)\License\ /Y /D /E</Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QWT_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.\..\Library\qwt\$(PlatformTarget)\include;.\GeneratedFiles;.;.\GeneratedFiles\$(ConfigurationName);.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\include\vtk-8.1;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\include;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\include;.\..\Library\DirectX\include;.\..\Library\cryptopp565\include;.\graphics;.\Cuda;.\UI;.\Actions;.\Windows;%(AdditionalIncludeDirectories);.\..\Library\Radiomics\$(Platform)\$(Configuration)\include;.\algorithm\Common</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\Medip2018.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Library\gtest\lib\$(PlatformTarget)\$(Configuration);.\..\Library\qwt\$(PlatformTarget)\lib;.\..\Library\VTK8\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\dcmtk36\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\zlib\$(PlatformTarget)\$(Configuration)\lib;.\..\Library\Mip\$(PlatformTarget)\$(Configuration);.\..\Library\DirectX\lib\$(PlatformTarget);.\..\Library\cryptopp565\Lib\$(PlatformTarget)\$(Configuration);.\..\Library\glew-2.1.0\lib\Release\Win32;.\..\Library\openvr\lib\win32;%(AdditionalLibraryDirectories);.\..\Library\Radiomics\$(PlatformTarget)\$(Configuration)\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vtkIOCore-8.1.lib;vtkIOLegacy-8.1.lib;qwt.lib;mipEngine.lib;medipLib.lib;\;$(INHERIT)\;Radiomics.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>CrashInfo.map</MapFileName>
+      <MapExports>true</MapExports>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3MF\C3MFLoader.cpp" />
+    <ClCompile Include="Actions\ActionAnimation.cpp" />
+    <ClCompile Include="Actions\ActionBoundingBox.cpp" />
+    <ClCompile Include="Actions\ActionCalculateFeature.cpp" />
+    <ClCompile Include="Actions\ActionCaptureImage.cpp" />
+    <ClCompile Include="Actions\ActionCOVIDReport.cpp" />
+    <ClCompile Include="Actions\ActionCuda.cpp" />
+    <ClCompile Include="Actions\AI\ActionPredictAddEx.cpp" />
+    <ClCompile Include="Actions\ActionDeepCatchReport.cpp" />
+    <ClCompile Include="Actions\ActionDrawCut.cpp" />
+    <ClCompile Include="Actions\ActionFileWork.cpp" />
+    <ClCompile Include="Actions\ActionFtpWork.cpp" />
+    <ClCompile Include="Actions\ActionGMMExtractMask.cpp" />
+    <ClCompile Include="Actions\ActionHccPrediction.cpp" />
+    <ClCompile Include="Actions\ActionImageBoundary.cpp" />
+    <ClCompile Include="Actions\ActionImageCircumference.cpp" />
+    <ClCompile Include="Actions\ActionImageComponent.cpp" />
+    <ClCompile Include="Actions\ActionImageDilation.cpp" />
+    <ClCompile Include="Actions\ActionImageEnhance.cpp" />
+    <ClCompile Include="Actions\ActionImageErosion.cpp" />
+    <ClCompile Include="Actions\ActionImageFeatureExtractor.cpp" />
+    <ClCompile Include="Actions\ActionImageFissureness.cpp" />
+    <ClCompile Include="Actions\ActionImageHoleFilling.cpp" />
+    <ClCompile Include="Actions\ActionImageIsotropic.cpp" />
+    <ClCompile Include="Actions\ActionImageList.cpp" />
+    <ClCompile Include="Actions\ActionImageMove.cpp" />
+    <ClCompile Include="Actions\ActionImagePolyhedronThreshold.cpp" />
+    <ClCompile Include="Actions\ActionImageScale.cpp" />
+    <ClCompile Include="Actions\ActionImageVesselness.cpp" />
+    <ClCompile Include="Actions\ActionLevelset.cpp" />
+    <ClCompile Include="Actions\ActionManager.cpp" />
+    <ClCompile Include="Actions\AI\WorkDeepPredictResult.cpp" />
+    <ClCompile Include="Actions\ThreadEnd\ActionManager_ThreadEnd.cpp" />
+    <ClCompile Include="Actions\ActionMarking.cpp" />
+    <ClCompile Include="Actions\ActionMaskList.cpp" />
+    <ClCompile Include="Actions\ActionMaskListDelete.cpp" />
+    <ClCompile Include="Actions\ActionMaskListsImageCalculate.cpp" />
+    <ClCompile Include="Actions\ActionMaskListSplitRegion.cpp" />
+    <ClCompile Include="Actions\ActionMesh.cpp" />
+    <ClCompile Include="Actions\ActionRegionGrowing.cpp" />
+    <ClCompile Include="Actions\ActionResult.cpp" />
+    <ClCompile Include="Actions\ActionThreadArgument.cpp" />
+    <ClCompile Include="Actions\ThreadEnd\ActionThreadEndDeepDrawPredict.cpp" />
+    <ClCompile Include="Actions\ActionVertebra.cpp" />
+    <ClCompile Include="Actions\ActionVisualPrintWork.cpp" />
+    <ClCompile Include="Actions\ActionWidthLevel.cpp" />
+    <ClCompile Include="Actions\ActionWorkBase.cpp" />
+    <ClCompile Include="Actions\ActionWorkThreadRunner.cpp" />
+    <ClCompile Include="Actions\AI\ActionContrastSynthesisApply.cpp" />
+    <ClCompile Include="Actions\AI\ActionCTQuantization.cpp" />
+    <ClCompile Include="Actions\AI\ActionKernelConversion.cpp" />
+    <ClCompile Include="Actions\AI\ActionLowdoseReconstruction.cpp" />
+    <ClCompile Include="Actions\AI\WorkAIContrastSynthesis.cpp" />
+    <ClCompile Include="Actions\AI\WorkAICTQuantization.cpp" />
+    <ClCompile Include="Actions\AI\WorkAIKernelContinousConversion.cpp" />
+    <ClCompile Include="Actions\AI\WorkAIKernelNeutralization.cpp" />
+    <ClCompile Include="Actions\AI\WorkAILowdoseReconstruction.cpp" />
+    <ClCompile Include="Actions\AI\WorkDeepPredict.cpp" />
+    <ClCompile Include="Actions\Annotation\ActionAnnoAngle.cpp" />
+    <ClCompile Include="Actions\Annotation\ActionAnnoArrow.cpp" />
+    <ClCompile Include="Actions\Annotation\ActionAnnoLen.cpp" />
+    <ClCompile Include="Actions\Annotation\ActionAnnoRectangle.cpp" />
+    <ClCompile Include="Actions\Annotation\ActionAnnoText.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoad3MF.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadOBJ.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadSTL.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshTo3MF.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToOBJ.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToSTL.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToUSD.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkMeshToVTK.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveOBJ.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveSTL.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkSurfaceSaveVTK.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkLoadUsd.cpp" />
+    <ClCompile Include="Actions\FileWork\Mesh\WorkVTKOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkDicomOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkMipOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkNIIOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkRawOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkROIOpen.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveCoordinateNII.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveHUNII.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveHURAW.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveJSON.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveMIP.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveNII.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveNRRD.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveRAW.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveROINII.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveSplits.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkSaveTXT.cpp" />
+    <ClCompile Include="Actions\FileWork\WorkTXTOpen.cpp" />
+    <ClCompile Include="Actions\MeshWork\Brush\WorkBrushThread.cpp" />
+    <ClCompile Include="Actions\Mesh\ActionAddMeshes.cpp" />
+    <ClCompile Include="Actions\Mesh\ActionCreateMesh.cpp" />
+    <ClCompile Include="Actions\Mesh\CUndoRedo.cpp" />
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseCreateMeshSTL.cpp" />
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseCreateUsdModel.cpp" />
+    <ClCompile Include="Actions\Omniverse\ActionOmniverseUploadUsd.cpp" />
+    <ClCompile Include="Actions\Omniverse\ActionReceiveFromOmniverse.cpp" />
+    <ClCompile Include="Actions\Omniverse\ActionSendToOmniverse.cpp" />
+    <ClCompile Include="Actions\PreviewSurface\VisualPrintWorkSurfaceExport.cpp" />
+    <ClCompile Include="Actions\PreviewSurface\WorkSurfaceExport.cpp" />
+    <ClCompile Include="Actions\VisualPrinting\VisualPrintWorkMeshExport.cpp" />
+    <ClCompile Include="Actions\WorkBase.cpp" />
+    <ClCompile Include="AI\AIProject.cpp" />
+    <ClCompile Include="AI\AIProjectDefinitions.cpp" />
+    <ClCompile Include="AI\AIProjectFactory.cpp" />
+    <ClCompile Include="algorithm\GMM.cpp" />
+    <ClCompile Include="algorithm\KMeans.cpp" />
+    <ClCompile Include="algorithm\MagicCut.cpp" />
+    <ClCompile Include="algorithm\Radiomics.cpp" />
+    <ClCompile Include="algorithm\VolumeToSurface3D\VolumeTo3DSurface.cpp" />
+    <ClCompile Include="Dialogs\AnnoControlDlg.cpp" />
+    <ClCompile Include="Dialogs\AnnoPathUsageDlg.cpp" />
+    <ClCompile Include="Dialogs\AnnoTextDlg.cpp" />
+    <ClCompile Include="Dialogs\BrushSculptDlg.cpp" />
+    <ClCompile Include="Dialogs\BrushSelectDlg.cpp" />
+    <ClCompile Include="Dialogs\CHoleFillingDlg.cpp" />
+    <ClCompile Include="Dialogs\CIslandFilterDlg.cpp" />
+    <ClCompile Include="Dialogs\ClinicalInformationDlg.cpp" />
+    <ClCompile Include="Dialogs\CManpulateDlg.cpp" />
+    <ClCompile Include="Dialogs\CMeshCutDlg.cpp" />
+    <ClCompile Include="Dialogs\ColorMapDialog.cpp" />
+    <ClCompile Include="Dialogs\ComponentDlg.cpp" />
+    <ClCompile Include="Dialogs\ConfusionMatrixInfoDialog.cpp" />
+    <ClCompile Include="Dialogs\CPlaneCutDlg.cpp" />
+    <ClCompile Include="Dialogs\CRemeshDlg.cpp" />
+    <ClCompile Include="Dialogs\CroppingDialog.cpp" />
+    <ClCompile Include="Dialogs\CSolidDlg.cpp" />
+    <ClCompile Include="Dialogs\CSubDivisionDlg.cpp" />
+    <ClCompile Include="Dialogs\CVoxelCountRatioDlg.cpp" />
+    <ClCompile Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.cpp" />
+    <ClCompile Include="Dialogs\Debug\DebugUsdStageViewerWidget.cpp" />
+    <ClCompile Include="Dialogs\Debug\DebugWidgetDialog.cpp" />
+    <ClCompile Include="Dialogs\DicomSeriesSelectDialog.cpp" />
+    <ClCompile Include="Dialogs\DrawcutDlg.cpp" />
+    <ClCompile Include="Dialogs\HCCPredictionDlg.cpp" />
+    <ClCompile Include="Dialogs\HeightMapDlg.cpp" />
+    <ClCompile Include="Dialogs\HollowDlg.cpp" />
+    <ClCompile Include="Dialogs\ImageCalculatorDlg.cpp" />
+    <ClCompile Include="Dialogs\ImageDialog.cpp" />
+    <ClCompile Include="Dialogs\Infomation\InfoDialog.cpp" />
+    <ClCompile Include="Dialogs\Infomation\ModuleInfoDialog.cpp" />
+    <ClCompile Include="Dialogs\InputMessageDlg.cpp" />
+    <ClCompile Include="Dialogs\Interpolation3dDlg.cpp" />
+    <ClCompile Include="Dialogs\LayerHistogramDlg.cpp" />
+    <ClCompile Include="Dialogs\LevelsetDialog.cpp" />
+    <ClCompile Include="Dialogs\LineProfileDialog.cpp" />
+    <ClCompile Include="Dialogs\LoginDlg.cpp" />
+    <ClCompile Include="Dialogs\MeshBaseDlg.cpp" />
+    <ClCompile Include="Dialogs\MeshOffsetDlg.cpp" />
+    <ClCompile Include="Dialogs\NoticeDisplayDlg.cpp" />
+    <ClCompile Include="Dialogs\NumDialog.cpp" />
+    <ClCompile Include="Dialogs\OfflineLicenseRegDlg.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniverseFileViewDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLoginDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.cpp" />
+    <ClCompile Include="Dialogs\Omniverse\OmniversePresetDialog.cpp" />
+    <ClCompile Include="Dialogs\OpenSourceLicenseDlg.cpp" />
+    <ClCompile Include="Dialogs\PasswordDialog.cpp" />
+    <ClCompile Include="Dialogs\PathBrowseDialog.cpp" />
+    <ClCompile Include="Dialogs\PresetDlg.cpp" />
+    <ClCompile Include="Dialogs\ProjectDialog.cpp" />
+    <ClCompile Include="Dialogs\ReduceDlg.cpp" />
+    <ClCompile Include="Dialogs\ReportTabDialog.cpp" />
+    <ClCompile Include="Dialogs\SelectSliceDlg.cpp" />
+    <ClCompile Include="Dialogs\SessionSelectDialog.cpp" />
+    <ClCompile Include="Dialogs\SizeDialog.cpp" />
+    <ClCompile Include="Dialogs\SmoothDlg.cpp" />
+    <ClCompile Include="Dialogs\SpacingDialog.cpp" />
+    <ClCompile Include="Dialogs\Stamp3dDlg.cpp" />
+    <ClCompile Include="Dialogs\TableDialog.cpp" />
+    <ClCompile Include="Dialogs\ThickDialog.cpp" />
+    <ClCompile Include="Dialogs\VisualPrintDlg.cpp" />
+    <ClCompile Include="FunctionLevel.cpp" />
+    <ClCompile Include="graphics\AnnotationFactory.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoAngle.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoArrow.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoLength.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoName.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoProfile.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoRectangle.cpp" />
+    <ClCompile Include="graphics\Annotation\AnnoString.cpp" />
+    <ClCompile Include="graphics\anotation.cpp" />
+    <ClCompile Include="graphics\BoundingBox.cpp" />
+    <ClCompile Include="graphics\CRSpline.cpp" />
+    <ClCompile Include="graphics\DataContext.cpp" />
+    <ClCompile Include="graphics\DeletedMaskInfo.cpp" />
+    <ClCompile Include="graphics\MaskInfo.cpp" />
+    <ClCompile Include="graphics\MeshData.cpp" />
+    <ClCompile Include="graphics\MeshInfo.cpp" />
+    <ClCompile Include="graphics\MeshLayerData.cpp" />
+    <ClCompile Include="graphics\MeshLayerDataOmniverse.cpp" />
+    <ClCompile Include="graphics\Mesh\MeshPrimitiveBuilder.cpp" />
+    <ClCompile Include="graphics\Mesh\MeshSTLFileUtil.cpp" />
+    <ClCompile Include="graphics\Mesh\MeshTopologyBuilder.cpp" />
+    <ClCompile Include="graphics\OnSButton.cpp" />
+    <ClCompile Include="graphics\OnSGroupBox.cpp" />
+    <ClCompile Include="graphics\volumedata.cpp" />
+    <ClCompile Include="graphics\volumedatapet.cpp" />
+    <ClCompile Include="graphics\volumedatapet_colortable.cpp" />
+    <ClCompile Include="Macro\MacroArgumentParser.cpp" />
+    <ClCompile Include="Macro\MacroRunner.cpp" />
+    <ClCompile Include="Macro\Parser\MacroArgumentParser_Omniverse.cpp" />
+    <ClCompile Include="MedipQT.cpp" />
+    <ClCompile Include="MeshEdit\CManipulator.cpp" />
+    <ClCompile Include="MeshEdit\CMeshCutManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshDistancMananager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshDlgManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshFontManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshHoleFillManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshManipulator.cpp" />
+    <ClCompile Include="MeshEdit\CMeshModelViewManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshViewBtn3DScene.cpp" />
+    <ClCompile Include="MeshEdit\CMeshViewRenderManager.cpp" />
+    <ClCompile Include="MeshEdit\CMeshViewRightClickEvent.cpp" />
+    <ClCompile Include="MeshEdit\CMeshWorkManager.cpp" />
+    <ClCompile Include="MeshEdit\CPlaneManiplator.cpp" />
+    <ClCompile Include="MeshEdit\MeshEditScreenSelector.cpp" />
+    <ClCompile Include="MeshEdit\MeshEditSculpt.cpp" />
+    <ClCompile Include="Network\SSENetwork.cpp" />
+    <ClCompile Include="Omniverse\Config\OmniverseConfig.cpp" />
+    <ClCompile Include="Omniverse\Converter\UsdMeshConverter.cpp" />
+    <ClCompile Include="Omniverse\Converter\UsdMeshPureDataConverter.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\LiveSessionConfigFile.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\LiveSessionInfo.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\OmniChannel.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveChannel.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveChannelMessage.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\OmniverseLiveSession.cpp" />
+    <ClCompile Include="Omniverse\LiveSession\OmniversePeerUser.cpp" />
+    <ClCompile Include="Omniverse\OmniverseConnector.cpp" />
+    <ClCompile Include="Omniverse\OmniverseContext.cpp" />
+    <ClCompile Include="Omniverse\OmniverseFileInfo.cpp" />
+    <ClCompile Include="Omniverse\OmniverseFileUtil.cpp" />
+    <ClCompile Include="Omniverse\OmniverseHeader.cpp" />
+    <ClCompile Include="Omniverse\OmniverseSharedResource.cpp" />
+    <ClCompile Include="Omniverse\OmniverseStage.cpp" />
+    <ClCompile Include="Omniverse\OmniverseStageEventListenerWorker.cpp" />
+    <ClCompile Include="Omniverse\OmniverseStageReaderWorker.cpp" />
+    <ClCompile Include="Omniverse\OmniverseStageWriterWorker.cpp" />
+    <ClCompile Include="Omniverse\OmniverseUtils.cpp" />
+    <ClCompile Include="Omniverse\Resource\OmniverseResourceManager.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdCustomLayerData.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdLight.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUSDMaterial.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUSDMaterial_p.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUSDMesh.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdPreset.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdPresetManager.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdRenderSetting.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdStage.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdStage_p.cpp" />
+    <ClCompile Include="Omniverse\Usd\mipUsdUtil.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="System\ApplicationManager.cpp" />
+    <ClCompile Include="System\Config\ConfigManager.cpp" />
+    <ClCompile Include="System\Config\VisualPrintConfig.cpp" />
+    <ClCompile Include="System\FileManager.cpp" />
+    <ClCompile Include="System\File\FileWriterMesh.cpp" />
+    <ClCompile Include="System\FolderCompressor.cpp" />
+    <ClCompile Include="System\LicenseManager.cpp" />
+    <ClCompile Include="System\LogManager.cpp" />
+    <ClCompile Include="System\MedipType.cpp" />
+    <ClCompile Include="System\MinidumpHelp.cpp" />
+    <ClCompile Include="System\ProductManager.cpp" />
+    <ClCompile Include="System\resourceManager.cpp" />
+    <ClCompile Include="System\SelfDump.cpp" />
+    <ClCompile Include="System\ShortcutManager.cpp" />
+    <ClCompile Include="System\stringManager.cpp" />
+    <ClCompile Include="System\styleManager.cpp" />
+    <ClCompile Include="System\UpdateManager.cpp" />
+    <ClCompile Include="System\Version\FileVersionUtil.cpp" />
+    <ClCompile Include="System\VolumeCalculator.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Network\FTPProtocolOutput.cpp" />
+    <ClCompile Include="Network\Network.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkAIContrastSynthesis.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkAIKernelContinousConversion.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkAIKernelNeutralization.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkAILowdoseReconstruction.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkAICTQuantization.cpp" />
+    <ClCompile Include="Test\Actions\AI\TestWorkDeepPredict.cpp" />
+    <ClCompile Include="Test\Actions\FileWork\Mesh\TestWorkLoadUsd.cpp" />
+    <ClCompile Include="Test\Actions\FileWork\Mesh\TestWorkMeshToUSD.cpp" />
+    <ClCompile Include="Test\Actions\FileWork\TestWorkMipOpen.cpp" />
+    <ClCompile Include="Test\Actions\FileWork\TestWorkSaveMIP.cpp" />
+    <ClCompile Include="Test\Actions\Mesh\TestActionAddMeshes.cpp" />
+    <ClCompile Include="Test\Actions\Mesh\TestActionCreateMesh.cpp" />
+    <ClCompile Include="Test\Actions\Omniverse\TestActionReceiveFromOmniverse.cpp" />
+    <ClCompile Include="Test\Actions\Omniverse\TestActionSendToOmniverse.cpp" />
+    <ClCompile Include="Test\Actions\TestActionManager.cpp" />
+    <ClCompile Include="Test\Actions\TestActionManager_ThreadEnd.cpp" />
+    <ClCompile Include="Test\Actions\TestActionMaskListDelete.cpp" />
+    <ClCompile Include="Test\Actions\TestActionMedipMacro.cpp" />
+    <ClCompile Include="Test\Actions\TestActionPredictAddEx.cpp" />
+    <ClCompile Include="Test\Actions\TestActionThreadEndDeepDrawPredict.cpp" />
+    <ClCompile Include="Test\AI\TestAIProjectFactory.cpp" />
+    <ClCompile Include="Test\API\TestStdThread.cpp" />
+    <ClCompile Include="Test\Dialogs\TestBrushSculptDlg.cpp" />
+    <ClCompile Include="Test\Dicom\DicomTestFileResource.cpp" />
+    <ClCompile Include="Test\graphics\DataContextUtil.cpp" />
+    <ClCompile Include="Test\graphics\Mesh\TestMeshPrimitiveBuilder.cpp" />
+    <ClCompile Include="Test\graphics\TestMeshData.cpp" />
+    <ClCompile Include="Test\graphics\TestMeshDataList.cpp" />
+    <ClCompile Include="Test\graphics\TestMeshLayerDataOmniverse.cpp" />
+    <ClCompile Include="Test\graphics\TestVolumeData.cpp" />
+    <ClCompile Include="Test\graphics\TestVolumeDataCommon.cpp" />
+    <ClCompile Include="Test\graphics\TestVolumeData_AIPredict.cpp" />
+    <ClCompile Include="Test\graphics\TestVolumeData_Mask.cpp" />
+    <ClCompile Include="Test\graphics\VoxelVolumeData.cpp" />
+    <ClCompile Include="Test\graphics\VoxelVolumeSize.cpp" />
+    <ClCompile Include="Test\Macro\TestMacroArgumentParser.cpp" />
+    <ClCompile Include="Test\Macro\TestMacroRunner.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_CManipulator.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_CMeshModelViewManager.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_CMeshViewRenderManager.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_CMeshWorkManager.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_MeshEditScreenSelector.cpp" />
+    <ClCompile Include="Test\MeshEdit\Test_MeshEditSculpt.cpp" />
+    <ClCompile Include="Test\Omniverse\API_Test\TestOmniverseAPI.cpp" />
+    <ClCompile Include="Test\Omniverse\CommandLineTestProcessor.cpp" />
+    <ClCompile Include="Test\Omniverse\Converter\TestUsdMeshConverter.cpp" />
+    <ClCompile Include="Test\Omniverse\Converter\TestUsdMeshPureDataConverter.cpp" />
+    <ClCompile Include="Test\Omniverse\LiveSession\TestOmniverseChannelMessage.cpp" />
+    <ClCompile Include="Test\Omniverse\LiveSession\Test_OmniverseLiveChannel.cpp" />
+    <ClCompile Include="Test\Omniverse\LiveSession\Test_OmniverseLiveSession.cpp" />
+    <ClCompile Include="Test\Omniverse\OmniverseFileTestResource.cpp" />
+    <ClCompile Include="Test\Omniverse\Preset\TestUsdPresetParser.cpp" />
+    <ClCompile Include="Test\Omniverse\TestMeshTopology.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniClientAPI.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniverseContext.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniverseFileUtil.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniverseStage.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniverseStageEventListenerWorker.cpp" />
+    <ClCompile Include="Test\Omniverse\TestOmniverseStageEventListenerWorkerHandlerStub.cpp" />
+    <ClCompile Include="Test\Omniverse\TestUSDMeshTopology.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipCustomLayerData.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdMaterial.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdPreset.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdPresetManager.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\Test_mipUsdStage.cpp" />
+    <ClCompile Include="Test\Omniverse\Usd\UsdFileTestResource.cpp" />
+    <ClCompile Include="Test\Qt\TestQtAPI.cpp" />
+    <ClCompile Include="Test\Renderer\RendererWrapper.cpp" />
+    <ClCompile Include="Test\System\File\TestFileWriterMesh.cpp" />
+    <ClCompile Include="Test\System\LicenseManagerTestUtil.cpp" />
+    <ClCompile Include="Test\System\MockMedipType.cpp" />
+    <ClCompile Include="Test\System\MockProductManager.cpp" />
+    <ClCompile Include="Test\System\ProductManagerTestUtil.cpp" />
+    <ClCompile Include="Test\System\TestLicenseManager.cpp" />
+    <ClCompile Include="Test\System\TestProductManager.cpp" />
+    <ClCompile Include="Test\System\TestStringManager.cpp" />
+    <ClCompile Include="Test\TestActionMacro.cpp" />
+    <ClCompile Include="Test\TestAICommon.cpp" />
+    <ClCompile Include="Test\TestContext.cpp" />
+    <ClCompile Include="Test\TestTemplate.cpp" />
+    <ClCompile Include="Test\TestUtil.cpp" />
+    <ClCompile Include="Test\test_pch.cpp" />
+    <ClCompile Include="Test\TryCodeWrapper.cpp" />
+    <ClCompile Include="Test\UI\Mesh\TestMeshListColumnList.cpp" />
+    <ClCompile Include="Test\UI\TestMaskListWidget.cpp" />
+    <ClCompile Include="Test\UI\TestMeshListWidget.cpp" />
+    <ClCompile Include="Test\Windows\Tab\TestAISegTab.cpp" />
+    <ClCompile Include="Test\Windows\Tab\TestMeshTab.cpp" />
+    <ClCompile Include="Test\Windows\Tab\TestROITab2.cpp" />
+    <ClCompile Include="Test\Windows\TestTabWindow.cpp" />
+    <ClCompile Include="Test\Windows\TestWindowBase.cpp" />
+    <ClCompile Include="Test\Windows\TestWindowManager.cpp" />
+    <ClCompile Include="Test\Windows\Test_MEVolumeView.cpp" />
+    <ClCompile Include="UI\AlphaColorMap.cpp" />
+    <ClCompile Include="UI\AlphaWidget.cpp" />
+    <ClCompile Include="UI\AnalysisWidget.cpp" />
+    <ClCompile Include="UI\ClickLabel.cpp" />
+    <ClCompile Include="UI\ClinicalInfoTableWidget.cpp" />
+    <ClCompile Include="UI\CListWidget.cpp" />
+    <ClCompile Include="UI\CollapseDock.cpp" />
+    <ClCompile Include="UI\CollapseWidget.cpp" />
+    <ClCompile Include="UI\ColorTable.cpp" />
+    <ClCompile Include="UI\CustomHistogram.cpp" />
+    <ClCompile Include="UI\CustomUI.cpp" />
+    <ClCompile Include="UI\deepcatchAreaChart.cpp" />
+    <ClCompile Include="UI\HoverPoints.cpp" />
+    <ClCompile Include="UI\ImageListWidget.cpp" />
+    <ClCompile Include="UI\LayerHistogram.cpp" />
+    <ClCompile Include="UI\MaskList.cpp" />
+    <ClCompile Include="UI\MedipChartManager.cpp" />
+    <ClCompile Include="UI\MedipMultiBarChart.cpp" />
+    <ClCompile Include="UI\Mesh\MeshListColumn.cpp" />
+    <ClCompile Include="UI\Mesh\MeshListColumnList.cpp" />
+    <ClCompile Include="UI\Mesh\MeshListHeaderWidget.cpp" />
+    <ClCompile Include="UI\Mesh\MeshListWidget.cpp" />
+    <ClCompile Include="UI\Omniverse\OmniverseMeshListWidget.cpp" />
+    <ClCompile Include="UI\Omniverse\OmniversePropertyWidget.cpp" />
+    <ClCompile Include="UI\Omniverse\OmniverseStageListWidget.cpp" />
+    <ClCompile Include="UI\rangeDisplayChart.cpp" />
+    <ClCompile Include="ui\RangeWidget.cpp" />
+    <ClCompile Include="UI\ReportTextEdit.cpp" />
+    <ClCompile Include="UI\TASubClassResultCtrl.cpp" />
+    <ClCompile Include="UI\TrWidget.cpp" />
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshInfoWidget.cpp" />
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshListWidget.cpp" />
+    <ClCompile Include="UI\VisualPrint\VisualPrintMeshSmoothWidget.cpp" />
+    <ClCompile Include="Windows\AnalMPRPlaneView.cpp" />
+    <ClCompile Include="Windows\AnalVolumeView.cpp" />
+    <ClCompile Include="Windows\CroppingView.cpp" />
+    <ClCompile Include="Windows\CroppingViewControlWidget.cpp" />
+    <ClCompile Include="Windows\File\WindowManagerFileLoader.cpp" />
+    <ClCompile Include="Windows\glwidget.cpp" />
+    <ClCompile Include="Windows\HeightMapInfo.cpp" />
+    <ClCompile Include="Windows\HeightMapView.cpp" />
+    <ClCompile Include="Windows\ImageManagementTab.cpp" />
+    <ClCompile Include="Windows\Main\MainAnalWidget.cpp" />
+    <ClCompile Include="Windows\Main\MainMeshWidget.cpp" />
+    <ClCompile Include="Windows\Main\MainSegmentWidget.cpp" />
+    <ClCompile Include="Windows\Main\MainTabWidget.cpp" />
+    <ClCompile Include="Windows\Main\MainTAWidget.cpp" />
+    <ClCompile Include="Windows\MessageBox\ConsoleMessageBox.cpp" />
+    <ClCompile Include="Windows\MessageBox\GUIMessageBox.cpp" />
+    <ClCompile Include="Windows\MessageBox\MessageBoxBase.cpp" />
+    <ClCompile Include="Windows\MEVolumeView.cpp" />
+    <ClCompile Include="Windows\RadiomicsView.cpp" />
+    <ClCompile Include="Windows\ReportWidget.cpp" />
+    <ClCompile Include="Windows\ResultView.cpp" />
+    <ClCompile Include="Windows\SegmentationView.cpp" />
+    <ClCompile Include="Windows\SelectSliceView.cpp" />
+    <ClCompile Include="Windows\SubView.cpp" />
+    <ClCompile Include="Windows\Tabwindow.cpp" />
+    <ClCompile Include="Windows\Tab\AIContrastSynthesisTab.cpp" />
+    <ClCompile Include="Windows\Tab\AIKernelConversionTab.cpp" />
+    <ClCompile Include="Windows\Tab\AILowdoseCTReconstuctionTab.cpp" />
+    <ClCompile Include="Windows\Tab\AISegTab.cpp" />
+    <ClCompile Include="Windows\Tab\AISegTabDeepCatch.cpp" />
+    <ClCompile Include="Windows\Tab\AISetTab.cpp" />
+    <ClCompile Include="Windows\Tab\AITranslationTab.cpp" />
+    <ClCompile Include="Windows\Tab\AnalysisTab.cpp" />
+    <ClCompile Include="Windows\Tab\AnimationTab.cpp" />
+    <ClCompile Include="Windows\Tab\AnnotationTab2.cpp" />
+    <ClCompile Include="Windows\Tab\CaptureTab.cpp" />
+    <ClCompile Include="Windows\Tab\DrawcutTab.cpp" />
+    <ClCompile Include="Windows\Tab\Export3DTab.cpp" />
+    <ClCompile Include="Windows\Tab\IMGProcessTab.cpp" />
+    <ClCompile Include="Windows\Tab\MeshTab.cpp" />
+    <ClCompile Include="Windows\Tab\OmniverseTab.cpp" />
+    <ClCompile Include="Windows\Tab\OptionalTab.cpp" />
+    <ClCompile Include="Windows\Tab\RegionGrowTab.cpp" />
+    <ClCompile Include="Windows\Tab\ROITab2.cpp" />
+    <ClCompile Include="Windows\Tab\SummaryTab.cpp" />
+    <ClCompile Include="Windows\Tab\ThreSholdTab.cpp" />
+    <ClCompile Include="Windows\Tab\Visualize2DTab.cpp" />
+    <ClCompile Include="Windows\Tab\Visualize3DTab.cpp" />
+    <ClCompile Include="Windows\Tab\VisualPrintMeshTab.cpp" />
+    <ClCompile Include="Windows\Tab\VisualPrintTab.cpp" />
+    <ClCompile Include="Windows\Tab\VOLProcessTab.cpp" />
+    <ClCompile Include="Windows\Tab\WorkingRegionTab.cpp" />
+    <ClCompile Include="Windows\Main\MainVisualPrintMeshWidget.cpp" />
+    <ClCompile Include="Windows\VisualPrintMEVolumeView.cpp" />
+    <ClCompile Include="Windows\VolumeView.cpp" />
+    <ClCompile Include="Windows\WindowBase.cpp" />
+    <ClCompile Include="Windows\windowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MedipQT.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Dialogs\AnnoControlDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\AnnoPathUsageDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\AnnoTextDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\BrushSculptDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\BrushSelectDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CHoleFillingDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CIslandFilterDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ClinicalInformationDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CManpulateDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <CustomBuild Include="Actions\AI\ActionCTQuantization.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="Actions\AI\ActionKernelConversion.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="Actions\AI\ActionLowdoseReconstruction.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoad3MF.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadOBJ.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshTo3MF.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToOBJ.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToSTL.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToVTK.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveOBJ.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveSTL.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkSurfaceSaveVTK.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadUsd.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkDicomOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkMipOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkNIIOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkRawOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkROIOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveCoordinateNII.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveHUNII.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveHURAW.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveJSON.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveMIP.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveNII.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveNRRD.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveRAW.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveROINII.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveSplits.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkSaveTXT.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\WorkTXTOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\MeshWork\Brush\WorkBrushThread.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/MeshWork/Brush/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/MeshWork/Brush/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionAnimation.h" />
+    <ClInclude Include="Actions\ActionBoundingBox.h" />
+    <QtMoc Include="Actions\ActionCalculateFeature.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionCaptureImage.h" />
+    <QtMoc Include="Actions\ActionCOVIDReport.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionCuda.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\AI\ActionPredictAddEx.h" />
+    <QtMoc Include="Actions\ActionDeepCatchReport.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionDrawCut.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionDefinitions.h" />
+    <ClInclude Include="Actions\ActionFileWork.h" />
+    <QtMoc Include="Actions\ActionFtpWork.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionGMMExtractMask.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionHccPrediction.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageBoundary.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageCircumference.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageComponent.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageDilation.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageEnhance.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageErosion.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageFeatureExtractor.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageFissureness.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageHoleFilling.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageIsotropic.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionImageList.h" />
+    <QtMoc Include="Actions\ActionImageMove.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImagePolyhedronThreshold.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageScale.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionImageVesselness.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionLevelset.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\AI\WorkDeepPredictResult.h" />
+    <ClInclude Include="Actions\ThreadEnd\ActionManager_ThreadEnd.h" />
+    <QtMoc Include="Actions\ActionMarking.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionMaskList.h" />
+    <ClInclude Include="Actions\ActionMaskListDelete.h" />
+    <ClInclude Include="Actions\ActionMaskListsImageCalculate.h" />
+    <QtMoc Include="Actions\ActionMaskListSplitRegion.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionMesh.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionRegionGrowing.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionVertebra.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\ActionVisualPrintWork.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionResult.h" />
+    <ClInclude Include="Actions\ActionThreadArgument.h" />
+    <ClInclude Include="Actions\ThreadEnd\ActionThreadEndDeepDrawPredict.h" />
+    <ClInclude Include="Actions\ActionWidthLevel.h" />
+    <QtMoc Include="Actions\ActionWorkBase.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\ActionWorkThreadRunner.h" />
+    <QtMoc Include="Actions\FileWork\Mesh\WorkLoadSTL.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkVTKOpen.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\FileWork\Mesh\WorkMeshToUSD.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/FileWork/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAILowdoseReconstruction.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAIKernelContinousConversion.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAIKernelNeutralization.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkAICTQuantization.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\AI\ActionContrastSynthesisApply.h" />
+    <QtMoc Include="Actions\AI\WorkAIContrastSynthesis.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\AI\WorkDeepPredict.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/AI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\Annotation\ActionAnnoAngle.h" />
+    <ClInclude Include="Actions\Annotation\ActionAnnoArrow.h" />
+    <ClInclude Include="Actions\Annotation\ActionAnnoLen.h" />
+    <ClInclude Include="Actions\Annotation\ActionAnnoRectangle.h" />
+    <ClInclude Include="Actions\Annotation\ActionAnnoText.h" />
+    <ClInclude Include="Actions\Mesh\ActionAddMeshes.h" />
+    <ClInclude Include="Actions\Mesh\ActionCreateMesh.h" />
+    <ClInclude Include="Actions\Mesh\CUndoRedo.h" />
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseCreateMeshSTL.h" />
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseCreateUsdModel.h" />
+    <ClInclude Include="Actions\Omniverse\ActionOmniverseUploadUsd.h" />
+    <QtMoc Include="Actions\PreviewSurface\VisualPrintWorkSurfaceExport.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/PreviewSurface/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/PreviewSurface/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\PreviewSurface\WorkSurfaceExport.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/PreviewSurface/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/PreviewSurface/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Actions\VisualPrinting\VisualPrintWorkMeshExport.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/VisualPrinting/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/VisualPrinting/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Actions\Omniverse\ActionReceiveFromOmniverse.h" />
+    <ClInclude Include="Actions\Omniverse\ActionSendToOmniverse.h" />
+    <QtMoc Include="Actions\WorkBase.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Actions/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="AI\AIProject.h" />
+    <ClInclude Include="AI\AIProjectDefinitions.h" />
+    <ClInclude Include="AI\AIProjectFactory.h" />
+    <ClInclude Include="Dialogs\CMeshCutDlg.h" />
+    <QtMoc Include="Dialogs\ColorMapDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ComponentDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ConfusionMatrixInfoDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CPlaneCutDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CRemeshDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CroppingDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CSolidDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\CSubDivisionDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Dialogs\CVoxelCountRatioDlg.h" />
+    <QtMoc Include="Dialogs\DicomSeriesSelectDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\DrawcutDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HCCPredictionDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HeightMapDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\HollowDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ImageCalculatorDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ImageDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\InputMessageDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Interpolation3dDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LayerHistogramDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LevelsetDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LineProfileDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\LoginDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\MeshBaseDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/$(Configuration)/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Debug/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugWidgetDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/$(Configuration)/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Debug/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Infomation\InfoDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Infomation/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Infomation/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Debug\DebugUsdStageViewerWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/$(Configuration)/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Debug/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Dialogs\Infomation\ModuleInfoDialog.h" />
+    <ClInclude Include="Dialogs\MeshOffsetDlg.h" />
+    <QtMoc Include="Dialogs\NoticeDisplayDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\NumDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\OfflineLicenseRegDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\OpenSourceLicenseDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\PasswordDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\PathBrowseDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\PresetDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ProjectDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ReduceDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ReportTabDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseFileViewDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLoginDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Omniverse\OmniversePresetDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SessionSelectDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SizeDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SmoothDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SpacingDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\Stamp3dDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\TableDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\ThickDialog.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\VisualPrintDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Dialogs\SelectSliceDlg.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Dialogs/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\MeshEditScreenSelector.h" />
+    <ClInclude Include="MeshEdit\MeshEditSculpt.h" />
+    <ClInclude Include="System\File\FileWriterMesh.h" />
+    <ClInclude Include="graphics\AnnoDeclare.h" />
+    <ClInclude Include="graphics\AnnotationFactory.h" />
+    <ClInclude Include="graphics\Annotation\AnnoAngle.h" />
+    <ClInclude Include="graphics\Annotation\AnnoArrow.h" />
+    <ClInclude Include="graphics\Annotation\AnnoLength.h" />
+    <ClInclude Include="graphics\Annotation\AnnoName.h" />
+    <ClInclude Include="graphics\Annotation\AnnoProfile.h" />
+    <ClInclude Include="graphics\Annotation\AnnoRectangle.h" />
+    <ClInclude Include="graphics\Annotation\AnnoRectangleCalculator.h" />
+    <ClInclude Include="graphics\Annotation\AnnoString.h" />
+    <ClInclude Include="graphics\anotation.h" />
+    <ClInclude Include="graphics\BoundingBox.h" />
+    <ClInclude Include="graphics\color.h" />
+    <ClInclude Include="graphics\CRSpline.h" />
+    <QtMoc Include="graphics\DataContext.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../graphics/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../graphics/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="graphics\DeletedMaskInfo.h" />
+    <ClInclude Include="graphics\Hessian_3D.h" />
+    <ClInclude Include="graphics\MaskInfo.h" />
+    <ClInclude Include="graphics\MeshData.h" />
+    <ClInclude Include="graphics\MeshInfo.h" />
+    <ClInclude Include="graphics\MeshLayerData.h" />
+    <ClInclude Include="graphics\MeshLayerDataOmniverse.h" />
+    <ClInclude Include="graphics\Mesh\MeshPrimitiveBuilder.h" />
+    <ClInclude Include="graphics\Mesh\MeshSTLFileUtil.h" />
+    <ClInclude Include="graphics\Mesh\MeshTopologyBuilder.h" />
+    <ClInclude Include="graphics\OnSButton.h" />
+    <QtMoc Include="graphics\OnSGroupBox.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../graphics/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../graphics/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="graphics\volumedata.h" />
+    <ClInclude Include="graphics\volumedatapet.h" />
+    <QtMoc Include="MedipQT.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\CManipulator.h" />
+    <QtMoc Include="MeshEdit\CMeshCutManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\CMeshDistancMananager.h" />
+    <ClInclude Include="MeshEdit\CMeshDlgManager.h" />
+    <ClInclude Include="MeshEdit\CMeshFontManager.h" />
+    <QtMoc Include="MeshEdit\CMeshHoleFillManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\CMeshManipulator.h" />
+    <QtMoc Include="MeshEdit\CMeshModelViewManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshViewBtn3DScene.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\CMeshViewRenderManager.h" />
+    <QtMoc Include="MeshEdit\CMeshViewRightClickEvent.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="MeshEdit\CMeshWorkManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../MeshEdit/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="MeshEdit\CPlaneManiplator.h" />
+    <QtMoc Include="Network\SSENetwork.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Network/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Network/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Omniverse\Config\OmniverseConfig.h" />
+    <QtMoc Include="Omniverse\Converter\UsdMeshConverter.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/Converter/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/Converter/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Omniverse\Converter\UsdMeshPureDataConverter.h" />
+    <ClInclude Include="Omniverse\LiveSession\LiveSessionConfigFile.h" />
+    <ClInclude Include="Omniverse\LiveSession\LiveSessionInfo.h" />
+    <ClInclude Include="Omniverse\LiveSession\OmniChannel.h" />
+    <QtMoc Include="Omniverse\LiveSession\OmniverseLiveChannel.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/LiveSession/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/LiveSession/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Omniverse\LiveSession\OmniverseLiveChannelMessage.h" />
+    <ClInclude Include="Omniverse\LiveSession\OmniverseLiveSession.h" />
+    <ClInclude Include="Omniverse\LiveSession\OmniversePeerUser.h" />
+    <ClInclude Include="Omniverse\OmniverseConnector.h" />
+    <QtMoc Include="Omniverse\OmniverseContext.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Omniverse\OmniverseFileInfo.h" />
+    <ClInclude Include="Omniverse\OmniverseFileUtil.h" />
+    <ClInclude Include="Omniverse\OmniverseHeader.h" />
+    <ClInclude Include="Omniverse\OmniverseSharedResource.h" />
+    <QtMoc Include="Omniverse\OmniverseStage.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageEventListenerWorker.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageReaderWorker.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Omniverse\OmniverseStageWriterWorker.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Omniverse\OmniverseUtils.h" />
+    <ClInclude Include="Omniverse\primUtils.h" />
+    <ClInclude Include="Omniverse\Resource\OmniverseResourceManager.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdCustomLayerData.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdLight.h" />
+    <ClInclude Include="Omniverse\Usd\mipUSDMaterial.h" />
+    <ClInclude Include="Omniverse\Usd\mipUSDMaterial_p.h" />
+    <ClInclude Include="Omniverse\Usd\mipUSDMesh.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdPreset.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdPresetManager.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdRenderSetting.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdStage.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdStage_p.h" />
+    <ClInclude Include="Omniverse\Usd\mipUsdUtil.h" />
+    <ClInclude Include="Omniverse\xformUtils.h" />
+    <QtMoc Include="System\ApplicationManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="System\Config\ConfigManager.h" />
+    <ClInclude Include="System\Config\VisualPrintConfig.h" />
+    <ClInclude Include="System\FileManager.h" />
+    <QtMoc Include="System\FolderCompressor.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="System\LicenseManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="System\LogManager.h" />
+    <ClInclude Include="System\MedipType.h" />
+    <ClInclude Include="System\MinidumpHelp.h" />
+    <ClInclude Include="System\ProductManager.h" />
+    <ClInclude Include="System\resourceManager.h" />
+    <ClInclude Include="System\SelfDump.h" />
+    <ClInclude Include="System\ShortcutManager.h" />
+    <QtMoc Include="System\stringManager.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../System/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="System\styleManager.h" />
+    <ClInclude Include="System\UpdateManager.h" />
+    <ClInclude Include="System\Version\FileVersionUtil.h" />
+    <ClInclude Include="System\VolumeCalculator.h" />
+    <QtMoc Include="UI\AlphaColorMap.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\AlphaWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\AnalysisWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\ClickLabel.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\ClinicalInfoTableWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\CListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\CollapseDock.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\CollapseWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\ColorTable.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\CustomHistogram.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Test\Actions\AI\TestWorkDeepPredictResult.cpp" />
+    <ClInclude Include="Test\Dicom\DicomTestFileResource.h" />
+    <ClInclude Include="Test\graphics\DataContextUtil.h" />
+    <ClInclude Include="Test\graphics\TestVolumeDataCommon.h" />
+    <ClInclude Include="Test\graphics\VoxelVolumeData.h" />
+    <ClInclude Include="Test\graphics\VoxelVolumeSize.h" />
+    <ClInclude Include="Test\Omniverse\CommandLineTestProcessor.h" />
+    <ClInclude Include="Test\Omniverse\OmniverseFileTestResource.h" />
+    <QtMoc Include="Test\Omniverse\TestOmniverseStageEventListenerWorkerHandlerStub.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Test/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Test/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Test\Omniverse\Usd\UsdFileTestResource.h" />
+    <ClInclude Include="Test\Renderer\RendererWrapper.h" />
+    <ClInclude Include="Test\System\LicenseManagerTestUtil.h" />
+    <ClInclude Include="Test\System\MockMedipType.h" />
+    <ClInclude Include="Test\System\MockProductManager.h" />
+    <ClInclude Include="Test\System\ProductManagerTestUtil.h" />
+    <ClInclude Include="Test\TestAICommon.h" />
+    <ClInclude Include="Test\TestContext.h" />
+    <ClInclude Include="Test\TestUtil.h" />
+    <ClInclude Include="Test\test_pch.h" />
+    <ClInclude Include="Test\TryCodeWrapper.h" />
+    <ClInclude Include="UI\CustomUI.h" />
+    <ClInclude Include="UI\deepcatchAreaChart.h" />
+    <QtMoc Include="UI\HoverPoints.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\ImageListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\LayerHistogram.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\MaskList.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="UI\MedipChartManager.h" />
+    <QtMoc Include="UI\MedipMultiBarChart.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="UI\Mesh\MeshListColumn.h" />
+    <ClInclude Include="UI\Mesh\MeshListColumnList.h" />
+    <QtMoc Include="UI\Mesh\MeshListHeaderWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\Mesh\MeshListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/Mesh/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/Mesh/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\Omniverse\OmniverseMeshListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\Omniverse\OmniversePropertyWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\Omniverse\OmniverseStageListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/Omniverse/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="UI\rangeDisplayChart.h" />
+    <QtMoc Include="ui\RangeWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../ui/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../ui/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\ReportTextEdit.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="UI\TASubClassResultCtrl.h" />
+    <QtMoc Include="UI\TrWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshSmoothWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshInfoWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="UI\VisualPrint\VisualPrintMeshListWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../UI/VisualPrint/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Windows\File\WindowManagerFileLoader.h" />
+    <ClInclude Include="Windows\HeightMapInfo.h" />
+    <QtMoc Include="Windows\Main\MainAnalWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainMeshWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainSegmentWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainTabWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Main\MainTAWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Main/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Windows\MessageBox\ConsoleMessageBox.h" />
+    <ClInclude Include="Windows\MessageBox\GUIMessageBox.h" />
+    <ClInclude Include="Windows\MessageBox\MessageBoxBase.h" />
+    <ClInclude Include="Windows\ResultView.h" />
+    <ClInclude Include="Windows\SubView.h" />
+    <QtMoc Include="Windows\Tab\AIContrastSynthesisTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AIKernelConversionTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AILowdoseCTReconstuctionTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISegTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISegTabDeepCatch.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AISetTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AITranslationTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnalysisTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnimationTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\AnnotationTab2.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\CaptureTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\DrawcutTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Export3DTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\IMGProcessTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\MeshTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\OmniverseTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\OptionalTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\RegionGrowTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\ROITab2.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\SummaryTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\ThreSholdTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Visualize2DTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\Visualize3DTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VisualPrintMeshTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VisualPrintTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\VOLProcessTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tab\WorkingRegionTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/Tab/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Windows\Main\MainVisualPrintMeshWidget.h" />
+    <QtMoc Include="Windows\VisualPrintMEVolumeView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\VolumeView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <ClInclude Include="Windows\windowManager.h" />
+    <QtMoc Include="Windows\WindowBase.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\Tabwindow.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\SelectSliceView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\SegmentationView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\ReportWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\RadiomicsView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\MEVolumeView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\ImageManagementTab.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\HeightMapView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\glwidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\CroppingViewControlWidget.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\CroppingView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\AnalVolumeView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtMoc Include="Windows\AnalMPRPlaneView.h">
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h;../../Windows/%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <CustomBuild Include="define.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+    </CustomBuild>
+    <ClInclude Include="3MF\C3MFLoader.h" />
+    <ClInclude Include="3MF\stb_image.h" />
+    <ClInclude Include="3MF\stb_image_write.h" />
+    <ClInclude Include="algorithm\Common\MaskInfoHelper.h" />
+    <ClInclude Include="algorithm\Radiomics.h" />
+    <ClInclude Include="algorithm\GMM.h" />
+    <ClInclude Include="algorithm\KMeans.h" />
+    <ClInclude Include="algorithm\VolumeToSurface3D\VolumeTo3DSurface.h" />
+    <ClInclude Include="defineMEDIP.h" />
+    <ClInclude Include="FunctionLevel.h" />
+    <ClInclude Include="Macro\MacroArgumentParser.h" />
+    <ClInclude Include="Macro\MacroDefines.h" />
+    <ClInclude Include="Macro\MacroRunner.h" />
+    <ClInclude Include="Macro\Parser\MacroArgumentParser_Omniverse.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="Mip\brush.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="graphics\GaussianSmoothing.h" />
+    <ClInclude Include="Network\FTPProtocolOutput.h" />
+    <CustomBuild Include="Network\Network.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MedipQT.qrc">
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MedipQT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.ico" />
+    <Image Include="logo_alpha.ico" />
+    <Image Include="logo_beta.ico" />
+    <Image Include="logo_DeepCatch.ico" />
+    <Image Include="logo_DeepCatch_alpha.ico" />
+    <Image Include="logo_DeepCatch_beta.ico" />
+    <Image Include="logo_MEDIP_AI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Dialogs\CroppingDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\ImageCalculatorDlg.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\OpenSourceLicenseDlg.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\SessionSelectDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Infomation\ModuleInfoDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugWidgetDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugUsdStageViewerWidget.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Debug\DebugOmniverseLiveSessionWidget.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseFileViewDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLiveSessionDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLoginDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniverseLoginInfoEditDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetAddNewTypeDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetAddOrModifyDialog.ui">
+    </QtUic>
+    <QtUic Include="Dialogs\Omniverse\OmniversePresetDialog.ui">
+    </QtUic>
+    <None Include="License.html" />
+    <None Include="License_DeepCatch.html">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="svn_version.h.tmpl" />
+    <QtUic Include="UI\Omniverse\OmniversePropertyWidget.ui">
+    </QtUic>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <!--<ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 8.0.targets" />
+  </ImportGroup>-->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>

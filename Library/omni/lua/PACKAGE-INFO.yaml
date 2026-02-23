@@ -1,0 +1,5 @@
+Package : lua
+Description : A powerful, efficient, lightweight, embeddable scripting language.
+Maintainers : seant@nvidia.com
+SWIPAT NvBug : http://nvbugs/2676244
+Repository : https://gitlab-master.nvidia.com/carbon/Carbonite-externals/lua

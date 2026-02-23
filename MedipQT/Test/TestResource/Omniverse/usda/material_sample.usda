@@ -1,0 +1,712 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary audioSettings = {
+            double dopplerLimit = 2
+            double dopplerScale = 1
+            token enableDistanceDelay = "off"
+            token enableDoppler = "off"
+            token enableInterauralDelay = "off"
+            double nonSpatialTimeScale = 1
+            double spatialTimeScale = 1
+            double speedOfSound = 340
+        }
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (0, 0, 50000)
+                double radius = 500
+            }
+            dictionary Perspective = {
+                double3 position = (222.79591176073498, -271.0442404279192, 362.6766569383688)
+                double3 target = (60.413042358198226, 60.98257781792557, 30.896980005488956)
+            }
+            dictionary Right = {
+                double3 position = (-50000, 0, 0)
+                double radius = 500
+            }
+            dictionary Top = {
+                double3 position = (0, 50000, 0)
+                double radius = 500
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        dictionary omni_layer = {
+            dictionary muteness = {
+            }
+        }
+        dictionary renderSettings = {
+            double "rtx:hydra:points:defaultWidth" = 1
+            bool "rtx:post:backgroundZeroAlpha:backgroundComposite" = 0
+            float3 "rtx:post:backgroundZeroAlpha:backgroundDefaultColor" = (1, 0.99999, 0.99999)
+            bool "rtx:post:backgroundZeroAlpha:enabled" = 1
+            int "rtx:post:histogram:enabled" = 1
+            double "rtx:post:histogram:whiteScale" = 0.7699999827891588
+            token "rtx:rendermode" = "PathTracing"
+            double "rtx:wireframe:wireframeThickness" = 0.09999999776482582
+        }
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    kind = "component"
+)
+{
+    rel material:binding = </Root/Looks/OmniSurface_Ceramic> (
+        bindMaterialAs = "weakerThanDescendants"
+    )
+    token visibility = "inherited"
+    float3 xformOp:rotateXYZ = (0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+    def Scope "Looks"
+    {
+        token visibility = "invisible"
+
+        def Material "bone_OmniSurface_Plastic"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/bone_OmniSurface_Plastic/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/bone_OmniSurface_Plastic/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/bone_OmniSurface_Plastic/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Plastic"
+                color3f inputs:diffuse_reflection_color = (0.79536676, 0.6605073, 0.5067009) (
+                    customData = {
+                        float3 default = (0.105, 0.242, 0.818)
+                    }
+                    displayGroup = "Base"
+                    displayName = "Color"
+                    hidden = false
+                )
+                int inputs:subsurface_scattering_colors_preset = 1 (
+                    customData = {
+                        int default = 12
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Scattering Presets"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::scattering_colors_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "scattering_colors_custom"
+                        string options = "scattering_colors_apple:0|scattering_colors_chicken:1|scattering_colors_cream:2|scattering_colors_ketchup:3|scattering_colors_marble:4|scattering_colors_potato:5|scattering_colors_skim_milk:6|scattering_colors_whole_milk:7|scattering_colors_skin_1:8|scattering_colors_skin_2:9|scattering_colors_skin_3:10|scattering_colors_skin_4:11|scattering_colors_custom:12"
+                    }
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Aorta_OmniSurface_Blood"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/Aorta_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/Aorta_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/Aorta_OmniSurface_Blood/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Blood"
+                token outputs:out
+            }
+        }
+
+        def Material "Myocardium_L_OmniSurface_Blood"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/Myocardium_L_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/Myocardium_L_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/Myocardium_L_OmniSurface_Blood/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Blood"
+                bool inputs:enable_opacity = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Enable Opacity"
+                    doc = "Enables the use of cutout opacity"
+                    hidden = false
+                )
+                asset inputs:geometry_opacity_image = @../../../../../Output/x64/Release/Test/Omniverse/usd/skin_test_opa.tga@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image"
+                    hidden = false
+                )
+                int inputs:geometry_opacity_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                color3f inputs:subsurface_transmission_color = (0.79536676, 0.30709144, 0.30709144) (
+                    customData = {
+                        float3 default = (0.432, 0, 0)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Color"
+                    hidden = false
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Thin Walled"
+                    doc = "Thin surface with no interior."
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "PA_OmniSurface_Blood"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/PA_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/PA_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/PA_OmniSurface_Blood/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Blood"
+                int inputs:specular_reflection_ior_preset = 99 (
+                    customData = {
+                        int default = 99
+                    }
+                    displayGroup = "Specular"
+                    displayName = "IOR Preset"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::ior_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "ior_custom"
+                        string options = "ior_acrylic_glass:0|ior_air:1|ior_crystal:2|ior_diamond:3|ior_emerald:4|ior_ethanol:5|ior_flint_glass:6|ior_glass:7|ior_honey_21p_water:8|ior_human_eye_aqueous_humor:9|ior_human_eye_cornea:10|ior_human_eye_lens:11|ior_human_eye_vitreous_humor:12|ior_human_skin:13|ior_human_hair:14|ior_human_wet_hair:15|ior_ice:16|ior_milk:17|ior_olive_oil:18|ior_pearl:19|ior_plastic:20|ior_sapphire:21|ior_soap_bubble:22|ior_vacuum:23|ior_water_0c:24|ior_water_35c:25|ior_water_100c:26|ior_custom:99"
+                    }
+                )
+                float inputs:specular_reflection_roughness = 0.1 (
+                    customData = {
+                        float default = 0.1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Roughness"
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmission_color = (0.7915058, 0.033616085, 0.033616085) (
+                    customData = {
+                        float3 default = (0.432, 0, 0)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Color"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Myocardium_R_OmniSurface_Blood"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/Myocardium_R_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/Myocardium_R_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/Myocardium_R_OmniSurface_Blood/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Blood"
+                bool inputs:enable_opacity = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Enable Opacity"
+                    doc = "Enables the use of cutout opacity"
+                    hidden = false
+                )
+                asset inputs:geometry_opacity_image = @../../../../../Output/x64/Release/Test/Omniverse/usd/skin_test_opa.tga@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image"
+                    hidden = false
+                )
+                int inputs:geometry_opacity_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                color3f inputs:subsurface_transmission_color = (0.11591958, 0.45246726, 0.93822396) (
+                    customData = {
+                        float3 default = (0.432, 0, 0)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Color"
+                    hidden = false
+                )
+                bool inputs:thin_walled = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Thin Walled"
+                    doc = "Thin surface with no interior."
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "PV_OmniSurface_Blood"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/PV_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/PV_OmniSurface_Blood/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/PV_OmniSurface_Blood/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Blood"
+                float inputs:emission_weight = 0 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Emission"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                color3f inputs:specular_reflection_color = (1, 0.99999, 1) (
+                    customData = {
+                        float3 default = (1, 1, 1)
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Color"
+                    hidden = false
+                )
+                float inputs:specular_reflection_weight = 1 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                color3f inputs:subsurface_transmission_color = (0, 0.04670278, 0.432) (
+                    customData = {
+                        float3 default = (0.432, 0, 0)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Color"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "lung_OmniSurface_Skin_1"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/lung_OmniSurface_Skin_1/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/lung_OmniSurface_Skin_1/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/lung_OmniSurface_Skin_1/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Skin_1"
+                color3f inputs:diffuse_reflection_color = (0.32404283, 0.0257599, 0.37065637) (
+                    customData = {
+                        float3 default = (1, 1, 1)
+                    }
+                    displayGroup = "Base"
+                    displayName = "Color"
+                    hidden = false
+                )
+                float inputs:diffuse_reflection_weight = 0.79999995 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Base"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                asset inputs:diffuse_reflection_weight_image = @@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Base"
+                    displayName = "Weight Image"
+                    hidden = false
+                )
+                int inputs:diffuse_reflection_weight_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Base"
+                    displayName = "Weight Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                bool inputs:enable_diffuse_transmission = 1 (
+                    customData = {
+                        bool default = 1
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Enable Subsurface"
+                    doc = "Enables the use of subsurface"
+                    hidden = false
+                )
+                bool inputs:enable_opacity = 0 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Enable Opacity"
+                    doc = "Enables the use of cutout opacity"
+                    hidden = false
+                )
+                float inputs:geometry_opacity = 0.099999994 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity"
+                    hidden = false
+                )
+                asset inputs:geometry_opacity_image = @../../../../../Output/x64/Release/Test/Omniverse/usd/skin_test_opa.tga@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image"
+                    hidden = false
+                )
+                int inputs:geometry_opacity_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                float inputs:geometry_opacity_threshold = 0 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Threshold"
+                    doc = "If > 0, remap opacity values to 1 when >= threshold and to 0 otherwise"
+                    hidden = false
+                )
+                float inputs:specular_reflection_weight = 0.17999999 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                color3f inputs:subsurface_scattering_color = (0.42894474, 0.13632773, 0.5984556) (
+                    customData = {
+                        float3 default = (3.67, 1.37, 0.68)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Radius (mfp)"
+                    hidden = false
+                )
+                int inputs:subsurface_scattering_colors_preset = 9 (
+                    customData = {
+                        int default = 8
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Scattering Presets"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::scattering_colors_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "scattering_colors_skin_1"
+                        string options = "scattering_colors_apple:0|scattering_colors_chicken:1|scattering_colors_cream:2|scattering_colors_ketchup:3|scattering_colors_marble:4|scattering_colors_potato:5|scattering_colors_skim_milk:6|scattering_colors_whole_milk:7|scattering_colors_skin_1:8|scattering_colors_skin_2:9|scattering_colors_skin_3:10|scattering_colors_skin_4:11|scattering_colors_custom:12"
+                    }
+                )
+                color3f inputs:subsurface_transmission_color = (0.4481269, 0.01838076, 0.5289575) (
+                    customData = {
+                        float3 default = (0.57, 0.31, 0.17)
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Color"
+                    hidden = false
+                )
+                float inputs:subsurface_weight = 0.78999996 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                asset inputs:subsurface_weight_image = @@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Weight Image"
+                    hidden = false
+                )
+                int inputs:subsurface_weight_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Weight Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "skin_OmniSurface_Skin_2"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/skin_OmniSurface_Skin_2/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/skin_OmniSurface_Skin_2/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/skin_OmniSurface_Skin_2/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Skin_2"
+                bool inputs:enable_opacity = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Enable Opacity"
+                    doc = "Enables the use of cutout opacity"
+                    hidden = false
+                )
+                asset inputs:geometry_opacity_image = @omniverse://106.254.254.174/Projects/1028_material_test/skin_texture.tga@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image"
+                    hidden = false
+                )
+                int inputs:geometry_opacity_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                float inputs:geometry_opacity_threshold = 0.42999998 (
+                    customData = {
+                        float default = 0
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Geometry"
+                    displayName = "Opacity Threshold"
+                    doc = "If > 0, remap opacity values to 1 when >= threshold and to 0 otherwise"
+                    hidden = false
+                )
+                int inputs:specular_reflection_ior_preset = 99 (
+                    customData = {
+                        int default = 99
+                    }
+                    displayGroup = "Specular"
+                    displayName = "IOR Preset"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::ior_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "ior_custom"
+                        string options = "ior_acrylic_glass:0|ior_air:1|ior_crystal:2|ior_diamond:3|ior_emerald:4|ior_ethanol:5|ior_flint_glass:6|ior_glass:7|ior_honey_21p_water:8|ior_human_eye_aqueous_humor:9|ior_human_eye_cornea:10|ior_human_eye_lens:11|ior_human_eye_vitreous_humor:12|ior_human_skin:13|ior_human_hair:14|ior_human_wet_hair:15|ior_ice:16|ior_milk:17|ior_olive_oil:18|ior_pearl:19|ior_plastic:20|ior_sapphire:21|ior_soap_bubble:22|ior_vacuum:23|ior_water_0c:24|ior_water_35c:25|ior_water_100c:26|ior_custom:99"
+                    }
+                )
+                float inputs:specular_reflection_roughness = 0.1 (
+                    customData = {
+                        float default = 0.1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Roughness"
+                    hidden = false
+                )
+                float inputs:specular_reflection_weight = 0.06 (
+                    customData = {
+                        float default = 1
+                        dictionary range = {
+                            float max = 1
+                            float min = 0
+                        }
+                    }
+                    displayGroup = "Specular"
+                    displayName = "Weight"
+                    hidden = false
+                )
+                int inputs:subsurface_scattering_colors_preset = 8 (
+                    customData = {
+                        int default = 9
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Scattering Presets"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::scattering_colors_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "scattering_colors_skin_2"
+                        string options = "scattering_colors_apple:0|scattering_colors_chicken:1|scattering_colors_cream:2|scattering_colors_ketchup:3|scattering_colors_marble:4|scattering_colors_potato:5|scattering_colors_skim_milk:6|scattering_colors_whole_milk:7|scattering_colors_skin_1:8|scattering_colors_skin_2:9|scattering_colors_skin_3:10|scattering_colors_skin_4:11|scattering_colors_custom:12"
+                    }
+                )
+                asset inputs:subsurface_weight_image = @@ (
+                    colorSpace = "sRGB"
+                    customData = {
+                        asset default = @@
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Weight Image"
+                    hidden = false
+                )
+                int inputs:subsurface_weight_image_alpha_mode = 7 (
+                    customData = {
+                        int default = 0
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Weight Image Alpha Mode"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniImage::alpha_mode"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "alpha_default"
+                        string options = "alpha_default:0|alpha_red:1|alpha_green:2|alpha_blue:3|alpha_white:4|alpha_black:5|alpha_luminance:6|alpha_average:7"
+                    }
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "trachea_OmniSurface_Skin_4"
+        {
+            token outputs:mdl:displacement.connect = </Root/Looks/trachea_OmniSurface_Skin_4/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Root/Looks/trachea_OmniSurface_Skin_4/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Root/Looks/trachea_OmniSurface_Skin_4/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurfacePresets.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface_Skin_4"
+                int inputs:subsurface_scattering_colors_preset = 9 (
+                    customData = {
+                        int default = 11
+                    }
+                    displayGroup = "Subsurface"
+                    displayName = "Scattering Presets"
+                    hidden = false
+                    renderType = "::OmniSurface::OmniShared::scattering_colors_presets"
+                    sdrMetadata = {
+                        string __SDR__enum_value = "scattering_colors_skin_4"
+                        string options = "scattering_colors_apple:0|scattering_colors_chicken:1|scattering_colors_cream:2|scattering_colors_ketchup:3|scattering_colors_marble:4|scattering_colors_potato:5|scattering_colors_skim_milk:6|scattering_colors_whole_milk:7|scattering_colors_skin_1:8|scattering_colors_skin_2:9|scattering_colors_skin_3:10|scattering_colors_skin_4:11|scattering_colors_custom:12"
+                    }
+                )
+                token outputs:out
+            }
+        }
+    }
+}
+
+over "OmniverseKit_Persp"
+{
+    float fStop = 0
+}
+

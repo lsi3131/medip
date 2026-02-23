@@ -1,0 +1,1 @@
+python build.py "copy" "debug" "deepcatch" "online"

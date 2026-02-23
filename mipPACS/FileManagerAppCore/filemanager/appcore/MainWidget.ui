@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>770</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="m_navButtonContainerWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>172</width>
+       <height>0</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignTop">
+       <widget class="QWidget" name="m_rdoButtonContainerWidget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_MIPProject">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/folder_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/folder_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/folder_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>MIP PROJECT</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_DICOM">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/folder_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/folder_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/folder_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>DICOM</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_Import">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/folder_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/folder_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/folder_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>IMPORT</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_Save">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/folder_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/folder_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/folder_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>SAVE</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_PatientList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/patient_list_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/patient_list_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/patient_list_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>PATIENT LIST</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_PACSDownload">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/pacs_down_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/pacs_down_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/pacs_down_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>PACS DOWNLOAD</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_PACSExport">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/pacs_upload_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/pacs_upload_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/pacs_upload_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>PACS UPLOAD</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_PACSSearch">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/search_d.png);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/search_h.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/search_p.png);
+	background-color: rgb(72,72,72);
+	width : 40px;
+	height: 40px;
+}</string>
+           </property>
+           <property name="text">
+            <string>PACS_SEARCH</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+   color : #707070;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::HLine</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="m_rdoTab_Setting">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	background-color: rgb(83,83,83);
+	color: rgb(255,255,255);
+	font: &quot;Malgun Gothic&quot; &quot;Arial&quot;;
+	font-size : 16px;
+}
+
+QRadioButton:hover {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton:checked {
+	background-color: rgb(72,72,72);
+	color: rgb(255,255,255);
+}
+
+QRadioButton::indicator {
+	image: url(:/Resource/Images/medip/setting_d.png);
+	margin-left : 12px;
+}
+
+QRadioButton::indicator:hover {
+	image: url(:/Resource/Images/medip/setting_h.png);
+	background-color: rgb(72,72,72);
+	margin-left : 12px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Resource/Images/medip/setting_p.png);
+	background-color: rgb(72,72,72);
+	margin-left : 12px;
+}</string>
+           </property>
+           <property name="text">
+            <string>SETTING</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="m_vertLine">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+   color : #707070;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="m_mainViewContainerWidget">
+     <widget class="QWidget" name="page_5">
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::FolderViewWidget" name="m_folderViewWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::PatientListWidget" name="m_patientListWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::PACSSearchDownloadWidget" name="m_pacsSearchDownloadWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page">
+      <layout class="QGridLayout" name="gridLayout_5">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="fm::PACSExportWidget" name="m_pacsExportWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>fm::FolderViewWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/subwindow/folderviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>fm::PatientListWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/subwindow/patientlistwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>fm::PACSExportWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/subwindow/pacsexportwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>fm::PACSSearchDownloadWidget</class>
+   <extends>QWidget</extends>
+   <header>filemanager/appcore/subwindow/pacssearchdownloadwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
